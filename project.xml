@@ -1,0 +1,7 @@
+<EBProj>
+  <projectName>ePage.dev</projectName>
+  <projectItems count="1">
+    <page pathname="/home" alias="" />
+  </projectItems>
+  <dbConnections count="0" />
+</EBProj>
