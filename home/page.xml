@@ -1,69 +1,82 @@
 <page>
-  <controls count="14">
+  <controls count="27">
     <control type="DivRoot" pathname="/divRoot">
       <backgroundColor>ffffff</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
       <dockX>fill</dockX>
       <dockY>fill</dockY>
-      <height>749</height>
+      <height>796</height>
       <left>0</left>
       <scrollPosX>3</scrollPosX>
       <top>0</top>
-      <width>1044</width>
+      <width>1207</width>
     </control>
-    <control type="Panel" pathname="/divRoot/panel6">
+    <control type="LayoutY" pathname="/divRoot/layouty1">
       <dockX>fill</dockX>
-      <height>212</height>
-      <heightRatio>0.283044058744993</heightRatio>
+      <dockY>fill</dockY>
+      <height>796</height>
+      <heightRatio>1</heightRatio>
       <left>0</left>
-      <sizeRatio>0.203065134099617</sizeRatio>
+      <sizeRatio>0.659486329743165</sizeRatio>
       <top>0</top>
-      <width>1044</width>
+      <topRatio>-0.00125628140703518</topRatio>
+      <width>1207</width>
       <widthRatio>1</widthRatio>
     </control>
-    <control type="Panel" pathname="/divRoot/panel6/panel7">
-      <backgroundImg>logo256.png</backgroundImg>
-      <height>121</height>
-      <heightRatio>0.840277777777778</heightRatio>
-      <left>22</left>
-      <leftRatio>0.0210727969348659</leftRatio>
-      <sizeRatio>0.909774436090226</sizeRatio>
-      <top>10</top>
-      <topRatio>0.0694444444444444</topRatio>
-      <width>133</width>
-      <widthRatio>0.127394636015326</widthRatio>
+    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem1">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <heavyEnabled>false</heavyEnabled>
+      <height>192</height>
+      <heightRatio>0.241206030150754</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.15907207953604</sizeRatio>
+      <top>0</top>
+      <width>1207</width>
+      <widthRatio>1</widthRatio>
     </control>
-    <control type="Panel" pathname="/divRoot/panel6/panel8">
+    <control type="Panel" pathname="/divRoot/layouty1/layoutyitem1/panel8">
       <fontColor>6B65BE</fontColor>
       <fontFamily>Arial Black</fontFamily>
       <fontSize>50</fontSize>
       <hAlign>left</hAlign>
-      <heightRatio>0.694444444444444</heightRatio>
-      <left>158</left>
-      <leftRatio>0.130903065451533</leftRatio>
+      <heightRatio>0.520833333333333</heightRatio>
+      <left>167</left>
+      <leftRatio>0.138359569179785</leftRatio>
       <sizeRatio>0.175131348511384</sizeRatio>
       <text>ePage Studio</text>
-      <top>39</top>
-      <topRatio>0.270833333333333</topRatio>
+      <top>34</top>
+      <topRatio>0.177083333333333</topRatio>
       <width>571</width>
       <widthRatio>0.473073736536868</widthRatio>
     </control>
-    <control type="LayoutX" pathname="/divRoot/panel6/layoutx1">
+    <control type="Panel" pathname="/divRoot/layouty1/layoutyitem1/panel7">
+      <backgroundImg>logo256.png</backgroundImg>
+      <height>107</height>
+      <heightRatio>0.557291666666667</heightRatio>
+      <left>39</left>
+      <leftRatio>0.0323115161557581</leftRatio>
+      <sizeRatio>0.922413793103448</sizeRatio>
+      <top>26</top>
+      <topRatio>0.135416666666667</topRatio>
+      <width>116</width>
+      <widthRatio>0.096106048053024</widthRatio>
+    </control>
+    <control type="LayoutX" pathname="/divRoot/layouty1/layoutyitem1/layoutx1">
       <backgroundColor>6B65BE</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
       <dockX>fill</dockX>
       <dockY>bottom</dockY>
       <fieldCount>9</fieldCount>
       <height>52</height>
-      <heightRatio>0.245283018867925</heightRatio>
+      <heightRatio>0.19622641509434</heightRatio>
       <left>0</left>
-      <sizeRatio>0.0498084291187739</sizeRatio>
-      <top>160</top>
-      <topRatio>0.754716981132076</topRatio>
-      <width>1044</width>
+      <sizeRatio>0.0430820215410108</sizeRatio>
+      <top>140</top>
+      <topRatio>0.80377358490566</topRatio>
+      <width>1207</width>
       <widthRatio>1</widthRatio>
     </control>
-    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem1">
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem1">
       <backgroundColor>f0f0f0</backgroundColor>
       <heavyEnabled>false</heavyEnabled>
       <height>52</height>
@@ -74,7 +87,7 @@
       <width>164</width>
       <widthRatio>0.157088122605364</widthRatio>
     </control>
-    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem2">
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem2">
       <backgroundColor>d0d0d0</backgroundColor>
       <cursor>pointer</cursor>
       <fontBold>true</fontBold>
@@ -93,7 +106,7 @@
       <width>116</width>
       <widthRatio>0.111111111111111</widthRatio>
     </control>
-    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem3">
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem3">
       <backgroundColor>f0f0f0</backgroundColor>
       <cursor>pointer</cursor>
       <fontBold>true</fontBold>
@@ -112,7 +125,7 @@
       <width>116</width>
       <widthRatio>0.111111111111111</widthRatio>
     </control>
-    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem4">
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem4">
       <backgroundColor>d0d0d0</backgroundColor>
       <cursor>pointer</cursor>
       <fontBold>true</fontBold>
@@ -131,7 +144,7 @@
       <width>116</width>
       <widthRatio>0.111111111111111</widthRatio>
     </control>
-    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem5">
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem5">
       <backgroundColor>f0f0f0</backgroundColor>
       <cursor>pointer</cursor>
       <fontBold>true</fontBold>
@@ -150,7 +163,7 @@
       <width>116</width>
       <widthRatio>0.111111111111111</widthRatio>
     </control>
-    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem6">
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem6">
       <backgroundColor>d0d0d0</backgroundColor>
       <cursor>pointer</cursor>
       <fontBold>true</fontBold>
@@ -169,7 +182,7 @@
       <width>116</width>
       <widthRatio>0.111111111111111</widthRatio>
     </control>
-    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem7">
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem7">
       <backgroundColor>f0f0f0</backgroundColor>
       <cursor>pointer</cursor>
       <fontBold>true</fontBold>
@@ -188,7 +201,7 @@
       <width>116</width>
       <widthRatio>0.111111111111111</widthRatio>
     </control>
-    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem8">
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem8">
       <backgroundColor>d0d0d0</backgroundColor>
       <heavyEnabled>false</heavyEnabled>
       <height>52</height>
@@ -200,7 +213,7 @@
       <width>116</width>
       <widthRatio>0.111111111111111</widthRatio>
     </control>
-    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem9">
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem9">
       <backgroundColor>f0f0f0</backgroundColor>
       <height>52</height>
       <heightRatio>1</heightRatio>
@@ -208,7 +221,192 @@
       <leftRatio>0.888888888888889</leftRatio>
       <sizeRatio>0.560344827586207</sizeRatio>
       <top>0</top>
-      <width>68</width>
+      <width>231</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem2">
+      <backgroundColor>d0d0d0</backgroundColor>
+      <height>544</height>
+      <heightRatio>0.34</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.34</sizeRatio>
+      <top>192</top>
+      <topRatio>0.33</topRatio>
+      <width>1207</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem3">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <heavyEnabled>false</heavyEnabled>
+      <height>60</height>
+      <heightRatio>0.0753768844221105</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.0497100248550124</sizeRatio>
+      <top>736</top>
+      <topRatio>0.924623115577889</topRatio>
+      <width>1207</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="LayoutX" pathname="/divRoot/layouty1/layoutyitem3/layoutx2">
+      <backgroundColor>6B65BE</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockX>fill</dockX>
+      <dockY>bottom</dockY>
+      <fieldCount>9</fieldCount>
+      <height>52</height>
+      <heightRatio>0.477064220183486</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.0430820215410108</sizeRatio>
+      <top>8</top>
+      <width>1207</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem10">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.396341463414634</sizeRatio>
+      <top>0</top>
+      <width>164</width>
+      <widthRatio>0.157088122605364</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem11">
+      <backgroundColor>d0d0d0</backgroundColor>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>164</left>
+      <leftRatio>0.157088122605364</leftRatio>
+      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
+      <sizeRatio>0.448275862068966</sizeRatio>
+      <text>Home</text>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem12">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>280</left>
+      <leftRatio>0.268199233716475</leftRatio>
+      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
+      <sizeRatio>0.448275862068966</sizeRatio>
+      <text>Features</text>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem13">
+      <backgroundColor>d0d0d0</backgroundColor>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>396</left>
+      <leftRatio>0.379310344827586</leftRatio>
+      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
+      <sizeRatio>0.448275862068966</sizeRatio>
+      <text>Examples</text>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem14">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>512</left>
+      <leftRatio>0.490421455938697</leftRatio>
+      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
+      <sizeRatio>0.448275862068966</sizeRatio>
+      <text>Tutorials</text>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem15">
+      <backgroundColor>d0d0d0</backgroundColor>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>628</left>
+      <leftRatio>0.601532567049808</leftRatio>
+      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
+      <sizeRatio>0.448275862068966</sizeRatio>
+      <text>Support</text>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem16">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>744</left>
+      <leftRatio>0.71264367816092</leftRatio>
+      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
+      <sizeRatio>0.448275862068966</sizeRatio>
+      <text>Blog</text>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem17">
+      <backgroundColor>d0d0d0</backgroundColor>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>860</left>
+      <leftRatio>0.777777777777778</leftRatio>
+      <sizeRatio>0.560344827586207</sizeRatio>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem18">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>976</left>
+      <leftRatio>0.888888888888889</leftRatio>
+      <sizeRatio>0.560344827586207</sizeRatio>
+      <top>0</top>
+      <width>231</width>
       <widthRatio>0.111111111111111</widthRatio>
     </control>
   </controls>
