@@ -1,7 +1,8 @@
 <EBProj>
   <projectName>ePage.dev</projectName>
-  <projectItems count="1">
+  <projectItems count="2">
     <page pathname="/home" alias="" />
+    <image pathname="/home/logo256.png" />
   </projectItems>
   <dbConnections count="0" />
 </EBProj>

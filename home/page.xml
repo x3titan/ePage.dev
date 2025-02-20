@@ -1,16 +1,313 @@
 <page>
-  <controls count="1">
+  <controls count="14">
     <control type="DivRoot" pathname="/divRoot">
       <backgroundColor>ffffff</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
       <dockX>fill</dockX>
-      <height>800</height>
+      <dockY>fill</dockY>
+      <height>749</height>
       <left>0</left>
+      <scrollPosX>3</scrollPosX>
       <top>0</top>
-      <width>1149</width>
+      <width>1044</width>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel6">
+      <dockX>fill</dockX>
+      <height>212</height>
+      <heightRatio>0.283044058744993</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.203065134099617</sizeRatio>
+      <top>0</top>
+      <width>1044</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel6/panel7">
+      <backgroundImg>logo256.png</backgroundImg>
+      <height>121</height>
+      <heightRatio>0.840277777777778</heightRatio>
+      <left>22</left>
+      <leftRatio>0.0210727969348659</leftRatio>
+      <sizeRatio>0.909774436090226</sizeRatio>
+      <top>10</top>
+      <topRatio>0.0694444444444444</topRatio>
+      <width>133</width>
+      <widthRatio>0.127394636015326</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/panel6/panel8">
+      <fontColor>6B65BE</fontColor>
+      <fontFamily>Arial Black</fontFamily>
+      <fontSize>50</fontSize>
+      <hAlign>left</hAlign>
+      <heightRatio>0.694444444444444</heightRatio>
+      <left>158</left>
+      <leftRatio>0.130903065451533</leftRatio>
+      <sizeRatio>0.175131348511384</sizeRatio>
+      <text>ePage Studio</text>
+      <top>39</top>
+      <topRatio>0.270833333333333</topRatio>
+      <width>571</width>
+      <widthRatio>0.473073736536868</widthRatio>
+    </control>
+    <control type="LayoutX" pathname="/divRoot/panel6/layoutx1">
+      <backgroundColor>6B65BE</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <dockX>fill</dockX>
+      <dockY>bottom</dockY>
+      <fieldCount>9</fieldCount>
+      <height>52</height>
+      <heightRatio>0.245283018867925</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.0498084291187739</sizeRatio>
+      <top>160</top>
+      <topRatio>0.754716981132076</topRatio>
+      <width>1044</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem1">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.396341463414634</sizeRatio>
+      <top>0</top>
+      <width>164</width>
+      <widthRatio>0.157088122605364</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem2">
+      <backgroundColor>d0d0d0</backgroundColor>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>164</left>
+      <leftRatio>0.157088122605364</leftRatio>
+      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
+      <sizeRatio>0.448275862068966</sizeRatio>
+      <text>Home</text>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem3">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>280</left>
+      <leftRatio>0.268199233716475</leftRatio>
+      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
+      <sizeRatio>0.448275862068966</sizeRatio>
+      <text>Features</text>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem4">
+      <backgroundColor>d0d0d0</backgroundColor>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>396</left>
+      <leftRatio>0.379310344827586</leftRatio>
+      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
+      <sizeRatio>0.448275862068966</sizeRatio>
+      <text>Examples</text>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem5">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>512</left>
+      <leftRatio>0.490421455938697</leftRatio>
+      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
+      <sizeRatio>0.448275862068966</sizeRatio>
+      <text>Tutorials</text>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem6">
+      <backgroundColor>d0d0d0</backgroundColor>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>628</left>
+      <leftRatio>0.601532567049808</leftRatio>
+      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
+      <sizeRatio>0.448275862068966</sizeRatio>
+      <text>Support</text>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem7">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <cursor>pointer</cursor>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>Arial</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>744</left>
+      <leftRatio>0.71264367816092</leftRatio>
+      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
+      <sizeRatio>0.448275862068966</sizeRatio>
+      <text>Blog</text>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem8">
+      <backgroundColor>d0d0d0</backgroundColor>
+      <heavyEnabled>false</heavyEnabled>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>860</left>
+      <leftRatio>0.777777777777778</leftRatio>
+      <sizeRatio>0.560344827586207</sizeRatio>
+      <top>0</top>
+      <width>116</width>
+      <widthRatio>0.111111111111111</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/panel6/layoutx1/layoutxitem9">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <height>52</height>
+      <heightRatio>1</heightRatio>
+      <left>976</left>
+      <leftRatio>0.888888888888889</leftRatio>
+      <sizeRatio>0.560344827586207</sizeRatio>
+      <top>0</top>
+      <width>68</width>
+      <widthRatio>0.111111111111111</widthRatio>
     </control>
   </controls>
   <taskSet count="0" />
   <gridLines count="0" />
-  <g5Items count="0" />
+  <g5Items count="2">
+    <item name="BStyle" type="20">
+      <varValue />
+      <functionParam>color1,color2,color3,text1,text2,text3,tColor1,tColor2,tColor3,bdColor</functionParam>
+      <functionCode>this.color1 = color1;
+this.color2 = color2
+this.color3 = color3;
+this.text1 = text1;
+this.text2 = text2;
+this.text3 = text3;
+this.tColor1 = tColor1;
+this.tColor2 = tColor2;
+this.tColor3 = tColor3;
+this.bdColor = bdColor;</functionCode>
+    </item>
+    <item name="initButtonV3" type="20">
+      <varValue />
+      <functionParam>sender,v_style</functionParam>
+      <functionCode><![CDATA[sender.v_style = v_style;
+
+sender.init = function(index) {
+    this.v_index = index;
+    this.style.backgroundColor = this.v_style[index].color1;
+    this.setText(this.v_style[index].text1);
+    this.setTextColor(this.v_style[index].tColor1);
+    if (this.v_style[index].bdColor=="") {
+        this.style.borderWidth = "0px";
+        if (this.label) eb.setDivRect(this.label.parentNode,0,0,null,null);
+    } else {
+        this.style.boxSizing="border-box";
+        this.style.borderWidth = "1px";
+        this.style.borderColor = this.v_style[index].bdColor;
+        this.style.borderStyle = "solid";
+        if (this.label) eb.setDivRect(this.label.parentNode,-1,-1,null,null);
+    }
+    //this.style.borderRadius = parseInt(eb.getDivRect(this).h/2) + "px";
+    if (this.c_cover) ee.removeControl(this.c_cover);
+    this.c_cover = createPanel(this, "", "#00000001", 0, 0, 1, 1);
+    eb.setDock(this.c_cover,"fill","fill");
+}
+
+sender.setText = function(text) {
+    var index = this.v_index;
+    if ((this.v_style[index].text1.length>0) || (this.v_style[index].text2.length>0) || (this.v_style[index].text3.length>0)) {
+        ee.setText(this,text);
+    }
+}
+
+sender.setTextColor = function(color) {
+    var index = this.v_index;
+    if ((this.v_style[index].tColor1.length>0) || (this.v_style[index].tColor2.length>0) || (this.v_style[index].tColor3.length>0)) {
+        ee.setTextColor(this, color);
+    }
+}
+
+ee.setOnMouseEnter(sender, function(sender,event) { 
+    var s =sender.v_style[sender.v_index];
+    sender.style.backgroundColor = s.color2;
+    this.setText(s.text2);
+    this.setTextColor(s.tColor2);
+});
+ee.setOnMouseLeave(sender, function(sender,event) { 
+    var s =sender.v_style[sender.v_index];
+    sender.style.backgroundColor = s.color1;
+    this.setText(s.text1);
+    this.setTextColor(s.tColor1);
+});
+sender.eeMouseDown = function(sender,event,x,y) {
+    var s =sender.v_style[sender.v_index];
+    sender.style.backgroundColor = s.color3;
+    this.setText(s.text3);
+    this.setTextColor(s.tColor3);
+}
+sender.eeMouseUp = function(sender,event,x,y) {
+    var s =sender.v_style[sender.v_index];
+    if ("ontouchstart" in window) {
+        sender.style.backgroundColor = s.color1;
+        this.setText(s.text1);
+        this.setTextColor(s.tColor1);
+    } else {
+        sender.style.backgroundColor = s.color2;
+        this.setText(s.text2);
+        this.setTextColor(s.tColor2);
+    }
+}
+sender.eeOnClickCancel = function(sender,event) {
+    var s =sender.v_style[sender.v_index];
+    sender.style.backgroundColor = s.color1;
+    this.setText(s.text1);
+    this.setTextColor(s.tColor1);
+}
+eb.initMouseEvent(sender);
+
+sender.init(0);]]></functionCode>
+    </item>
+  </g5Items>
 </page>
