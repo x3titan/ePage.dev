@@ -1,8 +1,124 @@
 <EBProj>
   <projectName>ePage.dev</projectName>
-  <projectItems count="2">
+  <projectItems count="118">
     <page pathname="/home" alias="" />
     <image pathname="/home/logo256.png" />
+    <image pathname="/.gitattributes" />
+    <page pathname="/EBWeb" alias="" />
+    <page pathname="/EBWeb/about" alias="" />
+    <image pathname="/EBWeb/about/CPY0000.jpg" />
+    <image pathname="/EBWeb/about/CPY0001.jpg" />
+    <image pathname="/EBWeb/about/CPY0002.jpg" />
+    <image pathname="/EBWeb/about/CPY0003.jpg" />
+    <image pathname="/EBWeb/about/for.gif" />
+    <image pathname="/EBWeb/about/logo.png" />
+    <page pathname="/EBWeb/main" alias="" />
+    <image pathname="/EBWeb/main/CPY0000.jpg" />
+    <image pathname="/EBWeb/main/CPY0001.jpg" />
+    <image pathname="/EBWeb/main/CPY0002.jpg" />
+    <image pathname="/EBWeb/main/CPY0003.jpg" />
+    <image pathname="/EBWeb/main/CPY0004.jpg" />
+    <image pathname="/EBWeb/main/CPY0005.jpg" />
+    <image pathname="/EBWeb/main/ePageLogo.png" />
+    <page pathname="/EBWeb/main2" alias="" />
+    <image pathname="/EBWeb/main2/1.JPG" />
+    <image pathname="/EBWeb/main2/2.JPG" />
+    <image pathname="/EBWeb/main2/3.JPG" />
+    <image pathname="/EBWeb/main2/4.JPG" />
+    <image pathname="/EBWeb/main2/6.JPG" />
+    <image pathname="/EBWeb/main2/7.JPG" />
+    <image pathname="/EBWeb/main2/8.JPG" />
+    <image pathname="/EBWeb/main2/9.JPG" />
+    <image pathname="/EBWeb/main2/b1.png" />
+    <image pathname="/EBWeb/main2/b1a.png" />
+    <image pathname="/EBWeb/main2/b2.png" />
+    <image pathname="/EBWeb/main2/b2a.png" />
+    <image pathname="/EBWeb/main2/b3.png" />
+    <image pathname="/EBWeb/main2/b3a.png" />
+    <image pathname="/EBWeb/main2/b4.png" />
+    <image pathname="/EBWeb/main2/b4a.png" />
+    <image pathname="/EBWeb/main2/CPY0000.jpg" />
+    <image pathname="/EBWeb/main2/CPY0001.jpg" />
+    <image pathname="/EBWeb/main2/CPY0002.jpg" />
+    <image pathname="/EBWeb/main2/CPY0003.jpg" />
+    <image pathname="/EBWeb/main2/epageLogo1.bmp" />
+    <image pathname="/EBWeb/main2/f5.JPG" />
+    <image pathname="/EBWeb/main2/for.gif" />
+    <image pathname="/EBWeb/main2/logo.png" />
+    <image pathname="/EBWeb/main2/xz_bn.png" />
+    <image pathname="/EBWeb/main2/未标题-2.jpg" />
+    <image pathname="/EBWeb/main2/未标题-3.jpg" />
+    <page pathname="/EBWeb/admin" alias="" />
+    <page pathname="/EBWeb/admin/news" alias="" />
+    <page pathname="/EBWeb/demo" alias="" />
+    <page pathname="/EBWeb/demo/layer" alias="" />
+    <image pathname="/EBWeb/demo/layer/CPY0000.jpg" />
+    <image pathname="/EBWeb/demo/layer/CPY0001.jpg" />
+    <image pathname="/EBWeb/demo/layer/CPY0002.jpg" />
+    <image pathname="/EBWeb/demo/layer/CPY0003.jpg" />
+    <image pathname="/EBWeb/demo/layer/logo.png" />
+    <page pathname="/EBWeb/demo/main" alias="" />
+    <image pathname="/EBWeb/demo/main/CPY0000.jpg" />
+    <image pathname="/EBWeb/demo/main/CPY0001.jpg" />
+    <image pathname="/EBWeb/demo/main/CPY0002.jpg" />
+    <image pathname="/EBWeb/demo/main/logo.png" />
+    <page pathname="/EBWeb/demo/skin" alias="" />
+    <image pathname="/EBWeb/demo/skin/CPY0000.jpg" />
+    <image pathname="/EBWeb/demo/skin/CPY0001.jpg" />
+    <image pathname="/EBWeb/demo/skin/CPY0002.jpg" />
+    <image pathname="/EBWeb/demo/skin/CPY0003.jpg" />
+    <image pathname="/EBWeb/demo/skin/CPY0004.jpg" />
+    <image pathname="/EBWeb/demo/skin/CPY0005.jpg" />
+    <image pathname="/EBWeb/demo/skin/CPY0006.jpg" />
+    <image pathname="/EBWeb/demo/skin/CPY0007.jpg" />
+    <image pathname="/EBWeb/demo/skin/CPY0008.jpg" />
+    <image pathname="/EBWeb/demo/skin/logo.png" />
+    <page pathname="/EBWeb/samples" alias="" />
+    <page pathname="/EBWeb/samples/main1" alias="" />
+    <image pathname="/EBWeb/samples/main1/3007.png" />
+    <image pathname="/EBWeb/samples/main1/dot.png" />
+    <image pathname="/EBWeb/samples/main1/GIS系统.png" />
+    <image pathname="/EBWeb/samples/main1/p2d3c1.png" />
+    <image pathname="/EBWeb/samples/main1/p2d3c2.png" />
+    <image pathname="/EBWeb/samples/main1/p2d3d1.png" />
+    <image pathname="/EBWeb/samples/main1/p2d3d2.png" />
+    <image pathname="/EBWeb/samples/main1/RtuGroupIcon.png" />
+    <image pathname="/EBWeb/samples/main1/set1.png" />
+    <image pathname="/EBWeb/samples/main1/set2.png" />
+    <image pathname="/EBWeb/samples/main1/set3.png" />
+    <image pathname="/EBWeb/samples/main1/sy.png" />
+    <image pathname="/EBWeb/samples/main1/tab_blue.rar" />
+    <image pathname="/EBWeb/samples/main1/tab_green.rar" />
+    <image pathname="/EBWeb/samples/main1/title.png" />
+    <image pathname="/EBWeb/samples/main1/zygl.png" />
+    <image pathname="/EBWeb/samples/main1/作业管理.png" />
+    <image pathname="/EBWeb/samples/main1/服务热线.png" />
+    <image pathname="/EBWeb/samples/main1/监控报警.png" />
+    <image pathname="/EBWeb/samples/main1/金坛.png" />
+    <page pathname="/EBWeb/samples/menu1" alias="" />
+    <image pathname="/EBWeb/samples/menu1/dot.png" />
+    <page pathname="/EBWeb/samples/ncDemo" alias="" />
+    <image pathname="/EBWeb/samples/ncDemo/a1.bmp" />
+    <image pathname="/EBWeb/samples/ncDemo/a2.bmp" />
+    <image pathname="/EBWeb/samples/ncDemo/a3.bmp" />
+    <image pathname="/EBWeb/samples/ncDemo/a4.bmp" />
+    <image pathname="/EBWeb/samples/ncDemo/a5.bmp" />
+    <image pathname="/EBWeb/samples/ncDemo/a6.bmp" />
+    <image pathname="/EBWeb/samples/ncDemo/a7.bmp" />
+    <image pathname="/EBWeb/samples/ncDemo/a8.bmp" />
+    <image pathname="/EBWeb/samples/ncDemo/a9.bmp" />
+    <image pathname="/EBWeb/samples/ncDemo/b1.bmp" />
+    <image pathname="/EBWeb/samples/ncDemo/bg2.jpg" />
+    <image pathname="/EBWeb/samples/ncDemo/bq3.bmp" />
+    <image pathname="/EBWeb/samples/ncDemo/light.png" />
+    <image pathname="/EBWeb/samples/ncDemo/mark1.png" />
+    <image pathname="/EBWeb/samples/ncDemo/mark2.png" />
+    <image pathname="/EBWeb/samples/ncDemo/xz_bn.png" />
+    <page pathname="/EBWeb/samples/pjApp" alias="" />
+    <image pathname="/EBWeb/samples/pjApp/CPY0000.jpg" />
+    <page pathname="/EBWeb/samples/richtext" alias="" />
+    <page pathname="/EBWeb/samples/webService" alias="" />
+    <image pathname="/EBWeb/samples/webService/xz_bn.png" />
   </projectItems>
   <dbConnections count="0" />
 </EBProj>
