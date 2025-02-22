@@ -229,6 +229,16 @@
       <height>515</height>
       <heightRatio>0.34</heightRatio>
       <left>0</left>
+      <onCreate>sender.c_frame = document.createElement("iframe");
+sender.c_frame.style.position = "absolute";
+sender.c_frame.style.width = "100%";
+sender.c_frame.style.height = "100%";
+sender.c_frame.style.scrolling = "auto";
+sender.c_frame.style.overflow = "auto";
+sender.c_frame.style.overflowX = "hidden";
+sender.c_frame.setAttribute("frameborder", "0", 0);
+sender.appendChild(sender.c_frame);
+sender.c_frame.src = ee.pageRoot + "/EBWeb/about";</onCreate>
       <sizeRatio>0.34</sizeRatio>
       <top>192</top>
       <topRatio>0.33</topRatio>
