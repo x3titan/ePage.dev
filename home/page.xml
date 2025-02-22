@@ -1,5 +1,5 @@
 <page>
-  <controls count="27">
+  <controls count="21">
     <control type="DivRoot" pathname="/divRoot">
       <backgroundColor>ffffff</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
@@ -19,7 +19,7 @@
       <left>0</left>
       <sizeRatio>0.659486329743165</sizeRatio>
       <top>0</top>
-      <topRatio>-0.00125628140703518</topRatio>
+      <topRatio>0.00125628140703518</topRatio>
       <width>1207</width>
       <widthRatio>1</widthRatio>
     </control>
@@ -92,114 +92,114 @@
       <cursor>pointer</cursor>
       <fontBold>true</fontBold>
       <fontColor>FFFFFF</fontColor>
-      <fontFamily>Arial</fontFamily>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
       <fontSize>12</fontSize>
       <heavyEnabled>false</heavyEnabled>
       <height>52</height>
       <heightRatio>1</heightRatio>
       <left>164</left>
-      <leftRatio>0.157088122605364</leftRatio>
+      <leftRatio>0.135874067937034</leftRatio>
       <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
       <sizeRatio>0.448275862068966</sizeRatio>
       <text>Home</text>
       <top>0</top>
       <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
+      <widthRatio>0.096106048053024</widthRatio>
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem3">
       <backgroundColor>f0f0f0</backgroundColor>
       <cursor>pointer</cursor>
       <fontBold>true</fontBold>
       <fontColor>FFFFFF</fontColor>
-      <fontFamily>Arial</fontFamily>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
       <fontSize>12</fontSize>
       <heavyEnabled>false</heavyEnabled>
       <height>52</height>
       <heightRatio>1</heightRatio>
       <left>280</left>
-      <leftRatio>0.268199233716475</leftRatio>
+      <leftRatio>0.231980115990058</leftRatio>
       <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
       <sizeRatio>0.448275862068966</sizeRatio>
       <text>Features</text>
       <top>0</top>
       <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
+      <widthRatio>0.096106048053024</widthRatio>
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem4">
       <backgroundColor>d0d0d0</backgroundColor>
       <cursor>pointer</cursor>
       <fontBold>true</fontBold>
       <fontColor>FFFFFF</fontColor>
-      <fontFamily>Arial</fontFamily>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
       <fontSize>12</fontSize>
       <heavyEnabled>false</heavyEnabled>
       <height>52</height>
       <heightRatio>1</heightRatio>
       <left>396</left>
-      <leftRatio>0.379310344827586</leftRatio>
+      <leftRatio>0.328086164043082</leftRatio>
       <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
       <sizeRatio>0.448275862068966</sizeRatio>
       <text>Examples</text>
       <top>0</top>
       <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
+      <widthRatio>0.096106048053024</widthRatio>
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem5">
       <backgroundColor>f0f0f0</backgroundColor>
       <cursor>pointer</cursor>
       <fontBold>true</fontBold>
       <fontColor>FFFFFF</fontColor>
-      <fontFamily>Arial</fontFamily>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
       <fontSize>12</fontSize>
       <heavyEnabled>false</heavyEnabled>
       <height>52</height>
       <heightRatio>1</heightRatio>
       <left>512</left>
-      <leftRatio>0.490421455938697</leftRatio>
+      <leftRatio>0.424192212096106</leftRatio>
       <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
       <sizeRatio>0.448275862068966</sizeRatio>
       <text>Tutorials</text>
       <top>0</top>
       <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
+      <widthRatio>0.096106048053024</widthRatio>
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem6">
       <backgroundColor>d0d0d0</backgroundColor>
       <cursor>pointer</cursor>
       <fontBold>true</fontBold>
       <fontColor>FFFFFF</fontColor>
-      <fontFamily>Arial</fontFamily>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
       <fontSize>12</fontSize>
       <heavyEnabled>false</heavyEnabled>
       <height>52</height>
       <heightRatio>1</heightRatio>
       <left>628</left>
-      <leftRatio>0.601532567049808</leftRatio>
+      <leftRatio>0.52029826014913</leftRatio>
       <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
       <sizeRatio>0.448275862068966</sizeRatio>
       <text>Support</text>
       <top>0</top>
       <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
+      <widthRatio>0.096106048053024</widthRatio>
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem7">
       <backgroundColor>f0f0f0</backgroundColor>
       <cursor>pointer</cursor>
       <fontBold>true</fontBold>
       <fontColor>FFFFFF</fontColor>
-      <fontFamily>Arial</fontFamily>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
       <fontSize>12</fontSize>
       <heavyEnabled>false</heavyEnabled>
       <height>52</height>
       <heightRatio>1</heightRatio>
       <left>744</left>
-      <leftRatio>0.71264367816092</leftRatio>
+      <leftRatio>0.616404308202154</leftRatio>
       <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
       <sizeRatio>0.448275862068966</sizeRatio>
       <text>Blog</text>
       <top>0</top>
       <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
+      <widthRatio>0.096106048053024</widthRatio>
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem8">
       <backgroundColor>d0d0d0</backgroundColor>
@@ -226,7 +226,7 @@
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem2">
       <backgroundColor>d0d0d0</backgroundColor>
-      <height>544</height>
+      <height>515</height>
       <heightRatio>0.34</heightRatio>
       <left>0</left>
       <sizeRatio>0.34</sizeRatio>
@@ -236,178 +236,76 @@
       <widthRatio>1</widthRatio>
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem3">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <heavyEnabled>false</heavyEnabled>
-      <height>60</height>
-      <heightRatio>0.0753768844221105</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.0497100248550124</sizeRatio>
-      <top>736</top>
-      <topRatio>0.924623115577889</topRatio>
-      <width>1207</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="LayoutX" pathname="/divRoot/layouty1/layoutyitem3/layoutx2">
       <backgroundColor>6B65BE</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
-      <dockX>fill</dockX>
-      <dockY>bottom</dockY>
-      <fieldCount>9</fieldCount>
-      <height>52</height>
-      <heightRatio>0.477064220183486</heightRatio>
+      <heavyEnabled>false</heavyEnabled>
+      <height>89</height>
+      <heightRatio>0.111809045226131</heightRatio>
       <left>0</left>
-      <sizeRatio>0.0430820215410108</sizeRatio>
-      <top>8</top>
+      <sizeRatio>0.0737365368682684</sizeRatio>
+      <top>707</top>
+      <topRatio>0.888190954773869</topRatio>
       <width>1207</width>
       <widthRatio>1</widthRatio>
     </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem10">
+    <control type="LayoutY" pathname="/divRoot/layouty1/layoutyitem3/layouty2">
+      <dockX>center</dockX>
+      <dockY>fill</dockY>
+      <height>74</height>
+      <heightRatio>0.943820224719101</heightRatio>
+      <left>357</left>
+      <leftRatio>0.295774647887324</leftRatio>
+      <outerBottom>10</outerBottom>
+      <outerTop>5</outerTop>
+      <sizeRatio>0.170385395537525</sizeRatio>
+      <top>5</top>
+      <topRatio>0.0561797752808989</topRatio>
+      <width>493</width>
+      <widthRatio>0.408450704225352</widthRatio>
+    </control>
+    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem3/layouty2/layoutyitem4">
       <backgroundColor>f0f0f0</backgroundColor>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
+      <fontBold>true</fontBold>
+      <fontColor>FFFFFF</fontColor>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
+      <height>25</height>
+      <heightRatio>0.337837837837838</heightRatio>
       <left>0</left>
-      <sizeRatio>0.396341463414634</sizeRatio>
+      <sizeRatio>0.050709939148073</sizeRatio>
+      <text>Need help? Contact us: support@epage.dev    </text>
       <top>0</top>
-      <width>164</width>
-      <widthRatio>0.157088122605364</widthRatio>
+      <width>493</width>
+      <widthRatio>1</widthRatio>
     </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem11">
+    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem3/layouty2/layoutyitem5">
       <backgroundColor>d0d0d0</backgroundColor>
-      <cursor>pointer</cursor>
       <fontBold>true</fontBold>
       <fontColor>FFFFFF</fontColor>
-      <fontFamily>Arial</fontFamily>
-      <fontSize>12</fontSize>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>164</left>
-      <leftRatio>0.157088122605364</leftRatio>
-      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
-      <sizeRatio>0.448275862068966</sizeRatio>
-      <text>Home</text>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
+      <height>24</height>
+      <heightRatio>0.324324324324324</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.0486815415821501</sizeRatio>
+      <text>Terms of Service  |  Privacy Policy  </text>
+      <top>25</top>
+      <topRatio>0.337837837837838</topRatio>
+      <width>493</width>
+      <widthRatio>1</widthRatio>
     </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem12">
+    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem3/layouty2/layoutyitem6">
       <backgroundColor>f0f0f0</backgroundColor>
-      <cursor>pointer</cursor>
       <fontBold>true</fontBold>
       <fontColor>FFFFFF</fontColor>
-      <fontFamily>Arial</fontFamily>
-      <fontSize>12</fontSize>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>280</left>
-      <leftRatio>0.268199233716475</leftRatio>
-      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
-      <sizeRatio>0.448275862068966</sizeRatio>
-      <text>Features</text>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem13">
-      <backgroundColor>d0d0d0</backgroundColor>
-      <cursor>pointer</cursor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
-      <fontFamily>Arial</fontFamily>
-      <fontSize>12</fontSize>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>396</left>
-      <leftRatio>0.379310344827586</leftRatio>
-      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
-      <sizeRatio>0.448275862068966</sizeRatio>
-      <text>Examples</text>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem14">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <cursor>pointer</cursor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
-      <fontFamily>Arial</fontFamily>
-      <fontSize>12</fontSize>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>512</left>
-      <leftRatio>0.490421455938697</leftRatio>
-      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
-      <sizeRatio>0.448275862068966</sizeRatio>
-      <text>Tutorials</text>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem15">
-      <backgroundColor>d0d0d0</backgroundColor>
-      <cursor>pointer</cursor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
-      <fontFamily>Arial</fontFamily>
-      <fontSize>12</fontSize>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>628</left>
-      <leftRatio>0.601532567049808</leftRatio>
-      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
-      <sizeRatio>0.448275862068966</sizeRatio>
-      <text>Support</text>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem16">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <cursor>pointer</cursor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
-      <fontFamily>Arial</fontFamily>
-      <fontSize>12</fontSize>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>744</left>
-      <leftRatio>0.71264367816092</leftRatio>
-      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
-      <sizeRatio>0.448275862068966</sizeRatio>
-      <text>Blog</text>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem17">
-      <backgroundColor>d0d0d0</backgroundColor>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>860</left>
-      <leftRatio>0.777777777777778</leftRatio>
-      <sizeRatio>0.560344827586207</sizeRatio>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem3/layoutx2/layoutxitem18">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>976</left>
-      <leftRatio>0.888888888888889</leftRatio>
-      <sizeRatio>0.560344827586207</sizeRatio>
-      <top>0</top>
-      <width>231</width>
-      <widthRatio>0.111111111111111</widthRatio>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
+      <height>25</height>
+      <heightRatio>0.337837837837838</heightRatio>
+      <left>0</left>
+      <sizeRatio>0.050709939148073</sizeRatio>
+      <text> © 2025 ePage. All rights reserved.</text>
+      <top>49</top>
+      <topRatio>0.662162162162162</topRatio>
+      <width>493</width>
+      <widthRatio>1</widthRatio>
     </control>
   </controls>
   <taskSet count="0" />
