@@ -1,419 +1,75 @@
 <page>
-  <controls count="21">
+  <controls count="6">
     <control type="DivRoot" pathname="/divRoot">
       <backgroundColor>ffffff</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
       <dockX>fill</dockX>
-      <dockY>fill</dockY>
       <height>796</height>
       <left>0</left>
-      <scrollPosX>3</scrollPosX>
       <top>0</top>
       <width>1207</width>
     </control>
-    <control type="LayoutY" pathname="/divRoot/layouty1">
+    <control type="Panel" pathname="/divRoot/panel1">
+      <backgroundImg>ePageBg.jpg</backgroundImg>
       <dockX>fill</dockX>
-      <dockY>fill</dockY>
-      <height>796</height>
-      <heightRatio>1</heightRatio>
+      <height>265</height>
+      <heightRatio>0.332914572864322</heightRatio>
       <left>0</left>
-      <sizeRatio>0.659486329743165</sizeRatio>
-      <top>0</top>
-      <topRatio>0.00125628140703518</topRatio>
-      <width>1207</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem1">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <heavyEnabled>false</heavyEnabled>
-      <height>192</height>
-      <heightRatio>0.241206030150754</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.15907207953604</sizeRatio>
+      <sizeRatio>0.219552609776305</sizeRatio>
       <top>0</top>
       <width>1207</width>
       <widthRatio>1</widthRatio>
     </control>
-    <control type="Panel" pathname="/divRoot/layouty1/layoutyitem1/panel8">
-      <fontColor>6B65BE</fontColor>
-      <fontFamily>Arial Black</fontFamily>
-      <fontSize>50</fontSize>
-      <hAlign>left</hAlign>
-      <heightRatio>0.520833333333333</heightRatio>
-      <left>167</left>
-      <leftRatio>0.138359569179785</leftRatio>
-      <sizeRatio>0.175131348511384</sizeRatio>
-      <text>ePage Studio</text>
-      <top>34</top>
-      <topRatio>0.177083333333333</topRatio>
-      <width>571</width>
-      <widthRatio>0.473073736536868</widthRatio>
-    </control>
-    <control type="Panel" pathname="/divRoot/layouty1/layoutyitem1/panel7">
-      <backgroundImg>logo256.png</backgroundImg>
-      <height>107</height>
-      <heightRatio>0.557291666666667</heightRatio>
-      <left>39</left>
-      <leftRatio>0.0323115161557581</leftRatio>
-      <sizeRatio>0.922413793103448</sizeRatio>
-      <top>26</top>
-      <topRatio>0.135416666666667</topRatio>
-      <width>116</width>
-      <widthRatio>0.096106048053024</widthRatio>
-    </control>
-    <control type="LayoutX" pathname="/divRoot/layouty1/layoutyitem1/layoutx1">
-      <backgroundColor>6B65BE</backgroundColor>
-      <bgColorEnabled>true</bgColorEnabled>
-      <dockX>fill</dockX>
-      <dockY>bottom</dockY>
-      <fieldCount>9</fieldCount>
-      <height>52</height>
-      <heightRatio>0.19622641509434</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.0430820215410108</sizeRatio>
-      <top>140</top>
-      <topRatio>0.80377358490566</topRatio>
-      <width>1207</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem1">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.396341463414634</sizeRatio>
-      <top>0</top>
-      <width>164</width>
-      <widthRatio>0.157088122605364</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem2">
-      <backgroundColor>d0d0d0</backgroundColor>
-      <cursor>pointer</cursor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>164</left>
-      <leftRatio>0.135874067937034</leftRatio>
-      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
-      <sizeRatio>0.448275862068966</sizeRatio>
-      <text>Home</text>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.096106048053024</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem3">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <cursor>pointer</cursor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>280</left>
-      <leftRatio>0.231980115990058</leftRatio>
-      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
-      <sizeRatio>0.448275862068966</sizeRatio>
-      <text>Features</text>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.096106048053024</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem4">
-      <backgroundColor>d0d0d0</backgroundColor>
-      <cursor>pointer</cursor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>396</left>
-      <leftRatio>0.328086164043082</leftRatio>
-      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
-      <sizeRatio>0.448275862068966</sizeRatio>
-      <text>Examples</text>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.096106048053024</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem5">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <cursor>pointer</cursor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>512</left>
-      <leftRatio>0.424192212096106</leftRatio>
-      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
-      <sizeRatio>0.448275862068966</sizeRatio>
-      <text>Tutorials</text>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.096106048053024</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem6">
-      <backgroundColor>d0d0d0</backgroundColor>
-      <cursor>pointer</cursor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>628</left>
-      <leftRatio>0.52029826014913</leftRatio>
-      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
-      <sizeRatio>0.448275862068966</sizeRatio>
-      <text>Support</text>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.096106048053024</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem7">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <cursor>pointer</cursor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>744</left>
-      <leftRatio>0.616404308202154</leftRatio>
-      <onCreate>g5.initButtonV3(sender,[new g5.BStyle("rgb(107, 101, 190)","rgb(117, 111, 199)","rgb(100, 90, 180)","","","","#ffffff","#ffffff","#ffffff","rgb(77, 71, 160)")]);</onCreate>
-      <sizeRatio>0.448275862068966</sizeRatio>
-      <text>Blog</text>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.096106048053024</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem8">
-      <backgroundColor>d0d0d0</backgroundColor>
-      <heavyEnabled>false</heavyEnabled>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>860</left>
-      <leftRatio>0.777777777777778</leftRatio>
-      <sizeRatio>0.560344827586207</sizeRatio>
-      <top>0</top>
-      <width>116</width>
-      <widthRatio>0.111111111111111</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem9">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <height>52</height>
-      <heightRatio>1</heightRatio>
-      <left>976</left>
-      <leftRatio>0.888888888888889</leftRatio>
-      <sizeRatio>0.560344827586207</sizeRatio>
-      <top>0</top>
-      <width>231</width>
-      <widthRatio>0.111111111111111</widthRatio>
-    </control>
-    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem2">
-      <backgroundColor>d0d0d0</backgroundColor>
-      <height>515</height>
-      <heightRatio>0.34</heightRatio>
-      <left>0</left>
-      <onCreate>sender.c_frame = document.createElement("iframe");
-sender.c_frame.style.position = "absolute";
-sender.c_frame.style.width = "100%";
-sender.c_frame.style.height = "100%";
-sender.c_frame.style.scrolling = "auto";
-sender.c_frame.style.overflow = "auto";
-sender.c_frame.style.overflowX = "hidden";
-sender.c_frame.setAttribute("frameborder", "0", 0);
-sender.appendChild(sender.c_frame);
-sender.c_frame.src = ee.pageRoot + "/EBWeb/about";</onCreate>
-      <sizeRatio>0.34</sizeRatio>
-      <top>192</top>
-      <topRatio>0.33</topRatio>
-      <width>1207</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem3">
-      <backgroundColor>6B65BE</backgroundColor>
-      <bgColorEnabled>true</bgColorEnabled>
-      <heavyEnabled>false</heavyEnabled>
-      <height>89</height>
-      <heightRatio>0.111809045226131</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.0737365368682684</sizeRatio>
-      <top>707</top>
-      <topRatio>0.888190954773869</topRatio>
-      <width>1207</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="LayoutY" pathname="/divRoot/layouty1/layoutyitem3/layouty2">
+    <control type="LayoutX" pathname="/divRoot/layoutx1">
       <dockX>center</dockX>
-      <dockY>fill</dockY>
-      <height>74</height>
-      <heightRatio>0.943820224719101</heightRatio>
-      <left>357</left>
-      <leftRatio>0.295774647887324</leftRatio>
-      <outerBottom>10</outerBottom>
-      <outerTop>5</outerTop>
-      <sizeRatio>0.170385395537525</sizeRatio>
-      <top>5</top>
-      <topRatio>0.0561797752808989</topRatio>
-      <width>493</width>
-      <widthRatio>0.408450704225352</widthRatio>
+      <height>530</height>
+      <heightRatio>0.665829145728643</heightRatio>
+      <left>239</left>
+      <leftRatio>0.1980115990058</leftRatio>
+      <sizeRatio>0.727023319615912</sizeRatio>
+      <top>266</top>
+      <topRatio>0.334170854271357</topRatio>
+      <width>729</width>
+      <widthRatio>0.603976801988401</widthRatio>
     </control>
-    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem3/layouty2/layoutyitem4">
+    <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem1">
       <backgroundColor>f0f0f0</backgroundColor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
       <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <height>25</height>
-      <heightRatio>0.337837837837838</heightRatio>
+      <hAlign>left</hAlign>
+      <height>530</height>
+      <heightRatio>1</heightRatio>
       <left>0</left>
-      <sizeRatio>0.050709939148073</sizeRatio>
-      <text>Need help? Contact us: support@epage.dev    </text>
+      <sizeRatio>2.18106995884774</sizeRatio>
+      <text>ePage is an Internet application development platform designed to help developers quickly build and deploy various applications. It provides a range of tools and features, including an easy-to-use interface designer, flexible data modeling, powerful backend services, and integration capabilities. With ePage, developers can efficiently create feature-rich and user-friendly web and mobile applications and deploy them across multiple platforms and devices. Whether you're building an e-commerce website, a social media application, an online education platform, or any other type of application, ePage offers a rich set of features and tools to simplify and streamline the development process. Whether you're an experienced developer or a beginner, ePage can help you easily achieve your application development goals.</text>
       <top>0</top>
-      <width>493</width>
-      <widthRatio>1</widthRatio>
+      <width>243</width>
+      <widthRatio>0.333333333333333</widthRatio>
     </control>
-    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem3/layouty2/layoutyitem5">
+    <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem2">
       <backgroundColor>d0d0d0</backgroundColor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <height>24</height>
-      <heightRatio>0.324324324324324</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.0486815415821501</sizeRatio>
-      <text>Terms of Service  |  Privacy Policy  </text>
-      <top>25</top>
-      <topRatio>0.337837837837838</topRatio>
-      <width>493</width>
-      <widthRatio>1</widthRatio>
+      <height>530</height>
+      <heightRatio>1</heightRatio>
+      <left>243</left>
+      <leftRatio>0.333333333333333</leftRatio>
+      <sizeRatio>3.27572016460905</sizeRatio>
+      <top>0</top>
+      <width>243</width>
+      <widthRatio>0.333333333333333</widthRatio>
     </control>
-    <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem3/layouty2/layoutyitem6">
+    <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem3">
       <backgroundColor>f0f0f0</backgroundColor>
-      <fontBold>true</fontBold>
-      <fontColor>FFFFFF</fontColor>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <height>25</height>
-      <heightRatio>0.337837837837838</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.050709939148073</sizeRatio>
-      <text> © 2025 ePage. All rights reserved.</text>
-      <top>49</top>
-      <topRatio>0.662162162162162</topRatio>
-      <width>493</width>
-      <widthRatio>1</widthRatio>
+      <hAlign>left</hAlign>
+      <height>530</height>
+      <heightRatio>1</heightRatio>
+      <left>486</left>
+      <leftRatio>0.666666666666667</leftRatio>
+      <sizeRatio>2.18106995884774</sizeRatio>
+      <top>0</top>
+      <width>243</width>
+      <widthRatio>0.333333333333333</widthRatio>
     </control>
   </controls>
   <taskSet count="0" />
   <gridLines count="0" />
-  <g5Items count="2">
-    <item name="BStyle" type="20">
-      <varValue />
-      <functionParam>color1,color2,color3,text1,text2,text3,tColor1,tColor2,tColor3,bdColor</functionParam>
-      <functionCode>this.color1 = color1;
-this.color2 = color2
-this.color3 = color3;
-this.text1 = text1;
-this.text2 = text2;
-this.text3 = text3;
-this.tColor1 = tColor1;
-this.tColor2 = tColor2;
-this.tColor3 = tColor3;
-this.bdColor = bdColor;</functionCode>
-    </item>
-    <item name="initButtonV3" type="20">
-      <varValue />
-      <functionParam>sender,v_style</functionParam>
-      <functionCode><![CDATA[sender.v_style = v_style;
-
-sender.init = function(index) {
-    this.v_index = index;
-    this.style.backgroundColor = this.v_style[index].color1;
-    this.setText(this.v_style[index].text1);
-    this.setTextColor(this.v_style[index].tColor1);
-    if (this.v_style[index].bdColor=="") {
-        this.style.borderWidth = "0px";
-        if (this.label) eb.setDivRect(this.label.parentNode,0,0,null,null);
-    } else {
-        this.style.boxSizing="border-box";
-        this.style.borderWidth = "1px";
-        this.style.borderColor = this.v_style[index].bdColor;
-        this.style.borderStyle = "solid";
-        if (this.label) eb.setDivRect(this.label.parentNode,-1,-1,null,null);
-    }
-    //this.style.borderRadius = parseInt(eb.getDivRect(this).h/2) + "px";
-    if (this.c_cover) ee.removeControl(this.c_cover);
-    this.c_cover = createPanel(this, "", "#00000001", 0, 0, 1, 1);
-    eb.setDock(this.c_cover,"fill","fill");
-}
-
-sender.setText = function(text) {
-    var index = this.v_index;
-    if ((this.v_style[index].text1.length>0) || (this.v_style[index].text2.length>0) || (this.v_style[index].text3.length>0)) {
-        ee.setText(this,text);
-    }
-}
-
-sender.setTextColor = function(color) {
-    var index = this.v_index;
-    if ((this.v_style[index].tColor1.length>0) || (this.v_style[index].tColor2.length>0) || (this.v_style[index].tColor3.length>0)) {
-        ee.setTextColor(this, color);
-    }
-}
-
-ee.setOnMouseEnter(sender, function(sender,event) { 
-    var s =sender.v_style[sender.v_index];
-    sender.style.backgroundColor = s.color2;
-    this.setText(s.text2);
-    this.setTextColor(s.tColor2);
-});
-ee.setOnMouseLeave(sender, function(sender,event) { 
-    var s =sender.v_style[sender.v_index];
-    sender.style.backgroundColor = s.color1;
-    this.setText(s.text1);
-    this.setTextColor(s.tColor1);
-});
-sender.eeMouseDown = function(sender,event,x,y) {
-    var s =sender.v_style[sender.v_index];
-    sender.style.backgroundColor = s.color3;
-    this.setText(s.text3);
-    this.setTextColor(s.tColor3);
-}
-sender.eeMouseUp = function(sender,event,x,y) {
-    var s =sender.v_style[sender.v_index];
-    if ("ontouchstart" in window) {
-        sender.style.backgroundColor = s.color1;
-        this.setText(s.text1);
-        this.setTextColor(s.tColor1);
-    } else {
-        sender.style.backgroundColor = s.color2;
-        this.setText(s.text2);
-        this.setTextColor(s.tColor2);
-    }
-}
-sender.eeOnClickCancel = function(sender,event) {
-    var s =sender.v_style[sender.v_index];
-    sender.style.backgroundColor = s.color1;
-    this.setText(s.text1);
-    this.setTextColor(s.tColor1);
-}
-eb.initMouseEvent(sender);
-
-sender.init(0);]]></functionCode>
-    </item>
-  </g5Items>
+  <g5Items count="0" />
 </page>
