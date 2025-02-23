@@ -4,69 +4,71 @@
       <backgroundColor>ffffff</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
       <dockX>fill</dockX>
-      <height>796</height>
+      <height>672</height>
       <left>0</left>
-      <top>0</top>
-      <width>1207</width>
+      <top>-7</top>
+      <width>1192</width>
     </control>
     <control type="Panel" pathname="/divRoot/panel1">
       <backgroundImg>ePageBg.jpg</backgroundImg>
       <dockX>fill</dockX>
-      <height>265</height>
-      <heightRatio>0.332914572864322</heightRatio>
+      <height>264</height>
+      <heightRatio>0.331658291457286</heightRatio>
       <left>0</left>
-      <sizeRatio>0.219552609776305</sizeRatio>
+      <sizeRatio>0.221848739495798</sizeRatio>
       <top>0</top>
-      <width>1207</width>
+      <width>1192</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="LayoutX" pathname="/divRoot/layoutx1">
       <dockX>center</dockX>
-      <height>530</height>
-      <heightRatio>0.665829145728643</heightRatio>
-      <left>239</left>
-      <leftRatio>0.1980115990058</leftRatio>
-      <sizeRatio>0.727023319615912</sizeRatio>
-      <top>266</top>
-      <topRatio>0.334170854271357</topRatio>
-      <width>729</width>
-      <widthRatio>0.603976801988401</widthRatio>
+      <height>514</height>
+      <heightRatio>0.64572864321608</heightRatio>
+      <left>40</left>
+      <leftRatio>0.0327731092436975</leftRatio>
+      <sizeRatio>0.462646264626463</sizeRatio>
+      <top>282</top>
+      <topRatio>0.35427135678392</topRatio>
+      <width>1111</width>
+      <widthRatio>0.933613445378151</widthRatio>
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem1">
       <backgroundColor>f0f0f0</backgroundColor>
       <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
+      <fontSize>12</fontSize>
       <hAlign>left</hAlign>
-      <height>530</height>
+      <height>514</height>
       <heightRatio>1</heightRatio>
       <left>0</left>
-      <sizeRatio>2.18106995884774</sizeRatio>
+      <sizeRatio>1.48985507246377</sizeRatio>
       <text>ePage is an Internet application development platform designed to help developers quickly build and deploy various applications. It provides a range of tools and features, including an easy-to-use interface designer, flexible data modeling, powerful backend services, and integration capabilities. With ePage, developers can efficiently create feature-rich and user-friendly web and mobile applications and deploy them across multiple platforms and devices. Whether you're building an e-commerce website, a social media application, an online education platform, or any other type of application, ePage offers a rich set of features and tools to simplify and streamline the development process. Whether you're an experienced developer or a beginner, ePage can help you easily achieve your application development goals.</text>
       <top>0</top>
-      <width>243</width>
-      <widthRatio>0.333333333333333</widthRatio>
+      <vAlign>top</vAlign>
+      <width>370</width>
+      <widthRatio>0.333011583011583</widthRatio>
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem2">
       <backgroundColor>d0d0d0</backgroundColor>
-      <height>530</height>
+      <height>514</height>
       <heightRatio>1</heightRatio>
-      <left>243</left>
-      <leftRatio>0.333333333333333</leftRatio>
-      <sizeRatio>3.27572016460905</sizeRatio>
+      <left>370</left>
+      <leftRatio>0.333011583011583</leftRatio>
+      <sizeRatio>1.48554913294798</sizeRatio>
       <top>0</top>
-      <width>243</width>
-      <widthRatio>0.333333333333333</widthRatio>
+      <width>371</width>
+      <widthRatio>0.333976833976834</widthRatio>
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem3">
       <backgroundColor>f0f0f0</backgroundColor>
       <hAlign>left</hAlign>
-      <height>530</height>
+      <height>514</height>
       <heightRatio>1</heightRatio>
-      <left>486</left>
-      <leftRatio>0.666666666666667</leftRatio>
-      <sizeRatio>2.18106995884774</sizeRatio>
+      <left>741</left>
+      <leftRatio>0.666988416988417</leftRatio>
+      <sizeRatio>1.48985507246377</sizeRatio>
       <top>0</top>
-      <width>243</width>
-      <widthRatio>0.333333333333333</widthRatio>
+      <width>370</width>
+      <widthRatio>0.333011583011583</widthRatio>
     </control>
   </controls>
   <taskSet count="0" />
