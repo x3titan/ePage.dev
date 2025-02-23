@@ -5,21 +5,21 @@
       <bgColorEnabled>true</bgColorEnabled>
       <dockX>fill</dockX>
       <dockY>fill</dockY>
-      <height>796</height>
+      <height>876</height>
       <left>0</left>
       <scrollPosX>3</scrollPosX>
       <top>0</top>
-      <width>1207</width>
+      <width>1192</width>
     </control>
     <control type="LayoutY" pathname="/divRoot/layouty1">
       <dockX>fill</dockX>
       <dockY>fill</dockY>
-      <height>796</height>
+      <height>876</height>
       <heightRatio>1</heightRatio>
       <left>0</left>
       <sizeRatio>0.659486329743165</sizeRatio>
       <top>0</top>
-      <width>1207</width>
+      <width>1192</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem1">
@@ -30,7 +30,7 @@
       <left>0</left>
       <sizeRatio>0.15907207953604</sizeRatio>
       <top>0</top>
-      <width>1207</width>
+      <width>1192</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="Panel" pathname="/divRoot/layouty1/layoutyitem1/panel8">
@@ -72,7 +72,7 @@
       <sizeRatio>0.0430820215410108</sizeRatio>
       <top>140</top>
       <topRatio>0.729166666666667</topRatio>
-      <width>1207</width>
+      <width>1192</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layouty1/layoutyitem1/layoutx1/layoutxitem1">
@@ -220,28 +220,40 @@
       <leftRatio>0.808616404308202</leftRatio>
       <sizeRatio>0.225108225108225</sizeRatio>
       <top>0</top>
-      <width>231</width>
+      <width>216</width>
       <widthRatio>0.191383595691798</widthRatio>
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem2">
       <backgroundColor>d0d0d0</backgroundColor>
-      <height>515</height>
+      <height>595</height>
       <heightRatio>0.646984924623116</heightRatio>
       <left>0</left>
       <onCreate>sender.c_frame = document.createElement("iframe");
 sender.c_frame.style.position = "absolute";
 sender.c_frame.style.width = "100%";
 sender.c_frame.style.height = "100%";
-sender.c_frame.style.scrolling = "auto";
-sender.c_frame.style.overflow = "auto";
-sender.c_frame.style.overflowX = "hidden";
-sender.c_frame.setAttribute("frameborder", "0", 0);
+sender.c_frame.style.display = "block";
+sender.c_frame.style.overflow = "hidden"; // 确保 X 方向不滚动
+sender.c_frame.style.border = "none"; // 避免外部边框
+sender.c_frame.setAttribute("scrolling", "yes"); // 让 Y 方向滚动自动出现
+sender.c_frame.setAttribute("frameborder", "0");
 sender.appendChild(sender.c_frame);
-sender.c_frame.src = ee.pageRoot + "/home";</onCreate>
+sender.c_frame.src = ee.pageRoot + "/home";
+sender.style.overflowX = "hidden";
+
+sender.c_frame.onload = function() {
+    var iframeDoc = sender.c_frame.contentWindow.document;
+    if (iframeDoc) {
+        var style = iframeDoc.createElement("style");
+        style.innerHTML = "html, body { overflow-x: hidden; width: 100%; }";
+        iframeDoc.head.appendChild(style);
+    }
+};
+</onCreate>
       <sizeRatio>0.426677713338857</sizeRatio>
       <top>192</top>
       <topRatio>0.241206030150754</topRatio>
-      <width>1207</width>
+      <width>1192</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layouty1/layoutyitem3">
@@ -252,9 +264,9 @@ sender.c_frame.src = ee.pageRoot + "/home";</onCreate>
       <heightRatio>0.111809045226131</heightRatio>
       <left>0</left>
       <sizeRatio>0.0737365368682684</sizeRatio>
-      <top>707</top>
+      <top>787</top>
       <topRatio>0.888190954773869</topRatio>
-      <width>1207</width>
+      <width>1192</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="LayoutY" pathname="/divRoot/layouty1/layoutyitem3/layouty2">
@@ -262,7 +274,7 @@ sender.c_frame.src = ee.pageRoot + "/home";</onCreate>
       <dockY>fill</dockY>
       <height>74</height>
       <heightRatio>0.831460674157303</heightRatio>
-      <left>357</left>
+      <left>349</left>
       <leftRatio>0.295774647887324</leftRatio>
       <outerBottom>10</outerBottom>
       <outerTop>5</outerTop>
