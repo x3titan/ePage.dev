@@ -1,19 +1,19 @@
 <page>
-  <controls count="21">
+  <controls count="15">
     <control type="DivRoot" pathname="/divRoot">
       <backgroundColor>ffffff</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
       <dockX>fill</dockX>
-      <height>1000</height>
+      <height>1600</height>
       <left>0</left>
-      <top>-8</top>
+      <top>0</top>
       <width>1192</width>
     </control>
     <control type="Panel" pathname="/divRoot/panel1">
       <backgroundImg>ePageBg.jpg</backgroundImg>
       <dockX>fill</dockX>
       <height>264</height>
-      <heightRatio>0.392857142857143</heightRatio>
+      <heightRatio>0.264</heightRatio>
       <left>0</left>
       <sizeRatio>0.221476510067114</sizeRatio>
       <top>0</top>
@@ -22,13 +22,14 @@
     </control>
     <control type="LayoutX" pathname="/divRoot/layoutx1">
       <dockX>center</dockX>
-      <height>674</height>
-      <heightRatio>0.674</heightRatio>
+      <fieldCount>2</fieldCount>
+      <height>1166</height>
+      <heightRatio>0.72875</heightRatio>
       <left>40</left>
       <leftRatio>0.0335570469798658</leftRatio>
-      <sizeRatio>0.606660666066607</sizeRatio>
+      <sizeRatio>1.04950495049505</sizeRatio>
       <top>282</top>
-      <topRatio>0.282</topRatio>
+      <topRatio>0.17625</topRatio>
       <width>1111</width>
       <widthRatio>0.932046979865772</widthRatio>
     </control>
@@ -37,20 +38,19 @@
       <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
       <fontSize>12</fontSize>
       <hAlign>left</hAlign>
-      <height>674</height>
+      <height>1166</height>
       <heightRatio>1</heightRatio>
       <left>0</left>
-      <leftRatio>-0.0009000900090009</leftRatio>
-      <sizeRatio>1.38918918918919</sizeRatio>
+      <sizeRatio>1.82162162162162</sizeRatio>
       <top>0</top>
       <vAlign>top</vAlign>
-      <width>370</width>
+      <width>556</width>
       <widthRatio>0.333033303330333</widthRatio>
     </control>
     <control type="LayoutY" pathname="/divRoot/layoutx1/layoutxitem1/layouty1">
       <dockX>fill</dockX>
       <dockY>fill</dockY>
-      <height>674</height>
+      <height>1166</height>
       <heightRatio>1</heightRatio>
       <left>0</left>
       <onCreate>sender.style.boxSizing="border-box";
@@ -59,33 +59,33 @@ sender.style.borderColor = "rgb(230,236,240)";
 sender.style.borderStyle = "solid";
 sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <outerRight>10</outerRight>
-      <sizeRatio>1.82162162162162</sizeRatio>
+      <sizeRatio>1.87222222222222</sizeRatio>
       <top>0</top>
-      <width>360</width>
-      <widthRatio>1</widthRatio>
+      <width>546</width>
+      <widthRatio>0.972972972972973</widthRatio>
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem1/layouty1/layoutyitem1">
       <backgroundColor>f0f0f0</backgroundColor>
       <backgroundImg>CPY0000.jpg</backgroundImg>
       <heavyEnabled>false</heavyEnabled>
-      <height>171</height>
-      <heightRatio>0.332684824902724</heightRatio>
+      <height>300</height>
+      <heightRatio>0.340522133938706</heightRatio>
       <left>0</left>
-      <sizeRatio>0.462162162162162</sizeRatio>
+      <sizeRatio>0.54945054945055</sizeRatio>
       <top>0</top>
-      <width>360</width>
+      <width>546</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem1/layouty1/layoutyitem2">
       <backgroundColor>d0d0d0</backgroundColor>
       <heavyEnabled>false</heavyEnabled>
       <height>15</height>
-      <heightRatio>0.0291828793774319</heightRatio>
+      <heightRatio>0.0222551928783383</heightRatio>
       <left>0</left>
-      <sizeRatio>0.0405405405405405</sizeRatio>
-      <top>171</top>
-      <topRatio>0.332684824902724</topRatio>
-      <width>360</width>
+      <sizeRatio>0.0416666666666667</sizeRatio>
+      <top>300</top>
+      <topRatio>0.253709198813056</topRatio>
+      <width>546</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem1/layouty1/layoutyitem3">
@@ -93,14 +93,14 @@ sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
       <fontSize>12</fontSize>
       <hAlign>left</hAlign>
-      <height>488</height>
-      <heightRatio>0.638132295719844</heightRatio>
+      <height>851</height>
+      <heightRatio>0.724035608308605</heightRatio>
       <left>0</left>
-      <sizeRatio>0.886486486486487</sizeRatio>
-      <top>186</top>
-      <topRatio>0.361867704280156</topRatio>
+      <sizeRatio>1.35555555555556</sizeRatio>
+      <top>315</top>
+      <topRatio>0.275964391691395</topRatio>
       <vAlign>top</vAlign>
-      <width>360</width>
+      <width>546</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="Panel" pathname="/divRoot/layoutx1/layoutxitem1/layouty1/layoutyitem3/panel2">
@@ -109,34 +109,51 @@ sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
       <fontSize>12</fontSize>
       <hAlign>left</hAlign>
-      <height>488</height>
+      <height>851</height>
       <heightRatio>1</heightRatio>
       <left>10</left>
-      <leftRatio>0.027027027027027</leftRatio>
+      <leftRatio>0.0183150183150183</leftRatio>
       <outerLeft>10</outerLeft>
       <outerRight>10</outerRight>
-      <sizeRatio>1.06571428571429</sizeRatio>
-      <text>ePage is an Internet application development platform designed to help developers quickly build and deploy various applications. It provides a range of tools and features, including an easy-to-use interface designer, flexible data modeling, powerful backend services, and integration capabilities. With ePage, developers can efficiently create feature-rich and user-friendly web and mobile applications and deploy them across multiple platforms and devices. Whether you're building an e-commerce website, a social media application, an online education platform, or any other type of application, ePage offers a rich set of features and tools to simplify and streamline the development process. Whether you're an experienced developer or a beginner, ePage can help you easily achieve your application development goals.</text>
+      <sizeRatio>1.80988593155894</sizeRatio>
+      <text><![CDATA[    <strong>What is ePage?</strong><br>
+    ePage is an <em>Internet application development platform</em> designed to help developers quickly <strong>build</strong> and <strong>deploy</strong> various applications.<br>
+    It provides a range of powerful tools and features, including:<br>
+    &amp;bull; 🖌️ <strong>Easy-to-use Interface Designer</strong> – Create web applications with an intuitive drag-and-drop interface.
+    &amp;bull; 📊 <strong>Flexible Data Modeling</strong> – Structure and manage your data with ease.
+    &amp;bull; ⚙️ <strong>Powerful Backend Services</strong> – Scalable and secure server-side functionality.
+    &amp;bull; 🔗 <strong>Integration Capabilities</strong> – Seamlessly connect with APIs and third-party services.<br>
+    With ePage, developers can efficiently create <strong>feature-rich and user-friendly</strong> web and mobile applications and deploy them across multiple platforms and devices.<br>
+    <strong>What Can You Build with ePage?</strong><br>
+    Whether you're developing:<br>
+    &amp;bull; 🛒 <strong>An E-commerce Website</strong> – Sell products with an engaging online storefront.
+    &amp;bull; 📱 <strong>A Social Media Application</strong> – Connect users in an interactive way.
+    &amp;bull; 🎓 <strong>An Online Education Platform</strong> – Power virtual learning experiences.
+    &amp;bull; 🚀 <strong>Any Other Web or Mobile App</strong> – Customize for your unique needs.<br>
+    ePage offers a comprehensive set of features to <strong>simplify and streamline</strong> the development process.<br>
+    Whether you're an <strong>experienced developer</strong> or just <strong>getting started</strong>, ePage helps you <strong>effortlessly bring your ideas to life</strong>.
+]]></text>
+      <textAutoBr>false</textAutoBr>
       <top>0</top>
       <vAlign>top</vAlign>
-      <width>340</width>
-      <widthRatio>0.945945945945946</widthRatio>
+      <width>526</width>
+      <widthRatio>0.963369963369963</widthRatio>
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem2">
       <backgroundColor>d0d0d0</backgroundColor>
-      <height>674</height>
+      <height>1166</height>
       <heightRatio>1</heightRatio>
-      <left>370</left>
-      <leftRatio>0.333033303330333</leftRatio>
-      <sizeRatio>1.38544474393531</sizeRatio>
+      <left>556</left>
+      <leftRatio>0.3996399639964</leftRatio>
+      <sizeRatio>1.3208395802099</sizeRatio>
       <top>0</top>
-      <width>371</width>
-      <widthRatio>0.333933393339334</widthRatio>
+      <width>555</width>
+      <widthRatio>0.6003600360036</widthRatio>
     </control>
     <control type="LayoutY" pathname="/divRoot/layoutx1/layoutxitem2/layouty2">
       <dockX>fill</dockX>
       <dockY>fill</dockY>
-      <height>674</height>
+      <height>1166</height>
       <heightRatio>1</heightRatio>
       <left>0</left>
       <onCreate>sender.style.boxSizing="border-box";
@@ -145,33 +162,33 @@ sender.style.borderColor = "rgb(230,236,240)";
 sender.style.borderStyle = "solid";
 sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <outerRight>10</outerRight>
-      <sizeRatio>1.87222222222222</sizeRatio>
+      <sizeRatio>1.86703601108033</sizeRatio>
       <top>0</top>
-      <width>361</width>
-      <widthRatio>0.970350404312669</widthRatio>
+      <width>545</width>
+      <widthRatio>0.973045822102426</widthRatio>
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem2/layouty2/layoutyitem4">
       <backgroundColor>f0f0f0</backgroundColor>
-      <backgroundImg>CPY0000.jpg</backgroundImg>
+      <backgroundImg>CPY0003.jpg</backgroundImg>
       <heavyEnabled>false</heavyEnabled>
-      <height>171</height>
-      <heightRatio>0.332684824902724</heightRatio>
+      <height>300</height>
+      <heightRatio>0.340522133938706</heightRatio>
       <left>0</left>
-      <sizeRatio>0.462162162162162</sizeRatio>
+      <sizeRatio>0.55045871559633</sizeRatio>
       <top>0</top>
-      <width>361</width>
+      <width>545</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem2/layouty2/layoutyitem5">
       <backgroundColor>d0d0d0</backgroundColor>
       <heavyEnabled>false</heavyEnabled>
       <height>15</height>
-      <heightRatio>0.0291828793774319</heightRatio>
+      <heightRatio>0.0222551928783383</heightRatio>
       <left>0</left>
-      <sizeRatio>0.0405405405405405</sizeRatio>
-      <top>171</top>
-      <topRatio>0.332684824902724</topRatio>
-      <width>361</width>
+      <sizeRatio>0.0415512465373961</sizeRatio>
+      <top>300</top>
+      <topRatio>0.253709198813056</topRatio>
+      <width>545</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem2/layouty2/layoutyitem6">
@@ -179,14 +196,14 @@ sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
       <fontSize>12</fontSize>
       <hAlign>left</hAlign>
-      <height>488</height>
-      <heightRatio>0.638132295719844</heightRatio>
+      <height>851</height>
+      <heightRatio>0.724035608308605</heightRatio>
       <left>0</left>
-      <sizeRatio>0.886486486486487</sizeRatio>
-      <top>186</top>
-      <topRatio>0.361867704280156</topRatio>
+      <sizeRatio>1.35180055401662</sizeRatio>
+      <top>315</top>
+      <topRatio>0.275964391691395</topRatio>
       <vAlign>top</vAlign>
-      <width>361</width>
+      <width>545</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="Panel" pathname="/divRoot/layoutx1/layoutxitem2/layouty2/layoutyitem6/panel3">
@@ -195,135 +212,46 @@ sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
       <fontSize>12</fontSize>
       <hAlign>left</hAlign>
-      <height>488</height>
+      <height>851</height>
       <heightRatio>1</heightRatio>
       <left>10</left>
-      <leftRatio>0.0277008310249307</leftRatio>
+      <leftRatio>0.018348623853211</leftRatio>
       <onCreate><![CDATA[let t = ee.getText(sender);
 t = t.replace(/<br\s*\/?>/g, "");
 ee.setText(sender,t);
 ]]></onCreate>
       <outerLeft>10</outerLeft>
       <outerRight>10</outerRight>
-      <sizeRatio>1.43108504398827</sizeRatio>
-      <text><![CDATA[<section id="browser-compatibility">
-    <strong>Browser Compatibility</strong> ePage is designed to deliver a <strong>seamless and responsive experience</strong> across all modern web browsers, ensuring consistency and reliability on <strong>both desktop and mobile devices</strong>. Whether you are developing on a <strong>widescreen monitor, tablet, or a vertically oriented smartphone</strong>, ePage adapts fluidly to different screen sizes.<br>
-
+      <sizeRatio>1.62095238095238</sizeRatio>
+      <text><![CDATA[    ePage is designed to deliver a <strong>seamless and responsive experience</strong> across all modern web browsers, ensuring consistency and reliability on <strong>both desktop and mobile devices</strong>. Whether you are developing on a <strong>widescreen monitor, tablet, or a vertically oriented smartphone</strong>, ePage adapts fluidly to different screen sizes.
+<br>
+<br>
     <strong>✅ Desktop:</strong>
-    <ul style="margin: 0; padding-left: 20px; list-style-type: none;">
-        <li>• <strong>Google Chrome</strong> (Recommended for optimal performance)</li>
-        <li>• <strong>Mozilla Firefox</strong></li>
-        <li>• <strong>Microsoft Edge</strong></li>
-        <li>• <strong>Apple Safari</strong></li>
-        <li>• <strong>Opera</strong></li>
-    </ul>
-
+<br>
+    • <strong>Google Chrome</strong> (Recommended for optimal performance)<br>
+    • <strong>Mozilla Firefox</strong><br>
+    • <strong>Microsoft Edge</strong><br>
+    • <strong>Apple Safari</strong><br>
+    • <strong>Opera</strong>
+<br>
+<br>
     <strong>✅ Mobile (Portrait &amp; Landscape Mode):</strong>
-    <ul style="margin: 0; padding-left: 20px; list-style-type: none;">
-        <li>• <strong>Safari (iOS)</strong> – iPhones &amp; iPads</li>
-        <li>• <strong>Chrome (Android &amp; iOS)</strong></li>
-        <li>• <strong>Samsung Internet (Android)</strong></li>
-        <li>• <strong>Edge (Mobile)</strong></li>
-    </ul>
-
-    ePage utilizes <strong>responsive design principles</strong> and <strong>CSS media queries</strong> to ensure that the interface remains intuitive and user-friendly, even on <strong>vertically oriented mobile browsers</strong>. This means that <strong>buttons, menus, and workspace elements adjust dynamically</strong> for smaller screens, providing a smooth experience for mobile developers.<br>
+<br>
+    • <strong>Safari (iOS)</strong> – iPhones &amp; iPads<br>
+    • <strong>Chrome (Android &amp; iOS)</strong><br>
+    • <strong>Samsung Internet (Android)</strong><br>
+    • <strong>Edge (Mobile)</strong>
+<br>
+<br>
+    ePage utilizes <strong>responsive design principles</strong> and <strong>CSS media queries</strong> to ensure that the interface remains intuitive and user-friendly, even on <strong>vertically oriented mobile browsers</strong>. This means that <strong>buttons, menus, and workspace elements adjust dynamically</strong> for smaller screens, providing a smooth experience for mobile developers.<br><br>
 
     For the best performance, it is recommended to use <strong>the latest browser versions</strong>, as older browsers may lack support for modern web technologies such as <strong>CSS Grid, Flexbox, and Web Components</strong>.
-</section>
 ]]></text>
+      <textAutoBr>false</textAutoBr>
       <top>0</top>
       <vAlign>top</vAlign>
-      <width>341</width>
-      <widthRatio>0.944598337950138</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem3">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <hAlign>left</hAlign>
-      <height>674</height>
-      <heightRatio>1</heightRatio>
-      <left>741</left>
-      <leftRatio>0.666966696669667</leftRatio>
-      <sizeRatio>1.38918918918919</sizeRatio>
-      <top>0</top>
-      <width>370</width>
-      <widthRatio>0.333033303330333</widthRatio>
-    </control>
-    <control type="LayoutY" pathname="/divRoot/layoutx1/layoutxitem3/layouty3">
-      <dockX>fill</dockX>
-      <dockY>fill</dockY>
-      <height>674</height>
-      <heightRatio>1</heightRatio>
-      <left>0</left>
-      <leftRatio>0.262162162162162</leftRatio>
-      <onCreate>sender.style.boxSizing="border-box";
-sender.style.borderWidth = "1px";
-sender.style.borderColor = "rgb(230,236,240)";
-sender.style.borderStyle = "solid";
-sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
-      <outerRight>10</outerRight>
-      <sizeRatio>1.87222222222222</sizeRatio>
-      <top>0</top>
-      <topRatio>0.194362017804154</topRatio>
-      <width>360</width>
-      <widthRatio>0.972972972972973</widthRatio>
-    </control>
-    <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem3/layouty3/layoutyitem7">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <backgroundImg>CPY0000.jpg</backgroundImg>
-      <heavyEnabled>false</heavyEnabled>
-      <height>171</height>
-      <heightRatio>0.332684824902724</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.462162162162162</sizeRatio>
-      <top>0</top>
-      <width>360</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem3/layouty3/layoutyitem8">
-      <backgroundColor>d0d0d0</backgroundColor>
-      <heavyEnabled>false</heavyEnabled>
-      <height>15</height>
-      <heightRatio>0.0291828793774319</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.0405405405405405</sizeRatio>
-      <top>171</top>
-      <topRatio>0.332684824902724</topRatio>
-      <width>360</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem3/layouty3/layoutyitem9">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <hAlign>left</hAlign>
-      <height>488</height>
-      <heightRatio>0.638132295719844</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.886486486486487</sizeRatio>
-      <top>186</top>
-      <topRatio>0.361867704280156</topRatio>
-      <vAlign>top</vAlign>
-      <width>360</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="Panel" pathname="/divRoot/layoutx1/layoutxitem3/layouty3/layoutyitem9/panel4">
-      <dockX>fill</dockX>
-      <dockY>fill</dockY>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <hAlign>left</hAlign>
-      <height>488</height>
-      <heightRatio>1</heightRatio>
-      <left>10</left>
-      <leftRatio>0.027027027027027</leftRatio>
-      <outerLeft>10</outerLeft>
-      <outerRight>10</outerRight>
-      <sizeRatio>1.06571428571429</sizeRatio>
-      <text>ePage is an Internet application development platform designed to help developers quickly build and deploy various applications. It provides a range of tools and features, including an easy-to-use interface designer, flexible data modeling, powerful backend services, and integration capabilities. With ePage, developers can efficiently create feature-rich and user-friendly web and mobile applications and deploy them across multiple platforms and devices. Whether you're building an e-commerce website, a social media application, an online education platform, or any other type of application, ePage offers a rich set of features and tools to simplify and streamline the development process. Whether you're an experienced developer or a beginner, ePage can help you easily achieve your application development goals.</text>
-      <top>0</top>
-      <vAlign>top</vAlign>
-      <width>340</width>
-      <widthRatio>0.945945945945946</widthRatio>
+      <width>525</width>
+      <widthRatio>0.963302752293578</widthRatio>
     </control>
   </controls>
   <taskSet count="0" />
