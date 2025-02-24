@@ -199,44 +199,36 @@ sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <heightRatio>1</heightRatio>
       <left>10</left>
       <leftRatio>0.0277008310249307</leftRatio>
+      <onCreate><![CDATA[let t = ee.getText(sender);
+t = t.replace(/<br\s*\/?>/g, "");
+ee.setText(sender,t);
+]]></onCreate>
       <outerLeft>10</outerLeft>
       <outerRight>10</outerRight>
       <sizeRatio>1.43108504398827</sizeRatio>
       <text><![CDATA[<section id="browser-compatibility">
-    <h2>Browser Compatibility</h2>
-    <p>
-        ePage is designed to deliver a <strong>seamless and responsive experience</strong> across all modern web browsers, ensuring consistency and reliability on 
-        <strong>both desktop and mobile devices</strong>. Whether you are developing on a <strong>widescreen monitor, tablet, or a vertically oriented smartphone</strong>, 
-        ePage adapts fluidly to different screen sizes.
-    </p>
+    <strong>Browser Compatibility</strong> ePage is designed to deliver a <strong>seamless and responsive experience</strong> across all modern web browsers, ensuring consistency and reliability on <strong>both desktop and mobile devices</strong>. Whether you are developing on a <strong>widescreen monitor, tablet, or a vertically oriented smartphone</strong>, ePage adapts fluidly to different screen sizes.<br>
 
-    <p><strong>✅ Desktop:</strong></p>
-    <ul>
-        <li><strong>Google Chrome</strong> (Recommended for optimal performance)</li>
-        <li><strong>Mozilla Firefox</strong></li>
-        <li><strong>Microsoft Edge</strong></li>
-        <li><strong>Apple Safari</strong></li>
-        <li><strong>Opera</strong></li>
+    <strong>✅ Desktop:</strong>
+    <ul style="margin: 0; padding-left: 20px; list-style-type: none;">
+        <li>• <strong>Google Chrome</strong> (Recommended for optimal performance)</li>
+        <li>• <strong>Mozilla Firefox</strong></li>
+        <li>• <strong>Microsoft Edge</strong></li>
+        <li>• <strong>Apple Safari</strong></li>
+        <li>• <strong>Opera</strong></li>
     </ul>
 
-    <p><strong>✅ Mobile (Portrait &amp; Landscape Mode):</strong></p>
-    <ul>
-        <li><strong>Safari (iOS)</strong> – iPhones &amp; iPads</li>
-        <li><strong>Chrome (Android &amp; iOS)</strong></li>
-        <li><strong>Samsung Internet (Android)</strong></li>
-        <li><strong>Edge (Mobile)</strong></li>
+    <strong>✅ Mobile (Portrait &amp; Landscape Mode):</strong>
+    <ul style="margin: 0; padding-left: 20px; list-style-type: none;">
+        <li>• <strong>Safari (iOS)</strong> – iPhones &amp; iPads</li>
+        <li>• <strong>Chrome (Android &amp; iOS)</strong></li>
+        <li>• <strong>Samsung Internet (Android)</strong></li>
+        <li>• <strong>Edge (Mobile)</strong></li>
     </ul>
 
-    <p>
-        ePage utilizes <strong>responsive design principles</strong> and <strong>CSS media queries</strong> to ensure that the interface remains intuitive and user-friendly, even on 
-        <strong>vertically oriented mobile browsers</strong>. This means that <strong>buttons, menus, and workspace elements adjust dynamically</strong> for smaller screens, 
-        providing a smooth experience for mobile developers.
-    </p>
+    ePage utilizes <strong>responsive design principles</strong> and <strong>CSS media queries</strong> to ensure that the interface remains intuitive and user-friendly, even on <strong>vertically oriented mobile browsers</strong>. This means that <strong>buttons, menus, and workspace elements adjust dynamically</strong> for smaller screens, providing a smooth experience for mobile developers.<br>
 
-    <p>
-        For the best performance, it is recommended to use <strong>the latest browser versions</strong>, as older browsers may lack support for modern web technologies such as 
-        <strong>CSS Grid, Flexbox, and Web Components</strong>.
-    </p>
+    For the best performance, it is recommended to use <strong>the latest browser versions</strong>, as older browsers may lack support for modern web technologies such as <strong>CSS Grid, Flexbox, and Web Components</strong>.
 </section>
 ]]></text>
       <top>0</top>
