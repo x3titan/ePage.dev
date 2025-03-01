@@ -1,11 +1,11 @@
 <page>
-  <controls count="26">
+  <controls count="29">
     <control type="DivRoot" pathname="/divRoot">
       <backgroundColor>ffffff</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
       <dockX>fill</dockX>
       <dockY>fill</dockY>
-      <height>1041</height>
+      <height>922</height>
       <left>0</left>
       <top>0</top>
       <width>1602</width>
@@ -14,7 +14,7 @@
       <dockX>fill</dockX>
       <dockY>fill</dockY>
       <fieldCount>2</fieldCount>
-      <height>1041</height>
+      <height>922</height>
       <heightRatio>1</heightRatio>
       <left>0</left>
       <sizeRatio>0.649812734082397</sizeRatio>
@@ -25,7 +25,7 @@
     <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem1">
       <backgroundColor>f0f0f0</backgroundColor>
       <heavyEnabled>false</heavyEnabled>
-      <height>1041</height>
+      <height>922</height>
       <heightRatio>1</heightRatio>
       <left>0</left>
       <onCreate><![CDATA[g5.menus = sender.eeChildren;
@@ -481,7 +481,7 @@ for (i=0; i<g5.menus.length; i++) {
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem2">
       <backgroundColor>d0d0d0</backgroundColor>
-      <height>1041</height>
+      <height>922</height>
       <heightRatio>1</heightRatio>
       <left>380</left>
       <leftRatio>0.258426966292135</leftRatio>
@@ -490,6 +490,42 @@ for (i=0; i<g5.menus.length; i++) {
       <topRatio>0.0201729106628242</topRatio>
       <width>1222</width>
       <widthRatio>0.747191011235955</widthRatio>
+    </control>
+    <control type="LayoutX" pathname="/divRoot/layoutx1/layoutxitem2/layoutx2">
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <ee_LocalName>P_01</ee_LocalName>
+      <fieldCount>2</fieldCount>
+      <height>922</height>
+      <heightRatio>1</heightRatio>
+      <layerName>P01</layerName>
+      <left>0</left>
+      <sizeRatio>0.754500818330606</sizeRatio>
+      <top>0</top>
+      <width>1222</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem2/layoutx2/layoutxitem3">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <height>922</height>
+      <heightRatio>1</heightRatio>
+      <left>0</left>
+      <sizeRatio>3.03030303030303</sizeRatio>
+      <top>0</top>
+      <width>817</width>
+      <widthRatio>0.33</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem2/layoutx2/layoutxitem4">
+      <backgroundColor>d0d0d0</backgroundColor>
+      <heavyEnabled>false</heavyEnabled>
+      <height>922</height>
+      <heightRatio>1</heightRatio>
+      <left>817</left>
+      <leftRatio>0.668576104746318</leftRatio>
+      <sizeRatio>2.27654320987654</sizeRatio>
+      <top>0</top>
+      <width>405</width>
+      <widthRatio>0.331423895253682</widthRatio>
     </control>
   </controls>
   <taskSet count="0" />

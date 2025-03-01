@@ -7,17 +7,17 @@
       <height>1600</height>
       <left>0</left>
       <top>0</top>
-      <width>1192</width>
+      <width>1602</width>
     </control>
     <control type="Panel" pathname="/divRoot/panel1">
       <backgroundImg>ePageBg.jpg</backgroundImg>
       <dockX>fill</dockX>
       <height>264</height>
-      <heightRatio>0.264</heightRatio>
+      <heightRatio>0.165</heightRatio>
       <left>0</left>
       <sizeRatio>0.221476510067114</sizeRatio>
       <top>0</top>
-      <width>1192</width>
+      <width>1602</width>
       <widthRatio>1</widthRatio>
     </control>
     <control type="LayoutX" pathname="/divRoot/layoutx1">
@@ -25,7 +25,7 @@
       <fieldCount>2</fieldCount>
       <height>1166</height>
       <heightRatio>0.72875</heightRatio>
-      <left>40</left>
+      <left>245</left>
       <leftRatio>0.0335570469798658</leftRatio>
       <sizeRatio>1.04950495049505</sizeRatio>
       <top>282</top>
@@ -41,11 +41,11 @@
       <height>1166</height>
       <heightRatio>1</heightRatio>
       <left>0</left>
-      <sizeRatio>1.82162162162162</sizeRatio>
+      <sizeRatio>2.09712230215827</sizeRatio>
       <top>0</top>
       <vAlign>top</vAlign>
       <width>556</width>
-      <widthRatio>0.333033303330333</widthRatio>
+      <widthRatio>0.5004500450045</widthRatio>
     </control>
     <control type="LayoutY" pathname="/divRoot/layoutx1/layoutxitem1/layouty1">
       <dockX>fill</dockX>
@@ -59,17 +59,17 @@ sender.style.borderColor = "rgb(230,236,240)";
 sender.style.borderStyle = "solid";
 sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <outerRight>10</outerRight>
-      <sizeRatio>1.87222222222222</sizeRatio>
+      <sizeRatio>2.13553113553114</sizeRatio>
       <top>0</top>
       <width>546</width>
-      <widthRatio>0.972972972972973</widthRatio>
+      <widthRatio>0.982014388489209</widthRatio>
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem1/layouty1/layoutyitem1">
       <backgroundColor>f0f0f0</backgroundColor>
       <backgroundImg>CPY0000.jpg</backgroundImg>
       <heavyEnabled>false</heavyEnabled>
       <height>300</height>
-      <heightRatio>0.340522133938706</heightRatio>
+      <heightRatio>0.257289879931389</heightRatio>
       <left>0</left>
       <sizeRatio>0.54945054945055</sizeRatio>
       <top>0</top>
@@ -80,11 +80,11 @@ sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <backgroundColor>d0d0d0</backgroundColor>
       <heavyEnabled>false</heavyEnabled>
       <height>15</height>
-      <heightRatio>0.0222551928783383</heightRatio>
+      <heightRatio>0.0128644939965695</heightRatio>
       <left>0</left>
-      <sizeRatio>0.0416666666666667</sizeRatio>
+      <sizeRatio>0.0274725274725275</sizeRatio>
       <top>300</top>
-      <topRatio>0.253709198813056</topRatio>
+      <topRatio>0.257289879931389</topRatio>
       <width>546</width>
       <widthRatio>1</widthRatio>
     </control>
@@ -94,11 +94,11 @@ sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <fontSize>12</fontSize>
       <hAlign>left</hAlign>
       <height>851</height>
-      <heightRatio>0.724035608308605</heightRatio>
+      <heightRatio>0.729845626072041</heightRatio>
       <left>0</left>
-      <sizeRatio>1.35555555555556</sizeRatio>
+      <sizeRatio>1.55860805860806</sizeRatio>
       <top>315</top>
-      <topRatio>0.275964391691395</topRatio>
+      <topRatio>0.270154373927959</topRatio>
       <vAlign>top</vAlign>
       <width>546</width>
       <widthRatio>1</widthRatio>
@@ -115,7 +115,7 @@ sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <leftRatio>0.0183150183150183</leftRatio>
       <outerLeft>10</outerLeft>
       <outerRight>10</outerRight>
-      <sizeRatio>1.80988593155894</sizeRatio>
+      <sizeRatio>1.61787072243346</sizeRatio>
       <text><![CDATA[    <strong>What is ePage?</strong><br>
     ePage is an <em>Internet application development platform</em> designed to help developers quickly <strong>build</strong> and <strong>deploy</strong> various applications.<br>
     It provides a range of powerful tools and features, including:<br>
@@ -144,11 +144,11 @@ sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <height>1166</height>
       <heightRatio>1</heightRatio>
       <left>556</left>
-      <leftRatio>0.3996399639964</leftRatio>
-      <sizeRatio>1.3208395802099</sizeRatio>
+      <leftRatio>0.5004500450045</leftRatio>
+      <sizeRatio>2.1009009009009</sizeRatio>
       <top>0</top>
       <width>555</width>
-      <widthRatio>0.6003600360036</widthRatio>
+      <widthRatio>0.4995499549955</widthRatio>
     </control>
     <control type="LayoutY" pathname="/divRoot/layoutx1/layoutxitem2/layouty2">
       <dockX>fill</dockX>
@@ -162,17 +162,17 @@ sender.style.borderColor = "rgb(230,236,240)";
 sender.style.borderStyle = "solid";
 sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <outerRight>10</outerRight>
-      <sizeRatio>1.86703601108033</sizeRatio>
+      <sizeRatio>2.1394495412844</sizeRatio>
       <top>0</top>
       <width>545</width>
-      <widthRatio>0.973045822102426</widthRatio>
+      <widthRatio>0.981981981981982</widthRatio>
     </control>
     <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem2/layouty2/layoutyitem4">
       <backgroundColor>f0f0f0</backgroundColor>
       <backgroundImg>CPY0003.jpg</backgroundImg>
       <heavyEnabled>false</heavyEnabled>
       <height>300</height>
-      <heightRatio>0.340522133938706</heightRatio>
+      <heightRatio>0.257289879931389</heightRatio>
       <left>0</left>
       <sizeRatio>0.55045871559633</sizeRatio>
       <top>0</top>
@@ -183,11 +183,11 @@ sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <backgroundColor>d0d0d0</backgroundColor>
       <heavyEnabled>false</heavyEnabled>
       <height>15</height>
-      <heightRatio>0.0222551928783383</heightRatio>
+      <heightRatio>0.0128644939965695</heightRatio>
       <left>0</left>
-      <sizeRatio>0.0415512465373961</sizeRatio>
+      <sizeRatio>0.0275229357798165</sizeRatio>
       <top>300</top>
-      <topRatio>0.253709198813056</topRatio>
+      <topRatio>0.257289879931389</topRatio>
       <width>545</width>
       <widthRatio>1</widthRatio>
     </control>
@@ -197,11 +197,11 @@ sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
       <fontSize>12</fontSize>
       <hAlign>left</hAlign>
       <height>851</height>
-      <heightRatio>0.724035608308605</heightRatio>
+      <heightRatio>0.729845626072041</heightRatio>
       <left>0</left>
-      <sizeRatio>1.35180055401662</sizeRatio>
+      <sizeRatio>1.56146788990826</sizeRatio>
       <top>315</top>
-      <topRatio>0.275964391691395</topRatio>
+      <topRatio>0.270154373927959</topRatio>
       <vAlign>top</vAlign>
       <width>545</width>
       <widthRatio>1</widthRatio>
