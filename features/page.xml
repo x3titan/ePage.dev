@@ -1,5 +1,5 @@
 <page>
-  <controls count="29">
+  <controls count="30">
     <control type="DivRoot" pathname="/divRoot">
       <backgroundColor>ffffff</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
@@ -27,6 +27,7 @@
       <heavyEnabled>false</heavyEnabled>
       <height>862</height>
       <heightRatio>1</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>0</left>
       <onCreate><![CDATA[g5.menus = sender.eeChildren;
 let i;
@@ -47,6 +48,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <onClick>g5.showPage("P01");</onClick>
@@ -68,6 +70,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -88,6 +91,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -108,6 +112,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -128,6 +133,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -148,6 +154,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -168,6 +175,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -188,6 +196,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -208,6 +217,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -228,6 +238,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -248,6 +259,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -268,6 +280,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -288,6 +301,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -308,6 +322,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -328,6 +343,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -348,6 +364,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -368,6 +385,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -388,6 +406,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -408,6 +427,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -428,6 +448,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -448,6 +469,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -468,6 +490,7 @@ for (i=0; i<g5.menus.length; i++) {
       <hAlign>left</hAlign>
       <height>36</height>
       <heightRatio>0.0417633410672854</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
       <outerLeft>20</outerLeft>
@@ -519,15 +542,55 @@ for (i=0; i<g5.menus.length; i++) {
     </control>
     <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem2/layoutx2/layoutxitem4">
       <backgroundColor>d0d0d0</backgroundColor>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
+      <fontSize>12</fontSize>
       <heavyEnabled>false</heavyEnabled>
       <height>862</height>
       <heightRatio>1</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>499</left>
       <leftRatio>0.551991150442478</leftRatio>
+      <onCreate>sender.style.overflowY = "auto";
+sender.style.overflowX = "hidden";</onCreate>
       <sizeRatio>2.1283950617284</sizeRatio>
+      <textAutoBr>false</textAutoBr>
       <top>0</top>
       <width>405</width>
       <widthRatio>0.448008849557522</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/layoutx1/layoutxitem2/layoutx2/layoutxitem4/panel23">
+      <dockX>fill</dockX>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <height>1016</height>
+      <heightRatio>1.17865429234339</heightRatio>
+      <left>10</left>
+      <leftRatio>0.0246913580246914</leftRatio>
+      <outerLeft>10</outerLeft>
+      <outerRight>10</outerRight>
+      <sizeRatio>2.63896103896104</sizeRatio>
+      <text><![CDATA[<section id="main-interface">
+    <strong>Main Interface</strong><br>
+    The <strong>ePage Studio</strong> main interface is designed for an intuitive and efficient development experience. 
+    It features a clean, organized workspace that allows users to quickly navigate through their projects and manage components with ease.<br><br>
+
+    <strong>Key Features:</strong><br>
+    &amp;bull; 📂 <strong>Project Explorer (Left Panel)</strong> – Provides a hierarchical view of your project structure, making it easy to locate and manage pages, components, and assets.<br>
+    &amp;bull; 🔧 <strong>Toolbar (Top Panel)</strong> – Offers essential tools for layout alignment, element positioning, and quick actions to enhance development efficiency.<br>
+    &amp;bull; 🎨 <strong>Design Canvas (Center)</strong> – A WYSIWYG (What You See Is What You Get) editor where users can visually build and customize web pages.<br>
+    &amp;bull; ⚙️ <strong>Properties Panel (Right Panel)</strong> – Displays detailed settings for selected elements, including animations, background properties, and layout configurations.<br>
+    &amp;bull; 📊 <strong>Status Bar (Bottom Panel)</strong> – Shows coordinate information and system messages to assist with precision editing.<br><br>
+
+    With its <strong>user-friendly drag-and-drop interface</strong>, comprehensive property controls, and seamless project management, 
+    the <strong>ePage Studio Main Interface</strong> provides developers with a powerful environment for building and deploying professional web applications.
+</section>
+]]></text>
+      <textAutoBr>false</textAutoBr>
+      <top>0</top>
+      <vAlign>top</vAlign>
+      <width>385</width>
+      <widthRatio>0.950617283950617</widthRatio>
     </control>
   </controls>
   <taskSet count="0" />
