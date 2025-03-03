@@ -1,7 +1,7 @@
 <EBProj>
   <projectName>ePage.dev</projectName>
   <projectItems count="121">
-    <page pathname="/main" alias="" />
+    <page pathname="/main" alias="main entery" />
     <image pathname="/main/logo256.png" />
     <image pathname="/.gitattributes" />
     <page pathname="/EBWeb" alias="" />
@@ -119,7 +119,7 @@
     <page pathname="/EBWeb/samples/richtext" alias="" />
     <page pathname="/EBWeb/samples/webService" alias="" />
     <image pathname="/EBWeb/samples/webService/xz_bn.png" />
-    <page pathname="/home" alias="" />
+    <page pathname="/home" alias="home page" />
     <image pathname="/home/ePageBg.jpg" />
     <page pathname="/features" alias="" />
   </projectItems>
