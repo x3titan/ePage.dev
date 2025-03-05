@@ -1,5 +1,5 @@
 <page>
-  <controls count="30">
+  <controls count="34">
     <control type="DivRoot" pathname="/divRoot">
       <backgroundColor>ffffff</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
@@ -543,6 +543,7 @@ sender.btnClick(g5.menus[0]);
       <height>862</height>
       <heightRatio>1</heightRatio>
       <layerName>P01</layerName>
+      <layerVisible>false</layerVisible>
       <left>0</left>
       <sizeRatio>0.95353982300885</sizeRatio>
       <top>0</top>
@@ -555,6 +556,7 @@ sender.btnClick(g5.menus[0]);
       <backgroundImgMode>fill</backgroundImgMode>
       <height>862</height>
       <heightRatio>1</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>0</left>
       <sizeRatio>1.72745490981964</sizeRatio>
       <top>0</top>
@@ -586,6 +588,7 @@ sender.style.overflowX = "hidden";</onCreate>
       <hAlign>left</hAlign>
       <height>1016</height>
       <heightRatio>1.17865429234339</heightRatio>
+      <layerVisible>false</layerVisible>
       <left>10</left>
       <leftRatio>0.0246913580246914</leftRatio>
       <outerLeft>10</outerLeft>
@@ -605,6 +608,85 @@ sender.style.overflowX = "hidden";</onCreate>
 
     With its <strong>user-friendly drag-and-drop interface</strong>, comprehensive property controls, and seamless project management, 
     the <strong>ePage Studio Main Interface</strong> provides developers with a powerful environment for building and deploying professional web applications.
+</section>
+]]></text>
+      <textAutoBr>false</textAutoBr>
+      <top>0</top>
+      <vAlign>top</vAlign>
+      <width>385</width>
+      <widthRatio>0.950617283950617</widthRatio>
+    </control>
+    <control type="LayoutX" pathname="/divRoot/layoutx1/layoutxitem2/layoutx3">
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <ee_LocalName>P_02</ee_LocalName>
+      <fieldCount>2</fieldCount>
+      <height>862</height>
+      <heightRatio>1</heightRatio>
+      <layerName>P02</layerName>
+      <left>0</left>
+      <leftRatio>0.00110619469026549</leftRatio>
+      <sizeRatio>0.95353982300885</sizeRatio>
+      <top>0</top>
+      <width>904</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem2/layoutx3/layoutxitem5">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <backgroundImg>CPY0001.jpg</backgroundImg>
+      <backgroundImgMode>fill</backgroundImgMode>
+      <height>862</height>
+      <heightRatio>1</heightRatio>
+      <layerVisible>false</layerVisible>
+      <left>0</left>
+      <sizeRatio>1.72745490981964</sizeRatio>
+      <top>0</top>
+      <width>499</width>
+      <widthRatio>0.551991150442478</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem2/layoutx3/layoutxitem6">
+      <backgroundColor>d0d0d0</backgroundColor>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>862</height>
+      <heightRatio>1</heightRatio>
+      <layerVisible>false</layerVisible>
+      <left>499</left>
+      <leftRatio>0.551991150442478</leftRatio>
+      <onCreate>sender.style.overflowY = "auto";
+sender.style.overflowX = "hidden";</onCreate>
+      <sizeRatio>2.1283950617284</sizeRatio>
+      <textAutoBr>false</textAutoBr>
+      <top>0</top>
+      <width>405</width>
+      <widthRatio>0.448008849557522</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/layoutx1/layoutxitem2/layoutx3/layoutxitem6/panel24">
+      <dockX>fill</dockX>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <height>1016</height>
+      <heightRatio>1.17865429234339</heightRatio>
+      <layerVisible>false</layerVisible>
+      <left>10</left>
+      <leftRatio>0.0246913580246914</leftRatio>
+      <outerLeft>10</outerLeft>
+      <outerRight>10</outerRight>
+      <sizeRatio>2.63896103896104</sizeRatio>
+      <text><![CDATA[<section id="browser-compatibility">
+    <strong>Browser Compatibility</strong><br>
+    ePage ensures seamless rendering and functionality across different web browsers and devices. 
+    The platform is designed to provide a consistent experience from the design interface to real-world deployment on various environments.<br><br>
+
+    <strong>Cross-Browser Testing:</strong><br>
+    &amp;bull; 🖥️ <strong>Design Interface</strong> – The ePage editor allows developers to build and preview their applications in a controlled environment.<br>
+    &amp;bull; 🌐 <strong>Internet Explorer (IE)</strong> – Supports legacy browsers for backward compatibility.<br>
+    &amp;bull; 🔍 <strong>360 Browser</strong> – Ensures smooth rendering on popular Chinese web browsers.<br>
+    &amp;bull; 📱 <strong>Android Safari</strong> – Optimized for mobile browsing, providing a responsive experience on smartphones.<br><br>
+
+    ePage’s robust browser compatibility ensures that applications function correctly across different platforms, minimizing rendering issues and improving accessibility for users on **both desktop and mobile devices**.
 </section>
 ]]></text>
       <textAutoBr>false</textAutoBr>
@@ -723,6 +805,7 @@ if (!g5.currentPageName) {
 let getPageByName = function(pageName) {
     switch (pageName) {
         case "P01": return g5.pageRoot.P_01; break;
+        case "P02": return g5.pageRoot.P_02; break;
         default: return null;
     }
 }

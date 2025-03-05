@@ -1,6 +1,6 @@
 <EBProj>
   <projectName>ePage.dev</projectName>
-  <projectItems count="121">
+  <projectItems count="123">
     <page pathname="/main" alias="main entery" />
     <image pathname="/main/logo256.png" />
     <image pathname="/.gitattributes" />
@@ -122,6 +122,8 @@
     <page pathname="/home" alias="home page" />
     <image pathname="/home/ePageBg.jpg" />
     <page pathname="/features" alias="" />
+    <page pathname="/samples" alias="" />
+    <page pathname="/samples/common" alias="" />
   </projectItems>
   <dbConnections count="0" />
 </EBProj>
