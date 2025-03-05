@@ -7,6 +7,7 @@
       <dockY>fill</dockY>
       <height>862</height>
       <left>0</left>
+      <onControlLoad>g5.showPage("P01");</onControlLoad>
       <top>0</top>
       <width>1284</width>
     </control>
@@ -32,9 +33,30 @@
       <onCreate><![CDATA[g5.menus = sender.eeChildren;
 let i;
 for (i=0; i<g5.menus.length; i++) {
-    g5.initButtonV3(g5.menus[i],[new g5.BStyle("","rgb(217, 211, 255)","rgb(200, 200, 230)","","","","#404040","#000000","#000000","")]);
+    g5.initButtonV3(g5.menus[i], [
+        new g5.BStyle("","rgb(217, 211, 255)","rgb(200, 200, 230)","","","","#404040","#000000","#000000",""),
+        new g5.BStyle("rgb(187, 211, 255)","rgb(217, 211, 255)","rgb(200, 200, 230)","","","","#404040","#000000","#000000","")
+    ]);
     g5.menus[i].style.borderRadius = "5px 20px 20px 5px";
-}]]></onCreate>
+    g5.menus[i].v_pageName = "P" + String(i+1).padStart(2, "0");
+    g5.menus[i].addEventListener("click", function(event) {
+        if (g5.showPage(this.v_pageName)) {
+            sender.btnClick(this);
+        }
+    });
+}
+
+sender.currentBtn = null;
+sender.btnClick = function(btn) {
+    if (sender.currentBtn!=null) {
+        sender.currentBtn.init(0);
+    }
+    sender.currentBtn = btn;
+    sender.currentBtn.init(1);
+}
+
+sender.btnClick(g5.menus[0]);
+]]></onCreate>
       <sizeRatio>2.26842105263158</sizeRatio>
       <top>0</top>
       <width>380</width>
@@ -51,7 +73,6 @@ for (i=0; i<g5.menus.length; i++) {
       <layerVisible>false</layerVisible>
       <left>20</left>
       <leftRatio>0.0526315789473684</leftRatio>
-      <onClick>g5.showPage("P01");</onClick>
       <outerLeft>20</outerLeft>
       <outerRight>10</outerRight>
       <sizeRatio>0.102857142857143</sizeRatio>
@@ -705,6 +726,8 @@ let getPageByName = function(pageName) {
         default: return null;
     }
 }
+ 
+if (getPageByName(name)==null) return false;
 
 let currentPage = getPageByName(g5.currentPageName);
 if (currentPage!=null) {
@@ -713,9 +736,9 @@ if (currentPage!=null) {
 
 g5.currentPageName = name;
 currentPage = getPageByName(g5.currentPageName);
-if (currentPage!=null) {
-    ee.setVisible(currentPage, true);
-}
+ee.setVisible(currentPage, true);
+
+return true;
 </functionCode>
     </item>
   </g5Items>
