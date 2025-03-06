@@ -1,5 +1,5 @@
 <page>
-  <controls count="34">
+  <controls count="38">
     <control type="DivRoot" pathname="/divRoot">
       <backgroundColor>ffffff</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
@@ -624,6 +624,7 @@ sender.style.overflowX = "hidden";</onCreate>
       <height>862</height>
       <heightRatio>1</heightRatio>
       <layerName>P02</layerName>
+      <layerVisible>false</layerVisible>
       <left>0</left>
       <leftRatio>0.00110619469026549</leftRatio>
       <sizeRatio>0.95353982300885</sizeRatio>
@@ -687,6 +688,83 @@ sender.style.overflowX = "hidden";</onCreate>
     &amp;bull; 📱 <strong>Android Safari</strong> – Optimized for mobile browsing, providing a responsive experience on smartphones.<br><br>
 
     ePage’s robust browser compatibility ensures that applications function correctly across different platforms, minimizing rendering issues and improving accessibility for users on **both desktop and mobile devices**.
+</section>
+]]></text>
+      <textAutoBr>false</textAutoBr>
+      <top>0</top>
+      <vAlign>top</vAlign>
+      <width>385</width>
+      <widthRatio>0.950617283950617</widthRatio>
+    </control>
+    <control type="LayoutX" pathname="/divRoot/layoutx1/layoutxitem2/layoutx4">
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <ee_LocalName>P_04</ee_LocalName>
+      <fieldCount>2</fieldCount>
+      <height>862</height>
+      <heightRatio>1</heightRatio>
+      <layerName>P04</layerName>
+      <left>0</left>
+      <leftRatio>0.00110619469026549</leftRatio>
+      <sizeRatio>0.95353982300885</sizeRatio>
+      <top>0</top>
+      <width>904</width>
+      <widthRatio>1</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem2/layoutx4/layoutxitem7">
+      <backgroundColor>f0f0f0</backgroundColor>
+      <backgroundImg>CPY0002.jpg</backgroundImg>
+      <backgroundImgMode>fill</backgroundImgMode>
+      <height>862</height>
+      <heightRatio>1</heightRatio>
+      <layerVisible>false</layerVisible>
+      <left>0</left>
+      <sizeRatio>1.72745490981964</sizeRatio>
+      <top>0</top>
+      <width>499</width>
+      <widthRatio>0.551991150442478</widthRatio>
+    </control>
+    <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem2/layoutx4/layoutxitem8">
+      <backgroundColor>d0d0d0</backgroundColor>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
+      <fontSize>12</fontSize>
+      <heavyEnabled>false</heavyEnabled>
+      <height>862</height>
+      <heightRatio>1</heightRatio>
+      <layerVisible>false</layerVisible>
+      <left>499</left>
+      <leftRatio>0.551991150442478</leftRatio>
+      <onCreate>sender.style.overflowY = "auto";
+sender.style.overflowX = "hidden";</onCreate>
+      <sizeRatio>2.1283950617284</sizeRatio>
+      <textAutoBr>false</textAutoBr>
+      <top>0</top>
+      <width>405</width>
+      <widthRatio>0.448008849557522</widthRatio>
+    </control>
+    <control type="Panel" pathname="/divRoot/layoutx1/layoutxitem2/layoutx4/layoutxitem8/panel25">
+      <dockX>fill</dockX>
+      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <height>1016</height>
+      <heightRatio>1.17865429234339</heightRatio>
+      <layerVisible>false</layerVisible>
+      <left>10</left>
+      <leftRatio>0.0246913580246914</leftRatio>
+      <outerLeft>10</outerLeft>
+      <outerRight>10</outerRight>
+      <sizeRatio>2.63896103896104</sizeRatio>
+      <text><![CDATA[<section id="project-management">
+    <strong>Project Management</strong><br>
+    ePage provides a structured approach to project organization, ensuring seamless development and efficient management of web applications.<br><br>
+
+    <strong>Hierarchical Structure:</strong><br>
+    &amp;bull; 🏗️ <strong>Solution</strong> – The top-level container that groups multiple projects together, allowing for modular development.<br>
+    &amp;bull; 📂 <strong>Projects</strong> – Each project contains various components, including web pages, assets, and configurations.<br>
+    &amp;bull; 📄 <strong>Web Pages</strong> – The core components of a project, where developers design and implement the UI and functionality.<br><br>
+
+    This hierarchical system enables developers to efficiently manage multiple projects, organize resources, and streamline the development process within a unified workspace.
 </section>
 ]]></text>
       <textAutoBr>false</textAutoBr>
@@ -806,6 +884,7 @@ let getPageByName = function(pageName) {
     switch (pageName) {
         case "P01": return g5.pageRoot.P_01; break;
         case "P02": return g5.pageRoot.P_02; break;
+        case "P04": return g5.pageRoot.P_04; break;
         default: return null;
     }
 }
