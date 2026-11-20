@@ -95,7 +95,7 @@ sender.innerHTML = `
 <li><a href="#hsi">HSI Transformation</a></li>
 </ul></li>
 <li><a href="#logic">Application logic and data</a><ul>
-<li><a href="#control-encapsulation">Control Encapsulation</a></li>
+<li><a href="#control-encapsulation">Reusable Components</a></li>
 <li><a href="#global-variables">Global Variables and Class Management</a></li>
 <li><a href="#task-set">Task Set</a></li>
 <li><a href="#database">Database Support</a></li>
@@ -148,7 +148,7 @@ sender.innerHTML = `
     <article id="page-layers">
       <h3>Page Layer Management</h3>
       <p>Put alternate views or transient controls on named layers and switch their visibility within the same page. For example, a selector can reveal a detail panel while the surrounding page stays in place.</p>
-      <a class="feature-example" href="./samples#layers">Open the layer demo</a>
+      <a class="feature-example" href="./samples#layers">Open the layer demo</a> &middot; <a class="feature-example" href="./tutorials?v=components#build-a-component">Explore a real layered page</a>
     </article>
     <article id="multi-level">
       <h3>Multi-Level System</h3>
@@ -184,8 +184,10 @@ sender.innerHTML = `
   <section id="logic" aria-labelledby="logic-title">
     <h2 id="logic-title">Application logic and data</h2>
     <article id="control-encapsulation">
-      <h3>Control Encapsulation</h3>
-      <p>Keep the behavior of a control together with its visual settings. In this site&#x27;s navigation, a shared JavaScript initializer applies button styles, while each item&#x27;s click event chooses which page to display.</p>
+      <h3>Build Reusable Components</h3>
+      <p>Start with a basic Div or Panel, add child controls, and define properties and events for the enclosing page. Use <code>onCreate</code> to bind children, initialize per-instance state, and expose methods such as <code>getEditText()</code> and <code>setEditText()</code>.</p>
+      <p>In Faith's desktop main page, the same multiline Edit component appears in Home, a mobile composer, and a dialog. The instances reuse their interface and behavior while setting a different height limit or reacting differently to height changes.</p>
+      <a class="feature-example" href="./tutorials?v=components#build-a-component">Learn to build a component</a> &middot; <a class="feature-example" href="./samples?v=components#advanced-edit">Try the advanced editor</a>
 
     </article>
     <article id="global-variables">

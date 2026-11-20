@@ -38,7 +38,7 @@ sender.innerHTML = `
 .site-doc table { width:100%; text-align:left; border-collapse:collapse; margin-top:10px; }
 .site-doc th,.site-doc td { padding:6px; border-bottom:1px solid #e3dff2; }
 </style>
-<main class="site-doc" lang="en"><header><div class="wrap"><h1>Tutorials</h1><p>Create a page, design its layout, add a Task Set, and publish with eServer.</p><p><a class="task-jump" href="#task-set-tutorial">Jump to the live Task Set walkthrough</a> ? <a class="task-jump" href="#project-admin-task-set">See the ProjectAdmin database case study</a> ? <a class="task-jump" href="#database-guide">Follow the database walkthrough</a></p></div></header><div class="wrap"><section><h2>Create your first page</h2><ol><li>In ePage Studio, open a project and create a page.</li><li>Add a panel, set its text and properties, and save the page.</li><li>Check that the page directory contains <code>page.xml</code> and appears in the project tree.</li></ol><p><a href="./features?v=task-set#main-interface">See the Studio workspace</a></p></section><section><h2>Build a layout that adapts to the viewport</h2>
+<main class="site-doc" lang="en"><header><div class="wrap"><h1>Tutorials</h1><p>Create a page, design its layout, add a Task Set, and publish with eServer.</p><p><a class="task-jump" href="#task-set-tutorial">Jump to the live Task Set walkthrough</a> ? <a class="task-jump" href="#project-admin-task-set">See the ProjectAdmin database case study</a> ? <a class="task-jump" href="#database-guide">Follow the database walkthrough</a> &middot; <a class="task-jump" href="#build-a-component">Build a reusable component</a></p></div></header><div class="wrap"><section><h2>Create your first page</h2><ol><li>In ePage Studio, open a project and create a page.</li><li>Add a panel, set its text and properties, and save the page.</li><li>Check that the page directory contains <code>page.xml</code> and appears in the project tree.</li></ol><p><a href="./features?v=task-set#main-interface">See the Studio workspace</a></p></section><section><h2>Build a layout that adapts to the viewport</h2>
   <ol><li>Use a vertical layout for the header and content. Put related controls under one parent in the control tree.</li><li>Use horizontal docking to keep the content panel aligned with the available width. Use named layers when multiple views share the same area.</li><li>Preview at a narrow width and check how labels wrap, which areas scroll, and whether buttons are still easy to reach.</li></ol>
   <p><a href="./features?v=task-set#visual-layout">Review docking and layout</a> or <a href="./samples#layers">try the view-switching example</a>.</p>
 </section><section><h2>Add a click event</h2><ol><li>Select a button or panel on the canvas.</li><li>Open its <code>onClick</code> event and add a JavaScript handler.</li><li>Publish and click the control in a browser to verify the result.</li></ol><pre>sender.style.backgroundColor = "#46368b";</pre><p><a href="./samples#layers">Try a view-switching example</a></p></section><section><h2>Publish with eServer</h2><ol><li>Register your project directory in the eServer project list.</li><li>Set the domain and default page where appropriate.</li><li>Open your public page URL. Test links and image responses in addition to the HTML.</li><li>For a page with a Task Set, submit a valid request and verify the response. Then test an invalid input and check that the page reports the expected result.</li></ol><p>For example, the page directory <code>features</code> in this project is available at <code>/ePage.dev/features</code>.</p></section>
@@ -181,6 +181,44 @@ eio.appendString8(ok ? &quot;T&quot; : &quot;F&quot;);</code></pre>
     &quot;DELETE FROM dbo.DemoTasks WHERE TaskId = 2&quot;);
 eio.appendString8(ok ? &quot;T&quot; : &quot;F&quot;);</code></pre>
   <p>For production forms, use a database access path that binds parameters for user-supplied text, and apply authorization before each write. The update example above constructs SQL only from validated integer fields, and the insert and delete use fixed values. Always scope an update or delete to the intended record.</p>
+</section>
+
+<section id="build-a-component">
+  <h2>Build a reusable component from a Div</h2>
+  <p>In ePage, a Panel can be the root of a component. Its children make up the interface, custom properties configure each instance, and JavaScript in <code>onCreate</code> implements the behavior. The surrounding page calls the component's methods or reacts to its events.</p>
+  <h3>See the component in a layered application</h3>
+  <p>The Faith desktop main page defines 909 controls and 121 named layers in one <code>page.xml</code>. In Studio, open <strong>pc / main</strong> and select <strong>Explorer</strong> to trace the control tree. Start at the main container and follow the central content group (<code>P2</code>) to views such as Home, Search, and Notifications. The menu, side content, secondary views, and dialog overlays have their own groups. A layer groups controls that appear together; a component such as the editor can appear in several of those groups.</p>
+  <h3>1. Start with a Panel and two children</h3>
+  <p>Use one child panel for the label and one for the editable area. On the Home instance, the children have local names <code>c_label</code> and <code>c_edit</code>. In <code>onCreate</code>, resolve children within the instance rather than looking up a page-wide ID. The same internal names can then be used in multiple editors on one page.</p>
+  <h3>2. Define properties and events in User Property</h3>
+  <p>The original editor declares <code>editFontFamily</code>, <code>editFontColor</code>, <code>editFontSize</code>, and <code>editMaxY</code>. Property definitions are stored in <code>userProperty</code> and instance overrides are saved under <code>__U_</code> fields. The following simplified declarations show the format using the actual property and event names.</p>
+  <pre><code>//#P:editMaxY|Multiline editor|300px|string||Maximum editor height
+//#P:onHeightChange(sender,oldH,newH)|Multiline editor||jsMix||Editor height changed</code></pre>
+  <p>The three editor instances in the reference page reuse the same property definitions. The Home composer and mobile composer have a <code>300px</code> limit, while the posting dialog has a <code>150px</code> limit.</p>
+  <h3>3. Implement behavior and expose methods</h3>
+  <p>This simplified <code>onCreate</code> starts with the same two-child structure as the project. It makes the second child editable and exposes methods on <code>sender</code> so the parent can read or replace its text without reaching into the editable child.</p>
+  <pre><code>const editor = sender.eeChildren[1];
+editor.contentEditable = &quot;plaintext-only&quot;;
+editor.style.whiteSpace = &quot;pre-wrap&quot;;
+editor.style.maxHeight = sender.editMaxY;
+editor.style.overflowY = &quot;auto&quot;;
+
+sender.getEditText = function () {
+    return editor.innerText;
+};
+sender.setEditText = function (text) {
+    editor.textContent = text;
+};</code></pre>
+  <p>The project editor also tracks text, HTML, and caret position. It measures its content height, updates the outer panel, and calls <code>onHeightChange(sender, oldH, newH)</code> when the size changes. Once it reaches its limit, the editable area scrolls.</p>
+  <h3>4. Keep page-specific actions in event handlers</h3>
+  <ul>
+    <li><code>onInputChange</code> receives the key and before-and-after text and HTML. A handler can return <code>false</code> to cancel an edit.</li>
+    <li><code>onFocusChange</code> reports whether the editable area has focus.</li>
+    <li><code>onCurPosChange</code> receives the old and new caret positions. Faith uses it to check what the user is typing around an <code>@</code> mention.</li>
+    <li><code>onHeightChange</code> lets the parent reflow the surrounding page. On Home, it refreshes the surrounding composer layout.</li>
+  </ul>
+  <p>Reuse the Panel, its child controls, property declarations, and initialization together. Keep draft text and focus state on the editor instance. A page can send the text to a Task Set when the user submits it.</p>
+  <p><a href="./samples?v=components#advanced-edit">Try two instances of the advanced editor</a></p>
 </section>
 </div></main>`;
 sender.querySelector("#task-total-form").addEventListener("submit", function (event) {

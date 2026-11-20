@@ -93,7 +93,7 @@ sender.innerHTML = `
     <div class="overview-wrap">
       <h1>Build web applications with ePage Studio</h1>
       <p>Design pages visually, write JavaScript for browser interactions and server-side logic, and publish your project with eServer. This website is built with ePage.</p>
-      <a class="overview-link" href="./features?v=task-set">Explore features</a>
+      <a class="overview-link" href="./features?v=components">Explore features</a>
     </div>
   </section>
   <div class="overview-wrap">
@@ -113,6 +113,11 @@ sender.innerHTML = `
           <p>Register your project directory in eServer. It reads your page definitions and serves the application over HTTP or HTTPS.</p>
         </article>
       </div>
+    </section>
+    <section class="overview-section overview-details" aria-labelledby="overview-components">
+      <h2 id="overview-components">Turn a Div into a reusable component</h2>
+      <p>Combine child controls with your own properties, methods, and events. A single multiline Edit component can then serve several views, with its own font, height limit, and behavior in each one.</p>
+      <p><a href="./tutorials?v=components#build-a-component">See how Faith builds its Edit component</a></p>
     </section>
     <section class="overview-section overview-details" aria-labelledby="overview-task-set">
       <h2 id="overview-task-set">Connect a page to eServer with Task Set</h2>
