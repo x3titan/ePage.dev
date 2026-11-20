@@ -93,7 +93,7 @@ sender.innerHTML = `
     <div class="overview-wrap">
       <h1>Build web applications with ePage Studio</h1>
       <p>Design pages visually, write JavaScript for browser interactions and server-side logic, and publish your project with eServer. This website is built with ePage.</p>
-      <a class="overview-link" href="./features?v=guide">Explore features</a>
+      <a class="overview-link" href="./features?v=task-set">Explore features</a>
     </div>
   </section>
   <div class="overview-wrap">
@@ -106,13 +106,18 @@ sender.innerHTML = `
         </article>
         <article class="overview-step">
           <h3>Add application logic</h3>
-          <p>Use JavaScript to respond to clicks and other page events. Add server-side code for tasks such as retrieving or processing data.</p>
+          <p>Use JavaScript for control events. When an action needs eServer, a Task Set groups request preparation, server logic, and the browser response in one named operation.</p>
         </article>
         <article class="overview-step">
           <h3>Publish with eServer</h3>
           <p>Register your project directory in eServer. It reads your page definitions and serves the application over HTTP or HTTPS.</p>
         </article>
       </div>
+    </section>
+    <section class="overview-section overview-details" aria-labelledby="overview-task-set">
+      <h2 id="overview-task-set">Connect a page to eServer with Task Set</h2>
+      <p>When a visitor submits a form, a Task Set can read the input in the browser, validate and process it on eServer, then display the result in the page. All three scripts are stored with the page.</p>
+      <p><a href="./tutorials?v=project-admin#task-set-tutorial">Try a Task Set and read the three scripts</a></p>
     </section>
     <section class="overview-section overview-details" aria-labelledby="overview-files">
       <h2 id="overview-files">How a project is organized</h2>
