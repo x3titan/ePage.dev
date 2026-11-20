@@ -48,6 +48,13 @@ sender.innerHTML = `
 .site-doc .edit-configuration, .site-doc .edit-metrics { font-size:13px; color:#4e4c63; }
 .site-doc .edit-surface { min-height:48px; margin-top:8px; padding:8px; border:1px solid #bcb3d4; border-radius:5px; white-space:pre-wrap; overflow-wrap:anywhere; overflow-y:auto; }
 
+.site-doc .upload-files { list-style:none; padding:0; margin:12px 0 0; }
+.site-doc .upload-files li { display:grid; gap:4px; margin-block:10px; }
+.site-doc .upload-files progress { width:100%; height:14px; accent-color:#514a9d; }
+.site-doc .upload-detail { font-size:13px; color:#4e4c63; }
+.site-doc .upload-capture { margin:14px 0; }
+.site-doc .upload-capture img { display:block; max-width:100%; height:auto; }
+.site-doc .upload-capture figcaption { font-size:13px; color:#4e4c63; margin-top:5px; }
 </style>
 <main class="site-doc" lang="en"><header><div class="wrap"><h1>Examples</h1><p>Try page interactions and front-end controls from ProjectAdmin.</p><p><a class="admin-jump" href="#admin-controls" style="color:white">Jump to the ProjectAdmin controls</a> &middot; <a class="admin-jump" href="#advanced-edit" style="color:white">Try the advanced Edit component</a> &middot; <a class="admin-jump" href="#file-upload" style="color:white">Try a file upload</a></p></div></header><div class="wrap"><section id="layers"><h2>Switch between page views</h2><p>Named layers let a page reveal one view while retaining the surrounding interface. Try switching this preview between a compact summary and a detail view.</p>
  <fieldset><legend>Preview layout</legend><button type="button" data-view="summary" aria-pressed="true">Summary</button> <button type="button" data-view="details" aria-pressed="false">Details</button>
@@ -94,24 +101,29 @@ sender.innerHTML = `
 </section>
 
 <section id="file-upload">
-  <h2>File upload with a control-level Task Set</h2>
-  <p>Choose a small file and send it to eServer. The server receives the file content and returns the number of bytes received. This demonstration processes one file of up to 32 KiB per request and does not store the file.</p>
+  <h2>Upload multiple files in chunks</h2>
+  <p>Select several files in one batch. Each file has its own progress bar. The component cycles through the files and sends one block at a time, so several files advance during the same batch. eServer acknowledges each block and discards its contents in this public demo.</p>
   <form id="upload-demo-form">
     <fieldset>
-      <legend>Send a sample file</legend>
-      <p><label>Choose a file <input type="file" required></label></p>
-      <p><button type="submit">Send to eServer</button></p>
-      <p id="upload-demo-status" role="status">Choose a file to try the upload.</p>
+      <legend>Send files to eServer</legend>
+      <p><label>Choose one or more files <input type="file" multiple required></label></p>
+      <p><button type="submit">Start uploads</button></p>
+      <p id="upload-demo-status" role="status">Choose files to try the upload.</p>
+      <ul id="upload-demo-files" class="upload-files"></ul>
     </fieldset>
   </form>
-  <h3>From control event to server and back</h3>
+  <figure class="upload-capture">
+    <img src="data:image/png;base64,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" width="800" height="332" alt="Live upload in progress. Project-layout.txt at 44 percent and sample-notes.txt at 33 percent.">
+    <figcaption>Captured during a real batch. eServer had acknowledged 32 KiB for each file, and each progress bar used its own total.</figcaption>
+  </figure>
+  <h3>What makes it work for large files</h3>
   <ol>
-    <li>The component reads the file and calls its own <code>sender.taskSet()</code>. The control's <code>taskSet</code> script writes the payload to <code>eio</code>.</li>
-    <li>The control's <code>taskSetServer</code> script validates the payload and returns a status and byte count.</li>
-    <li><code>taskSetReturn</code> reads the reply and raises the component's custom <code>onUploadComplete</code> event. The instance's event script updates the status line.</li>
+    <li><strong>One worker per file.</strong> The browser retains a File reference and a byte offset for each selected file. It uses <code>File.slice()</code> to read the next block. The block size is a per-request limit, and the browser never reads the whole file into memory.</li>
+    <li><strong>One block request at a time.</strong> The control's <code>taskSet</code> sends a block, <code>taskSetServer</code> verifies it, and <code>taskSetReturn</code> advances the sending worker after the acknowledgement. The next block goes to the next active worker.</li>
+    <li><strong>Progress belongs to the file.</strong> The component raises <code>onUploadProgress</code> after each acknowledgement and <code>onUploadComplete</code> when the file finishes or fails.</li>
   </ol>
-  <p>ProjectAdmin uses the same three control properties for its chunked uploader. It starts a job with file metadata, sends Base64 blocks to the assigned job, and uses each server reply to advance progress. It exposes <code>blockSize</code> and <code>multiSelect</code> in Studio, and publishes events such as <code>onStatusChange</code> and <code>onComplete</code>.</p>
-  <p><a href="./tutorials?v=live-controls#studio-custom-properties">See the uploader's property and event editors in Studio</a></p>
+  <p>In ProjectAdmin the server first assigns each file a job ID, then appends the received blocks to that file. The component exposes <code>blockSize</code> and <code>multiSelect</code> in Studio. Its <code>onStatusChange</code> handler refreshes the progress list, and <code>onComplete</code> runs separately for each file. Chunking avoids a single-request file-size limit. A deployment that stores files is still subject to its storage and filesystem limits.</p>
+  <p><a href="./tutorials?v=multi-upload#studio-custom-properties">See the uploader's property and event editors in Studio</a></p>
 </section>
 </div></main>`;
 
@@ -260,41 +272,105 @@ g5.mountEditor(sender);]]></onCreate>
       <width>1</width>
       <top>0</top>
       <left>0</left>
-      <userProperty><![CDATA[//#P:maxBytes|File upload|32768|int||Maximum file size in bytes
-//#P:onUploadComplete(sender,ok,size)|File upload||jsMix||eServer returned the upload result]]></userProperty>
-      <__U_maxBytes><![CDATA[32768]]></__U_maxBytes>
-      <__U_onUploadComplete-sender-ok-size><![CDATA[document.getElementById("upload-demo-status").textContent = ok
-    ? "eServer received " + size + " bytes."
-    : "eServer rejected the file payload.";]]></__U_onUploadComplete-sender-ok-size>
+      <userProperty><![CDATA[//#P:blockSize|File upload|32|int||Block size in KiB
+//#P:onUploadProgress(sender,worker)|File upload||jsMix||eServer acknowledged a block
+//#P:onUploadComplete(sender,worker,ok)|File upload||jsMix||A file finished or failed]]></userProperty>
+      <__U_blockSize>32</__U_blockSize>
+      <__U_onUploadProgress-sender-worker><![CDATA[worker.progress.value = worker.bytesSent;
+worker.detail.textContent = Math.floor(worker.bytesSent * 100 / worker.file.size)
+    + "% (" + worker.bytesSent.toLocaleString() + " / " + worker.file.size.toLocaleString() + " bytes)";]]></__U_onUploadProgress-sender-worker>
+      <__U_onUploadComplete-sender-worker-ok><![CDATA[worker.detail.textContent = ok
+    ? "Complete (" + worker.bytesSent.toLocaleString() + " bytes acknowledged)"
+    : "Upload stopped at " + worker.bytesSent.toLocaleString() + " bytes.";]]></__U_onUploadComplete-sender-worker-ok>
       <onCreate><![CDATA[sender.style.display = "none";
 const form = document.getElementById("upload-demo-form");
 const input = form.querySelector("input");
 const button = form.querySelector("button");
 const status = document.getElementById("upload-demo-status");
-sender.finishUpload = function () {
-    sender.uploadData = "";
+const list = document.getElementById("upload-demo-files");
+const blockBytes = Math.min(32, Math.max(1, sender.blockSize)) * 1024;
+const workers = [];
+let failed = 0;
+let inFlight = null;
+
+function finishBatch() {
+    status.textContent = failed ? failed + " file(s) did not finish." : "All files finished.";
     input.disabled = false;
     button.disabled = false;
-};
-form.addEventListener("submit", async function (event) {
-    event.preventDefault();
-    const file = input.files[0];
-    if (button.disabled || !file) return;
-    if (file.size === 0 || file.size > sender.maxBytes) {
-        status.textContent = "Choose a non-empty file up to 32 KiB.";
-        return;
+}
+function failWorker(worker) {
+    failed++;
+    sender.onUploadComplete(sender, worker, false);
+}
+
+sender.uploadNext = async function () {
+    while (workers.length) {
+        const worker = workers.shift();
+        const block = worker.file.slice(worker.bytesSent, worker.bytesSent + blockBytes);
+        try {
+            const bytes = new Uint8Array(await block.arrayBuffer());
+            if (!bytes.length) {
+                worker.progress.value = worker.progress.max;
+                sender.onUploadComplete(sender, worker, true);
+                continue;
+            }
+            inFlight = worker;
+            sender.uploadData = btoa(String.fromCharCode(...bytes));
+            sender.pendingBytes = bytes.length;
+            sender.taskSet();
+            return;
+        } catch (error) {
+            inFlight = null;
+            sender.uploadData = "";
+            failWorker(worker);
+        }
     }
+    finishBatch();
+};
+
+sender.acceptUploadReply = function (ok, size) {
+    const worker = inFlight;
+    if (!worker) return;
+    inFlight = null;
+    sender.uploadData = "";
+    if (!ok || size !== sender.pendingBytes) {
+        failWorker(worker);
+    } else {
+        worker.bytesSent += size;
+        sender.onUploadProgress(sender, worker);
+        if (worker.bytesSent < worker.file.size) {
+            workers.push(worker);
+        } else {
+            sender.onUploadComplete(sender, worker, true);
+        }
+    }
+    sender.uploadNext();
+};
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (button.disabled || !input.files.length) return;
     input.disabled = true;
     button.disabled = true;
-    status.textContent = "Sending file to eServer...";
-    try {
-        const bytes = new Uint8Array(await file.arrayBuffer());
-        sender.uploadData = btoa(String.fromCharCode(...bytes));
-        sender.taskSet();
-    } catch (error) {
-        sender.finishUpload();
-        status.textContent = "Could not send the file.";
+    failed = 0;
+    list.replaceChildren();
+    for (const file of input.files) {
+        const item = document.createElement("li");
+        const name = document.createElement("strong");
+        const progress = document.createElement("progress");
+        const detail = document.createElement("span");
+        name.textContent = file.name;
+        progress.max = Math.max(1, file.size);
+        progress.value = 0;
+        progress.setAttribute("aria-label", "Upload progress for " + file.name);
+        detail.className = "upload-detail";
+        detail.textContent = "Queued (" + file.size.toLocaleString() + " bytes)";
+        item.append(name, progress, detail);
+        list.appendChild(item);
+        workers.push({file, progress, detail, bytesSent: 0});
     }
+    status.textContent = "Sending file blocks to eServer...";
+    sender.uploadNext();
 });]]></onCreate>
       <taskSet><![CDATA[eio.appendString32(sender.uploadData);]]></taskSet>
       <taskSetServer><![CDATA[var data = eio.readString32();
@@ -311,8 +387,7 @@ eio.appendString8(ok ? "T" : "F");
 eio.appendInt32(ok ? size : 0);]]></taskSetServer>
       <taskSetReturn><![CDATA[const ok = eio.readString8() === "T";
 const size = eio.readInt32();
-sender.finishUpload();
-sender.onUploadComplete(sender, ok, size);]]></taskSetReturn>
+sender.acceptUploadReply(ok, size);]]></taskSetReturn>
     </control>
   </controls>
   <taskSet count="0" />
