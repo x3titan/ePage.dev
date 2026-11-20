@@ -173,7 +173,7 @@ sender.innerHTML = `
     <article id="themes">
       <h3>Themes</h3>
       <p>Apply a shared skin to controls that need a consistent appearance. A skin pairs an image with an XML definition that can describe its content region and which parts of the image may stretch.</p>
-      <a class="feature-example" href="./samples#themes">Try the palette preview</a>
+      <a class="feature-example" href="./samples#themes">Try the palette preview</a> ? <a class="feature-example" href="./samples?v=admin-controls#admin-controls">Try ProjectAdmin button skins</a>
     </article>
     <article id="hsi">
       <h3>HSI Transformation</h3>
@@ -209,7 +209,7 @@ sender.innerHTML = `
       <h3>Database Support</h3>
       <p>Database connection definitions belong to the project. A list view can send filter values in Script 1, run its query in Script 2, and read the returned rows in Script 3. A separate detail task can request one record by ID when a row is selected.</p>
       <p>The separate ProjectAdmin application uses named tasks for reading paginated results, creating records, and updating task information. Validate input and use parameterized queries for values supplied by visitors.</p>
-      <a class="feature-example" href="./tutorials?v=project-admin#project-admin-task-set">See the ProjectAdmin database case study</a>
+      <a class="feature-example" href="./tutorials?v=project-admin#project-admin-task-set">See the ProjectAdmin database case study</a> ? <a class="feature-example" href="./tutorials?v=database-guide#database-guide">Follow the database walkthrough</a>
 
     </article>
     <article id="backend-js">

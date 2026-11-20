@@ -38,7 +38,7 @@ sender.innerHTML = `
 .site-doc table { width:100%; text-align:left; border-collapse:collapse; margin-top:10px; }
 .site-doc th,.site-doc td { padding:6px; border-bottom:1px solid #e3dff2; }
 </style>
-<main class="site-doc" lang="en"><header><div class="wrap"><h1>Tutorials</h1><p>Create a page, design its layout, add a Task Set, and publish with eServer.</p><p><a class="task-jump" href="#task-set-tutorial">Jump to the live Task Set walkthrough</a> ? <a class="task-jump" href="#project-admin-task-set">See the ProjectAdmin database case study</a></p></div></header><div class="wrap"><section><h2>Create your first page</h2><ol><li>In ePage Studio, open a project and create a page.</li><li>Add a panel, set its text and properties, and save the page.</li><li>Check that the page directory contains <code>page.xml</code> and appears in the project tree.</li></ol><p><a href="./features?v=task-set#main-interface">See the Studio workspace</a></p></section><section><h2>Build a layout that adapts to the viewport</h2>
+<main class="site-doc" lang="en"><header><div class="wrap"><h1>Tutorials</h1><p>Create a page, design its layout, add a Task Set, and publish with eServer.</p><p><a class="task-jump" href="#task-set-tutorial">Jump to the live Task Set walkthrough</a> ? <a class="task-jump" href="#project-admin-task-set">See the ProjectAdmin database case study</a> ? <a class="task-jump" href="#database-guide">Follow the database walkthrough</a></p></div></header><div class="wrap"><section><h2>Create your first page</h2><ol><li>In ePage Studio, open a project and create a page.</li><li>Add a panel, set its text and properties, and save the page.</li><li>Check that the page directory contains <code>page.xml</code> and appears in the project tree.</li></ol><p><a href="./features?v=task-set#main-interface">See the Studio workspace</a></p></section><section><h2>Build a layout that adapts to the viewport</h2>
   <ol><li>Use a vertical layout for the header and content. Put related controls under one parent in the control tree.</li><li>Use horizontal docking to keep the content panel aligned with the available width. Use named layers when multiple views share the same area.</li><li>Preview at a narrow width and check how labels wrap, which areas scroll, and whether buttons are still easy to reach.</li></ol>
   <p><a href="./features?v=task-set#visual-layout">Review docking and layout</a> or <a href="./samples#layers">try the view-switching example</a>.</p>
 </section><section><h2>Add a click event</h2><ol><li>Select a button or panel on the canvas.</li><li>Open its <code>onClick</code> event and add a JavaScript handler.</li><li>Publish and click the control in a browser to verify the result.</li></ol><pre>sender.style.backgroundColor = "#46368b";</pre><p><a href="./samples#layers">Try a view-switching example</a></p></section><section><h2>Publish with eServer</h2><ol><li>Register your project directory in the eServer project list.</li><li>Set the domain and default page where appropriate.</li><li>Open your public page URL. Test links and image responses in addition to the HTML.</li><li>For a page with a Task Set, submit a valid request and verify the response. Then test an invalid input and check that the page reports the expected result.</li></ol><p>For example, the page directory <code>features</code> in this project is available at <code>/ePage.dev/features</code>.</p></section>
@@ -98,7 +98,89 @@ result.textContent = total &gt; 0
   </ol>
   <h3>Create and update records</h3>
   <p><code>taskNewV2</code> sends form values to eServer to create a task. <code>modifyTaskInfo</code> sends the selected record and edits to update it. Both use <code>db.executeNoneQuery</code> for database writes and return a status string for the browser to handle. A read task can return a data set after its status, while a write task can return a status alone.</p>
+  <p><a href="#database-guide">Set up a practice database and try the same query and write APIs</a>.</p>
   <p>When building a similar page, define the request fields and the success and failure replies before editing the scripts. Keep the corresponding reads and writes in the same order, and check access on eServer before querying or changing records.</p>
+</section>
+
+<section id="database-guide">
+  <h2>Connect to a database, then query and edit records</h2>
+  <p>This walkthrough uses a SQL Server practice table and the same eServer database APIs used by ProjectAdmin. Run the SQL and Task Sets against a database created for practice.</p>
+
+  <h3>1. Register a connection</h3>
+  <ol>
+    <li>In the ePage project, create a database connection named <code>DemoDb</code> and point its connection string at the practice database. ProjectAdmin stores its named connection under <code>dbConnections</code> in <code>project.xml</code>.</li>
+    <li>Give the practice account access to the table and to the operations you plan to test. Keep the connection string in the server-side project configuration and out of browser scripts and published examples.</li>
+    <li>Create the table and seed it using your database client. Here <code>Status</code> is <code>0</code> for open and <code>1</code> for complete.</li>
+  </ol>
+  <pre><code>CREATE TABLE dbo.DemoTasks (
+    TaskId INT PRIMARY KEY,
+    Title NVARCHAR(100) NOT NULL,
+    Status INT NOT NULL CHECK (Status IN (0, 1))
+);
+INSERT INTO dbo.DemoTasks (TaskId, Title, Status)
+VALUES (1, N&#x27;Check page layout&#x27;, 0);</code></pre>
+  <p>The XML is shown here with a placeholder for the connection string:</p>
+  <pre><code>&lt;dbConnections count=&quot;1&quot;&gt;
+  &lt;connection name=&quot;DemoDb&quot;&gt;
+    &lt;connectionString&gt;YOUR_PRACTICE_CONNECTION_STRING&lt;/connectionString&gt;
+  &lt;/connection&gt;
+&lt;/dbConnections&gt;</code></pre>
+  <p>In Script 2, <code>db.executeQuery("DemoDb", sql)</code> uses the registered alias. If it returns <code>null</code>, check the alias, eServer's access to the database, the account's permissions, and the SQL in that order.</p>
+
+  <h3>2. Read rows and return selected columns</h3>
+  <p>Create a Task Set named <code>loadDemoTasks</code>. Call <code>loadDemoTasks()</code> from a browser event. Script 1 can be empty for this fixed query. In Script 2, execute a <code>SELECT</code> and write a status before the data set.</p>
+  <pre><code>var rows = db.executeQuery(&quot;DemoDb&quot;,
+    &quot;SELECT TaskId, Title, Status FROM dbo.DemoTasks ORDER BY TaskId&quot;);
+if (rows == null) {
+    eio.appendString8(&quot;F&quot;);
+    es.logWarning(&quot;DemoTasks query failed&quot;);
+    return;
+}
+eio.appendString8(&quot;T&quot;);
+eio.appendDataSet(rows, &quot;TaskId,Title,Status&quot;, 0, 20);</code></pre>
+  <p>In <code>appendDataSet</code>, the last two arguments are the starting row and the number of rows to return. The explicit column list determines what crosses to the browser. For a single-row lookup, ProjectAdmin uses <code>db.read(result)</code> and a typed getter such as <code>db.getString(result, "columnName")</code>.</p>
+  <p>In Script 3, read the status first. With a table body named <code>taskTable</code> whose columns match the returned fields and a status panel named <code>taskMessage</code>, the response handler can be:</p>
+  <pre><code>var status = eio.readString8();
+if (status === &quot;T&quot;) {
+    var rows = eio.readDataSet();
+    ee.setTableData(ee.getControl(&quot;taskTable&quot;), rows, 0);
+} else {
+    ee.setText(ee.getControl(&quot;taskMessage&quot;), &quot;Could not load tasks.&quot;);
+}</code></pre>
+
+  <h3>3. Update the row selected in the browser</h3>
+  <p>Create a named write task such as <code>updateDemoTask</code>. In Script 1, read the selected row ID and the new status from controls. Here the form inputs have the IDs <code>task-id</code> and <code>task-status</code>. Require a positive integer ID and a status of 0 or 1 in the form.</p>
+  <pre><code>eio.appendInt32(Number(document.getElementById(&quot;task-id&quot;).value));
+eio.appendInt32(Number(document.getElementById(&quot;task-status&quot;).value));</code></pre>
+  <p>In Script 2, read both integers in the same order and validate them again. In an authenticated application, also verify that the current user may modify that row before executing the statement.</p>
+  <pre><code>var taskId = eio.readInt32();
+var status = eio.readInt32();
+if (taskId &lt; 1 || (status !== 0 &amp;&amp; status !== 1)) {
+    eio.appendString8(&quot;F&quot;);
+    return;
+}
+
+var sql = &quot;UPDATE dbo.DemoTasks SET Status = &quot; + status
+    + &quot; WHERE TaskId = &quot; + taskId;
+var ok = db.executeNoneQuery(&quot;DemoDb&quot;, sql);
+eio.appendString8(ok ? &quot;T&quot; : &quot;F&quot;);</code></pre>
+  <p>Script 3 reads the one status value with <code>eio.readString8()</code>. On success, call <code>loadDemoTasks()</code> to refresh the list. On failure, keep the edit visible and show a message. A successful statement is distinct from an affected row. If the interface must report a missing or concurrently changed record, use a write operation that reports the affected row count or a database routine that returns that outcome explicitly.</p>
+
+  <pre><code>var ok = eio.readString8() === &quot;T&quot;;
+ee.setText(ee.getControl(&quot;taskMessage&quot;),
+    ok ? &quot;Update submitted.&quot; : &quot;Could not update the task.&quot;);
+if (ok) loadDemoTasks();</code></pre>
+
+  <h3>4. Insert and delete practice rows</h3>
+  <p>Use <code>db.executeNoneQuery</code> for commands that do not return a result set. The following separate Script 2 examples use fixed demo values. Run the insert before the delete to test both operations.</p>
+  <pre><code>var ok = db.executeNoneQuery(&quot;DemoDb&quot;,
+    &quot;INSERT INTO dbo.DemoTasks (TaskId, Title, Status) &quot;
+    + &quot;VALUES (2, N&#x27;Review task list&#x27;, 0)&quot;);
+eio.appendString8(ok ? &quot;T&quot; : &quot;F&quot;);</code></pre>
+  <pre><code>var ok = db.executeNoneQuery(&quot;DemoDb&quot;,
+    &quot;DELETE FROM dbo.DemoTasks WHERE TaskId = 2&quot;);
+eio.appendString8(ok ? &quot;T&quot; : &quot;F&quot;);</code></pre>
+  <p>For production forms, use a database access path that binds parameters for user-supplied text, and apply authorization before each write. The update example above constructs SQL only from validated integer fields, and the insert and delete use fixed values. Always scope an update or delete to the intended record.</p>
 </section>
 </div></main>`;
 sender.querySelector("#task-total-form").addEventListener("submit", function (event) {
