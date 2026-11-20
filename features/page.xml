@@ -188,7 +188,7 @@ sender.innerHTML = `
       <p>Start with a basic Div or Panel, add child controls, and define properties and events for the enclosing page. Use <code>onCreate</code> to bind children, initialize per-instance state, and expose methods such as <code>getEditText()</code> and <code>setEditText()</code>.</p>
       <p>Declare an <code>enum</code> in <code>userProperty</code> to add a selectable dropdown to Studio Properties. A <code>jsMix</code> declaration can expose a custom event with its own script editor and named arguments.</p>
       <p>In Faith's desktop main page, the same multiline Edit component appears in Home, a mobile composer, and a dialog. The instances reuse their interface and behavior while setting a different height limit or reacting differently to height changes.</p>
-      <a class="feature-example" href="./tutorials?v=components#build-a-component">Learn to build a component</a> &middot; <a class="feature-example" href="./tutorials?v=studio-properties#studio-custom-properties">See the Studio property and event editors</a> &middot; <a class="feature-example" href="./samples?v=components#advanced-edit">Try the advanced editor</a>
+      <a class="feature-example" href="./tutorials?v=components#build-a-component">Learn to build a component</a> &middot; <a class="feature-example" href="./tutorials?v=studio-properties#studio-custom-properties">See the Studio property and event editors</a> &middot; <a class="feature-example" href="./samples?v=live-controls#advanced-edit">Try the advanced editor</a> &middot; <a class="feature-example" href="./samples?v=live-controls#file-upload">Try a component that sends a file to eServer</a>
 
     </article>
     <article id="global-variables">

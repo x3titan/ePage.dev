@@ -248,7 +248,7 @@ sender.setEditText = function (text) {
     <li><code>onHeightChange</code> lets the parent reflow the surrounding page. On Home, it refreshes the surrounding composer layout.</li>
   </ul>
   <p>Reuse the Panel, its child controls, property declarations, and initialization together. Keep draft text and focus state on the editor instance. A page can send the text to a Task Set when the user submits it.</p>
-  <p><a href="./samples?v=components#advanced-edit">Try two instances of the advanced editor</a></p>
+  <p><a href="./samples?v=live-controls#advanced-edit">Try two native advanced editor instances</a> &middot; <a href="./samples?v=live-controls#file-upload">Try the file upload component</a></p>
 </section>
 </div></main>`;
 sender.querySelector("#task-total-form").addEventListener("submit", function (event) {

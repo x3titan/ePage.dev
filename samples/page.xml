@@ -1,5 +1,5 @@
 <page>
-  <controls count="2">
+  <controls count="5">
     <control type="DivRoot" pathname="/divRoot">
       <dockX>fill</dockX>
       <dockY>fill</dockY>
@@ -49,7 +49,7 @@ sender.innerHTML = `
 .site-doc .edit-surface { min-height:48px; margin-top:8px; padding:8px; border:1px solid #bcb3d4; border-radius:5px; white-space:pre-wrap; overflow-wrap:anywhere; overflow-y:auto; }
 
 </style>
-<main class="site-doc" lang="en"><header><div class="wrap"><h1>Examples</h1><p>Try page interactions and front-end controls from ProjectAdmin.</p><p><a class="admin-jump" href="#admin-controls" style="color:white">Jump to the ProjectAdmin controls</a> &middot; <a class="admin-jump" href="#advanced-edit" style="color:white">Try the advanced Edit component</a></p></div></header><div class="wrap"><section id="layers"><h2>Switch between page views</h2><p>Named layers let a page reveal one view while retaining the surrounding interface. Try switching this preview between a compact summary and a detail view.</p>
+<main class="site-doc" lang="en"><header><div class="wrap"><h1>Examples</h1><p>Try page interactions and front-end controls from ProjectAdmin.</p><p><a class="admin-jump" href="#admin-controls" style="color:white">Jump to the ProjectAdmin controls</a> &middot; <a class="admin-jump" href="#advanced-edit" style="color:white">Try the advanced Edit component</a> &middot; <a class="admin-jump" href="#file-upload" style="color:white">Try a file upload</a></p></div></header><div class="wrap"><section id="layers"><h2>Switch between page views</h2><p>Named layers let a page reveal one view while retaining the surrounding interface. Try switching this preview between a compact summary and a detail view.</p>
  <fieldset><legend>Preview layout</legend><button type="button" data-view="summary" aria-pressed="true">Summary</button> <button type="button" data-view="details" aria-pressed="false">Details</button>
  <p data-layer="summary">Three pages are ready to publish.</p><p data-layer="details" hidden>Home, Features, and Examples are ready to publish. Each has its own page directory.</p></fieldset></section><section id="themes"><h2>Change the appearance</h2><p>ePage skins define the appearance of controls. Use this preview to see how the same panel reads in two palettes.</p>
  <fieldset id="theme-preview"><legend>Preview palette</legend><label>Palette <select id="palette"><option value="light">Light</option><option value="dark">Dark</option></select></label><p>Project preview</p></fieldset></section><section id="table"><h2>Filter rows in a table</h2><p>This browser-only example uses sample data to demonstrate filtering and rendering a result set. A Task Set can supply data from eServer when an application needs a server-side lookup.</p>
@@ -73,24 +73,45 @@ sender.innerHTML = `
 
 <section id="advanced-edit">
   <h2>One editor component, two configurations</h2>
-  <p>This browser example adapts Faith's multiline Edit component. Type or load a draft to see each instance grow until it reaches its height limit. Focus and editing state are independent.</p>
+  <p>These two ePage Panel instances share the same editor code and expose <code>editMaxY</code>, <code>editFontSize</code>, and an <code>editMode</code> dropdown in Studio. Type or load a draft to see the editor grow up to its configured height. The character count and height readouts are updated by each instance's custom events.</p>
   <div class="component-grid">
-    <div class="advanced-edit" data-max-height="160px" data-font-size="17px">
+    <div class="advanced-edit" id="page-editor-demo">
       <h3 id="draft-label">Page composer</h3>
-      <p class="edit-configuration">Maximum height 160 px</p>
+      <p class="edit-configuration"></p>
       <div class="edit-surface" contenteditable="plaintext-only" role="textbox" aria-multiline="true" aria-labelledby="draft-label"></div>
       <p class="edit-metrics"><span data-edit-count>0 characters</span> &middot; <span data-edit-height></span> &middot; <span data-edit-focus>Not focused</span></p>
       <p><button type="button" data-load-draft>Load sample draft</button> <button type="button" data-clear-draft>Clear</button></p>
     </div>
-    <div class="advanced-edit" data-max-height="92px" data-font-size="15px">
+    <div class="advanced-edit" id="dialog-editor-demo">
       <h3 id="dialog-label">Dialog composer</h3>
-      <p class="edit-configuration">Maximum height 92 px</p>
+      <p class="edit-configuration"></p>
       <div class="edit-surface" contenteditable="plaintext-only" role="textbox" aria-multiline="true" aria-labelledby="dialog-label"></div>
       <p class="edit-metrics"><span data-edit-count>0 characters</span> &middot; <span data-edit-height></span> &middot; <span data-edit-focus>Not focused</span></p>
       <p><button type="button" data-load-draft>Load sample draft</button> <button type="button" data-clear-draft>Clear</button></p>
     </div>
   </div>
   <p><a href="./tutorials?v=components#build-a-component">See the ePage properties, methods, and events behind this pattern</a></p>
+</section>
+
+<section id="file-upload">
+  <h2>File upload with a control-level Task Set</h2>
+  <p>Choose a small file and send it to eServer. The server receives the file content and returns the number of bytes received. This demonstration processes one file of up to 32 KiB per request and does not store the file.</p>
+  <form id="upload-demo-form">
+    <fieldset>
+      <legend>Send a sample file</legend>
+      <p><label>Choose a file <input type="file" required></label></p>
+      <p><button type="submit">Send to eServer</button></p>
+      <p id="upload-demo-status" role="status">Choose a file to try the upload.</p>
+    </fieldset>
+  </form>
+  <h3>From control event to server and back</h3>
+  <ol>
+    <li>The component reads the file and calls its own <code>sender.taskSet()</code>. The control's <code>taskSet</code> script writes the payload to <code>eio</code>.</li>
+    <li>The control's <code>taskSetServer</code> script validates the payload and returns a status and byte count.</li>
+    <li><code>taskSetReturn</code> reads the reply and raises the component's custom <code>onUploadComplete</code> event. The instance's event script updates the status line.</li>
+  </ol>
+  <p>ProjectAdmin uses the same three control properties for its chunked uploader. It starts a job with file metadata, sends Base64 blocks to the assigned job, and uses each server reply to advance progress. It exposes <code>blockSize</code> and <code>multiSelect</code> in Studio, and publishes events such as <code>onStatusChange</code> and <code>onComplete</code>.</p>
+  <p><a href="./tutorials?v=live-controls#studio-custom-properties">See the uploader's property and event editors in Studio</a></p>
 </section>
 </div></main>`;
 
@@ -144,34 +165,40 @@ checkboxes.querySelector("#clear-admin-checks").addEventListener("click", functi
     showSelectionCount();
 });
 
-function initAdvancedEdit(root) {
+g5.mountEditor = function (sender) {
+    const root = document.getElementById(sender.demoTarget);
     const surface = root.querySelector(".edit-surface");
-    const count = root.querySelector("[data-edit-count]");
-    const height = root.querySelector("[data-edit-height]");
     const focus = root.querySelector("[data-edit-focus]");
-    surface.style.maxHeight = root.dataset.maxHeight;
-    surface.style.fontSize = root.dataset.fontSize;
+    surface.style.maxHeight = sender.editMaxY;
+    surface.style.fontSize = sender.editFontSize;
+    surface.style.padding = sender.editMode === "compact" ? "6px" : "10px";
+    root.querySelector(".edit-configuration").textContent =
+        "Maximum height " + sender.editMaxY + " / " + sender.editMode;
 
-    root.getEditText = function () {
+    sender.getEditText = function () {
         return surface.innerText;
     };
-    root.setEditText = function (text) {
+    sender.setEditText = function (text) {
         surface.textContent = text;
-        updateCount();
+        reportInput();
     };
-
-    function updateCount() {
-        count.textContent = Array.from(root.getEditText()).length + " characters";
+    function reportInput() {
+        sender.onEditorInput(sender, sender.getEditText());
     }
-    surface.addEventListener("input", updateCount);
+    surface.addEventListener("input", reportInput);
     surface.addEventListener("focus", () => { focus.textContent = "Focused"; });
     surface.addEventListener("blur", () => { focus.textContent = "Not focused"; });
+    let previousHeight = 0;
     const observer = new ResizeObserver(() => {
-        height.textContent = Math.round(surface.getBoundingClientRect().height) + " px";
+        const height = Math.round(surface.getBoundingClientRect().height);
+        if (height === previousHeight) return;
+        const oldHeight = previousHeight;
+        previousHeight = height;
+        sender.onEditorResize(sender, oldHeight, height);
     });
     observer.observe(surface);
     root.querySelector("[data-load-draft]").addEventListener("click", () => {
-        root.setEditText([
+        sender.setEditText([
             "Plan the next update:",
             "Review the page layout.",
             "Check the controls in Explorer.",
@@ -180,16 +207,112 @@ function initAdvancedEdit(root) {
         ].join("\n"));
     });
     root.querySelector("[data-clear-draft]").addEventListener("click", () => {
-        root.setEditText("");
+        sender.setEditText("");
         surface.focus();
     });
-}
-for (const root of sender.querySelectorAll(".advanced-edit")) {
-    initAdvancedEdit(root);
-}
+};
 ]]></onCreate>
       <top>0</top>
       <width>1284</width>
+    </control>
+    <control type="Panel" pathname="/divRoot/pageEditorDemo">
+      <height>1</height>
+      <width>1</width>
+      <top>0</top>
+      <left>0</left>
+      <userProperty><![CDATA[//#P:demoTarget|Advanced Edit demo|page-editor-demo|string||ID of the demo mount point
+//#P:editMaxY|Advanced Edit|160px|string||Maximum height of the editable area
+//#P:editFontSize|Advanced Edit|17px|string||Font size of the editable area
+//#P:editMode|Advanced Edit|comfortable|enum|compact,comfortable|Choose the editor spacing
+//#P:onEditorInput(sender,text)|Advanced Edit||jsMix||The editor text changed
+//#P:onEditorResize(sender,oldHeight,height)|Advanced Edit||jsMix||The editor height changed]]></userProperty>
+      <__U_demoTarget><![CDATA[page-editor-demo]]></__U_demoTarget>
+      <__U_editMaxY><![CDATA[160px]]></__U_editMaxY>
+      <__U_editFontSize><![CDATA[17px]]></__U_editFontSize>
+      <__U_editMode><![CDATA[comfortable]]></__U_editMode>
+      <__U_onEditorInput-sender-text><![CDATA[document.getElementById(sender.demoTarget).querySelector("[data-edit-count]").textContent = Array.from(text).length + " characters";]]></__U_onEditorInput-sender-text>
+      <__U_onEditorResize-sender-oldHeight-height><![CDATA[document.getElementById(sender.demoTarget).querySelector("[data-edit-height]").textContent = height + " px";]]></__U_onEditorResize-sender-oldHeight-height>
+      <onCreate><![CDATA[sender.style.display = "none";
+g5.mountEditor(sender);]]></onCreate>
+    </control>
+    <control type="Panel" pathname="/divRoot/dialogEditorDemo">
+      <height>1</height>
+      <width>1</width>
+      <top>0</top>
+      <left>0</left>
+      <userProperty><![CDATA[//#P:demoTarget|Advanced Edit demo|page-editor-demo|string||ID of the demo mount point
+//#P:editMaxY|Advanced Edit|160px|string||Maximum height of the editable area
+//#P:editFontSize|Advanced Edit|17px|string||Font size of the editable area
+//#P:editMode|Advanced Edit|comfortable|enum|compact,comfortable|Choose the editor spacing
+//#P:onEditorInput(sender,text)|Advanced Edit||jsMix||The editor text changed
+//#P:onEditorResize(sender,oldHeight,height)|Advanced Edit||jsMix||The editor height changed]]></userProperty>
+      <__U_demoTarget><![CDATA[dialog-editor-demo]]></__U_demoTarget>
+      <__U_editMaxY><![CDATA[92px]]></__U_editMaxY>
+      <__U_editFontSize><![CDATA[15px]]></__U_editFontSize>
+      <__U_editMode><![CDATA[compact]]></__U_editMode>
+      <__U_onEditorInput-sender-text><![CDATA[document.getElementById(sender.demoTarget).querySelector("[data-edit-count]").textContent = Array.from(text).length + " characters";]]></__U_onEditorInput-sender-text>
+      <__U_onEditorResize-sender-oldHeight-height><![CDATA[document.getElementById(sender.demoTarget).querySelector("[data-edit-height]").textContent = height + " px";]]></__U_onEditorResize-sender-oldHeight-height>
+      <onCreate><![CDATA[sender.style.display = "none";
+g5.mountEditor(sender);]]></onCreate>
+    </control>
+    <control type="Panel" pathname="/divRoot/fileUploadDemo">
+      <height>1</height>
+      <width>1</width>
+      <top>0</top>
+      <left>0</left>
+      <userProperty><![CDATA[//#P:maxBytes|File upload|32768|int||Maximum file size in bytes
+//#P:onUploadComplete(sender,ok,size)|File upload||jsMix||eServer returned the upload result]]></userProperty>
+      <__U_maxBytes><![CDATA[32768]]></__U_maxBytes>
+      <__U_onUploadComplete-sender-ok-size><![CDATA[document.getElementById("upload-demo-status").textContent = ok
+    ? "eServer received " + size + " bytes."
+    : "eServer rejected the file payload.";]]></__U_onUploadComplete-sender-ok-size>
+      <onCreate><![CDATA[sender.style.display = "none";
+const form = document.getElementById("upload-demo-form");
+const input = form.querySelector("input");
+const button = form.querySelector("button");
+const status = document.getElementById("upload-demo-status");
+sender.finishUpload = function () {
+    sender.uploadData = "";
+    input.disabled = false;
+    button.disabled = false;
+};
+form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const file = input.files[0];
+    if (button.disabled || !file) return;
+    if (file.size === 0 || file.size > sender.maxBytes) {
+        status.textContent = "Choose a non-empty file up to 32 KiB.";
+        return;
+    }
+    input.disabled = true;
+    button.disabled = true;
+    status.textContent = "Sending file to eServer...";
+    try {
+        const bytes = new Uint8Array(await file.arrayBuffer());
+        sender.uploadData = btoa(String.fromCharCode(...bytes));
+        sender.taskSet();
+    } catch (error) {
+        sender.finishUpload();
+        status.textContent = "Could not send the file.";
+    }
+});]]></onCreate>
+      <taskSet><![CDATA[eio.appendString32(sender.uploadData);]]></taskSet>
+      <taskSetServer><![CDATA[var data = eio.readString32();
+var valid = typeof data === "string" && data.length > 0
+    && data.length <= 43692 && data.length % 4 === 0
+    && /^[A-Za-z0-9+/]+={0,2}$/.test(data);
+var size = 0;
+if (valid) {
+    var padding = data.slice(-2) === "==" ? 2 : (data.slice(-1) === "=" ? 1 : 0);
+    size = data.length / 4 * 3 - padding;
+}
+var ok = valid && size > 0 && size <= 32768;
+eio.appendString8(ok ? "T" : "F");
+eio.appendInt32(ok ? size : 0);]]></taskSetServer>
+      <taskSetReturn><![CDATA[const ok = eio.readString8() === "T";
+const size = eio.readInt32();
+sender.finishUpload();
+sender.onUploadComplete(sender, ok, size);]]></taskSetReturn>
     </control>
   </controls>
   <taskSet count="0" />
