@@ -1,6 +1,7 @@
 <page>
   <controls count="5">
     <control type="DivRoot" pathname="/divRoot">
+      <pageHead><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1" />]]></pageHead>
       <dockX>fill</dockX>
       <dockY>fill</dockY>
       <height>802</height>
@@ -48,7 +49,7 @@ sender.innerHTML = `
 .site-doc .edit-configuration, .site-doc .edit-metrics { font-size:13px; color:#4e4c63; }
 .site-doc .edit-surface { min-height:48px; margin-top:8px; padding:8px; border:1px solid #bcb3d4; border-radius:5px; white-space:pre-wrap; overflow-wrap:anywhere; overflow-y:auto; }
 
-.site-doc .upload-picker { max-width:355px; margin:14px auto; }
+.site-doc .upload-picker { width:100%; max-width:355px; margin:14px auto; }
 .site-doc .upload-picker .upload-button {
   display:block; width:min(100%,200px); min-height:34px; margin:auto; padding:4px 12px;
   background:white; border:1px solid #009dff; border-radius:24px;
@@ -61,7 +62,19 @@ sender.innerHTML = `
 .site-doc .upload-files progress::-webkit-progress-bar { background:#e3e4ec; }
 .site-doc .upload-files progress::-webkit-progress-value { background:#13a8f4; }
 .site-doc .upload-files progress::-moz-progress-bar { background:#13a8f4; }
-.site-doc .upload-detail { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:5px 10px; color:#13222b; font-size:14px; }
+.site-doc .upload-detail {
+  display:flex; align-items:baseline; gap:5px; min-width:0;
+  padding:5px 10px; color:#13222b; font-size:14px;
+}
+.site-doc .upload-counters { flex:none; font-variant-numeric:tabular-nums; }
+.site-doc .upload-filename { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+@media (max-width:520px) {
+  .site-doc .upload-picker .upload-button { width:100%; min-height:46px; }
+  .site-doc .upload-detail { display:grid; gap:1px; padding:8px 10px; }
+  .site-doc .upload-filename { white-space:normal; overflow-wrap:anywhere; }
+  .site-doc .upload-files li { margin-block:8px; }
+  .site-doc .upload-files progress { height:7px; }
+}
 .site-doc #upload-demo-status { text-align:center; font-size:13px; color:#4e4c63; }
 .site-doc .upload-capture { margin:14px 0; }
 .site-doc .upload-capture img { display:block; max-width:100%; height:auto; }
@@ -309,10 +322,8 @@ sender.renderUploadRow = function (worker, ok) {
     const total = worker.file.size;
     const sent = worker.bytesSent;
     const percent = total ? sent * 100 / total : (ok ? 100 : 0);
-    const label = percent.toFixed(1) + "%(" + formatSize(sent) + "/" + formatSize(total) + ") "
-        + worker.file.name + (ok === false ? " (stopped)" : "");
-    worker.detail.textContent = label;
-    worker.detail.title = label;
+    const counters = percent.toFixed(1) + "% (" + formatSize(sent) + "/" + formatSize(total) + ")";
+    worker.counters.textContent = counters + (ok === false ? " - stopped" : "");
 };
 button.addEventListener("click", () => input.click());
 input.addEventListener("change", () => {
@@ -385,13 +396,20 @@ form.addEventListener("submit", function (event) {
         const item = document.createElement("li");
         const progress = document.createElement("progress");
         const detail = document.createElement("span");
+        const counters = document.createElement("span");
+        const filename = document.createElement("span");
+        counters.className = "upload-counters";
+        filename.className = "upload-filename";
+        filename.textContent = file.name;
+        filename.title = file.name;
+        detail.append(counters, filename);
         progress.max = Math.max(1, file.size);
         progress.value = 0;
         progress.setAttribute("aria-label", "Upload progress for " + file.name);
         detail.className = "upload-detail";
         item.append(detail, progress);
         list.appendChild(item);
-        const worker = {file, progress, detail, bytesSent: 0};
+        const worker = {file, progress, counters, bytesSent: 0};
         workers.push(worker);
         sender.renderUploadRow(worker);
     }

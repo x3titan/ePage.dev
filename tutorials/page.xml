@@ -224,7 +224,7 @@ eio.appendString8(ok ? &quot;T&quot; : &quot;F&quot;);</code></pre>
   <pre><code>// In the component instance&#x27;s onHeightChange event editor:
 sender.parentNode.refresh();</code></pre>
   <p>The original Faith editor declares font family, color, font size, and maximum height. The declarations are stored in <code>userProperty</code> and the selected values and handler bodies are saved under <code>__U_</code> fields. The Home and mobile composers use a <code>300px</code> height limit and the posting dialog uses <code>150px</code>. Each instance can have its own event script.</p>
-  <p><a href="./samples?v=upload-preview#file-upload">See multiple files advance in the live upload demo</a>. It reproduces the uploader's per-file progress and round-robin block scheduling.</p>
+  <p><a href="./samples?v=mobile-upload#file-upload">See multiple files advance in the live upload demo</a>. It reproduces the uploader's per-file progress and round-robin block scheduling.</p>
   <h3>3. Implement behavior and expose methods</h3>
   <p>This simplified <code>onCreate</code> starts with the same two-child structure as the project. It makes the second child editable and exposes methods on <code>sender</code> so the parent can read or replace its text without reaching into the editable child.</p>
   <pre><code>const editor = sender.eeChildren[1];
@@ -249,7 +249,7 @@ sender.setEditText = function (text) {
     <li><code>onHeightChange</code> lets the parent reflow the surrounding page. On Home, it refreshes the surrounding composer layout.</li>
   </ul>
   <p>Reuse the Panel, its child controls, property declarations, and initialization together. Keep draft text and focus state on the editor instance. A page can send the text to a Task Set when the user submits it.</p>
-  <p><a href="./samples?v=upload-preview#advanced-edit">Try two native advanced editor instances</a> &middot; <a href="./samples?v=upload-preview#file-upload">Try the file upload component</a></p>
+  <p><a href="./samples?v=mobile-upload#advanced-edit">Try two native advanced editor instances</a> &middot; <a href="./samples?v=mobile-upload#file-upload">Try the file upload component</a></p>
 </section>
 </div></main>`;
 sender.querySelector("#task-total-form").addEventListener("submit", function (event) {
