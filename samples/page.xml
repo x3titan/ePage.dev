@@ -1,4 +1,79 @@
 <page>
-  <controls count="0" />
-  <sqlResultSet count="0" />
+  <controls count="2">
+    <control type="DivRoot" pathname="/divRoot">
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <height>802</height>
+      <left>0</left>
+      <top>0</top>
+      <width>1284</width>
+    </control>
+    <control type="Panel" pathname="/divRoot/content">
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <height>802</height>
+      <left>0</left>
+      <onCreate><![CDATA[sender.style.overflow = "auto";
+sender.innerHTML = `
+<style>
+.site-doc { color:#26243c; background:#f7f7fc; min-height:100%; font:16px/1.6 system-ui,sans-serif; white-space:normal; overflow-wrap:anywhere; }
+.site-doc * { box-sizing:border-box; }
+.site-doc a { color:#46368b; text-underline-offset:.15em; }
+.site-doc h1,.site-doc h2,.site-doc p { margin:0; }
+.site-doc h1 { font-size:clamp(28px,5vw,48px); line-height:1.1; }
+.site-doc h2 { font-size:clamp(19px,3vw,25px); line-height:1.25; }
+.site-doc header { background:#302a60; color:white; }
+.site-doc .wrap { max-width:950px; margin:auto; padding:clamp(20px,5vw,48px); }
+.site-doc header p,.site-doc section p { margin-top:10px; }
+.site-doc section { background:white; border:1px solid #e3dff2; border-radius:12px; padding:clamp(16px,3vw,26px); margin-bottom:15px; }
+.site-doc pre { white-space:pre-wrap; background:#f1eef9; padding:12px; border-radius:6px; }
+.site-doc button,.site-doc select,.site-doc input { font:inherit; }
+.site-doc button { background:#46368b; color:#fff; border:0; border-radius:6px; padding:6px 13px; cursor:pointer; }
+.site-doc :focus-visible { outline:2px solid #7c63d2; outline-offset:3px; }
+.site-doc fieldset { border:1px solid #d9d1ef; border-radius:8px; margin:12px 0 0; min-width:0; }
+.site-doc table { width:100%; text-align:left; border-collapse:collapse; margin-top:10px; }
+.site-doc th,.site-doc td { padding:6px; border-bottom:1px solid #e3dff2; }
+</style>
+<main class="site-doc" lang="en"><header><div class="wrap"><h1>Examples</h1><p>Try three common web application interactions.</p></div></header><div class="wrap"><section id="layers"><h2>Switch between page views</h2><p>Named layers let a page reveal one view while retaining the surrounding interface. Try switching this preview between a compact summary and a detail view.</p>
+ <fieldset><legend>Preview layout</legend><button type="button" data-view="summary" aria-pressed="true">Summary</button> <button type="button" data-view="details" aria-pressed="false">Details</button>
+ <p data-layer="summary">Three pages are ready to publish.</p><p data-layer="details" hidden>Home, Features, and Examples are ready to publish. Each has its own page directory.</p></fieldset></section><section id="themes"><h2>Change the appearance</h2><p>ePage skins define the appearance of controls. Use this preview to see how the same panel reads in two palettes.</p>
+ <fieldset id="theme-preview"><legend>Preview palette</legend><label>Palette <select id="palette"><option value="light">Light</option><option value="dark">Dark</option></select></label><p>Project preview</p></fieldset></section><section id="table"><h2>Filter rows in a table</h2><p>This browser-only example uses sample data to demonstrate filtering and rendering a result set. A Task Set can supply data from eServer when an application needs a server-side lookup.</p>
+ <fieldset><legend>Sample data</legend><label>Filter pages <input id="row-filter" type="search" placeholder="Search by page name"></label>
+ <table><thead><tr><th scope="col">Page</th><th scope="col">Type</th></tr></thead><tbody><tr><td>Home</td><td>Overview</td></tr><tr><td>Features</td><td>Reference</td></tr><tr><td>Tutorials</td><td>Guide</td></tr></tbody></table><p id="row-count" aria-live="polite">3 pages</p></fieldset></section></div></main>`;
+
+const views = sender.querySelectorAll("[data-view]");
+for (const button of views) {
+    button.addEventListener("click", function () {
+        const selected = button.dataset.view;
+        for (const option of views) {
+            option.setAttribute("aria-pressed", String(option.dataset.view === selected));
+        }
+        for (const panel of sender.querySelectorAll("[data-layer]")) {
+            panel.hidden = panel.dataset.layer !== selected;
+        }
+    });
+}
+sender.querySelector("#palette").addEventListener("change", function () {
+    const preview = sender.querySelector("#theme-preview");
+    const dark = this.value === "dark";
+    preview.style.backgroundColor = dark ? "#302a60" : "";
+    preview.style.color = dark ? "#ffffff" : "";
+});
+sender.querySelector("#row-filter").addEventListener("input", function () {
+    const query = this.value.trim().toLowerCase();
+    let count = 0;
+    for (const row of sender.querySelectorAll("tbody tr")) {
+        row.hidden = !row.cells[0].textContent.toLowerCase().includes(query);
+        if (!row.hidden) count++;
+    }
+    sender.querySelector("#row-count").textContent = count === 1 ? "1 page" : count + " pages";
+});
+]]></onCreate>
+      <top>0</top>
+      <width>1284</width>
+    </control>
+  </controls>
+  <taskSet count="0" />
+  <gridLines count="0" />
+  <g5Items count="0" />
 </page>

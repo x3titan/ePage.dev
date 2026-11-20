@@ -1,0 +1,46 @@
+<page>
+  <controls count="2">
+    <control type="DivRoot" pathname="/divRoot">
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <height>802</height>
+      <left>0</left>
+      <top>0</top>
+      <width>1284</width>
+    </control>
+    <control type="Panel" pathname="/divRoot/content">
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <height>802</height>
+      <left>0</left>
+      <onCreate><![CDATA[sender.style.overflow = "auto";
+sender.innerHTML = `
+<style>
+.site-doc { color:#26243c; background:#f7f7fc; min-height:100%; font:16px/1.6 system-ui,sans-serif; white-space:normal; overflow-wrap:anywhere; }
+.site-doc * { box-sizing:border-box; }
+.site-doc a { color:#46368b; text-underline-offset:.15em; }
+.site-doc h1,.site-doc h2,.site-doc p { margin:0; }
+.site-doc h1 { font-size:clamp(28px,5vw,48px); line-height:1.1; }
+.site-doc h2 { font-size:clamp(19px,3vw,25px); line-height:1.25; }
+.site-doc header { background:#302a60; color:white; }
+.site-doc .wrap { max-width:950px; margin:auto; padding:clamp(20px,5vw,48px); }
+.site-doc header p,.site-doc section p { margin-top:10px; }
+.site-doc section { background:white; border:1px solid #e3dff2; border-radius:12px; padding:clamp(16px,3vw,26px); margin-bottom:15px; }
+.site-doc pre { white-space:pre-wrap; background:#f1eef9; padding:12px; border-radius:6px; }
+.site-doc button,.site-doc select,.site-doc input { font:inherit; }
+.site-doc button { background:#46368b; color:#fff; border:0; border-radius:6px; padding:6px 13px; cursor:pointer; }
+.site-doc :focus-visible { outline:2px solid #7c63d2; outline-offset:3px; }
+.site-doc fieldset { border:1px solid #d9d1ef; border-radius:8px; margin:12px 0 0; min-width:0; }
+.site-doc table { width:100%; text-align:left; border-collapse:collapse; margin-top:10px; }
+.site-doc th,.site-doc td { padding:6px; border-bottom:1px solid #e3dff2; }
+</style>
+<main class="site-doc" lang="en"><header><div class="wrap"><h1>Website information</h1><p>Information about this site and its examples.</p></div></header><div class="wrap"><section id="use"><h2>Website use</h2><p>This website presents ePage Studio and eServer, provides tutorials, and hosts browser-based examples. The examples use sample content to demonstrate interface behavior.</p></section><section id="privacy"><h2>Privacy</h2><p>eServer can set a session cookie when serving this site. If you email support, your message includes the information you choose to share.</p><p>For questions about website use or privacy, email <a href="mailto:support@epage.dev">support@epage.dev</a>.</p></section></div></main>`;
+]]></onCreate>
+      <top>0</top>
+      <width>1284</width>
+    </control>
+  </controls>
+  <taskSet count="0" />
+  <gridLines count="0" />
+  <g5Items count="0" />
+</page>

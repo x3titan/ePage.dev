@@ -1,0 +1,46 @@
+<page>
+  <controls count="2">
+    <control type="DivRoot" pathname="/divRoot">
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <height>802</height>
+      <left>0</left>
+      <top>0</top>
+      <width>1284</width>
+    </control>
+    <control type="Panel" pathname="/divRoot/content">
+      <dockX>fill</dockX>
+      <dockY>fill</dockY>
+      <height>802</height>
+      <left>0</left>
+      <onCreate><![CDATA[sender.style.overflow = "auto";
+sender.innerHTML = `
+<style>
+.site-doc { color:#26243c; background:#f7f7fc; min-height:100%; font:16px/1.6 system-ui,sans-serif; white-space:normal; overflow-wrap:anywhere; }
+.site-doc * { box-sizing:border-box; }
+.site-doc a { color:#46368b; text-underline-offset:.15em; }
+.site-doc h1,.site-doc h2,.site-doc p { margin:0; }
+.site-doc h1 { font-size:clamp(28px,5vw,48px); line-height:1.1; }
+.site-doc h2 { font-size:clamp(19px,3vw,25px); line-height:1.25; }
+.site-doc header { background:#302a60; color:white; }
+.site-doc .wrap { max-width:950px; margin:auto; padding:clamp(20px,5vw,48px); }
+.site-doc header p,.site-doc section p { margin-top:10px; }
+.site-doc section { background:white; border:1px solid #e3dff2; border-radius:12px; padding:clamp(16px,3vw,26px); margin-bottom:15px; }
+.site-doc pre { white-space:pre-wrap; background:#f1eef9; padding:12px; border-radius:6px; }
+.site-doc button,.site-doc select,.site-doc input { font:inherit; }
+.site-doc button { background:#46368b; color:#fff; border:0; border-radius:6px; padding:6px 13px; cursor:pointer; }
+.site-doc :focus-visible { outline:2px solid #7c63d2; outline-offset:3px; }
+.site-doc fieldset { border:1px solid #d9d1ef; border-radius:8px; margin:12px 0 0; min-width:0; }
+.site-doc table { width:100%; text-align:left; border-collapse:collapse; margin-top:10px; }
+.site-doc th,.site-doc td { padding:6px; border-bottom:1px solid #e3dff2; }
+</style>
+<main class="site-doc" lang="en"><header><div class="wrap"><h1>Tutorials</h1><p>Create a page, add an event, and publish with eServer.</p></div></header><div class="wrap"><section><h2>Create your first page</h2><ol><li>In ePage Studio, open a project and create a page.</li><li>Add a panel, set its text and properties, and save the page.</li><li>Check that the page directory contains <code>page.xml</code> and appears in the project tree.</li></ol><p><a href="./features?v=guide#main-interface">See the Studio workspace</a></p></section><section><h2>Add a click event</h2><ol><li>Select a button or panel on the canvas.</li><li>Open its <code>onClick</code> event and add a JavaScript handler.</li><li>Publish and click the control in a browser to verify the result.</li></ol><pre>sender.style.backgroundColor = "#46368b";</pre><p><a href="./samples#layers">Try a view-switching example</a></p></section><section><h2>Publish with eServer</h2><ol><li>Register your project directory in the eServer project list.</li><li>Set the domain and default page where appropriate.</li><li>Open your public page URL. Test links and image responses in addition to the HTML.</li></ol><p>For example, the page directory <code>features</code> in this project is available at <code>/ePage.dev/features</code>.</p></section></div></main>`;
+]]></onCreate>
+      <top>0</top>
+      <width>1284</width>
+    </control>
+  </controls>
+  <taskSet count="0" />
+  <gridLines count="0" />
+  <g5Items count="0" />
+</page>

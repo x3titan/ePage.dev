@@ -1,257 +1,127 @@
 <page>
-  <controls count="15">
+  <controls count="2">
     <control type="DivRoot" pathname="/divRoot">
-      <backgroundColor>ffffff</backgroundColor>
+      <backgroundColor>f7f7fc</backgroundColor>
       <bgColorEnabled>true</bgColorEnabled>
       <dockX>fill</dockX>
-      <height>1600</height>
+      <dockY>fill</dockY>
+      <height>581</height>
       <left>0</left>
       <top>0</top>
-      <width>1602</width>
+      <width>1284</width>
     </control>
-    <control type="Panel" pathname="/divRoot/panel1">
-      <backgroundImg>ePageBg.jpg</backgroundImg>
-      <dockX>fill</dockX>
-      <height>264</height>
-      <heightRatio>0.165</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.221476510067114</sizeRatio>
-      <top>0</top>
-      <width>1602</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="LayoutX" pathname="/divRoot/layoutx1">
-      <dockX>center</dockX>
-      <fieldCount>2</fieldCount>
-      <height>1166</height>
-      <heightRatio>0.72875</heightRatio>
-      <left>245</left>
-      <leftRatio>0.0335570469798658</leftRatio>
-      <sizeRatio>1.04950495049505</sizeRatio>
-      <top>282</top>
-      <topRatio>0.17625</topRatio>
-      <width>1111</width>
-      <widthRatio>0.932046979865772</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem1">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <hAlign>left</hAlign>
-      <height>1166</height>
-      <heightRatio>1</heightRatio>
-      <left>0</left>
-      <sizeRatio>2.09712230215827</sizeRatio>
-      <top>0</top>
-      <vAlign>top</vAlign>
-      <width>556</width>
-      <widthRatio>0.5004500450045</widthRatio>
-    </control>
-    <control type="LayoutY" pathname="/divRoot/layoutx1/layoutxitem1/layouty1">
+    <control type="Panel" pathname="/divRoot/overview">
       <dockX>fill</dockX>
       <dockY>fill</dockY>
-      <height>1166</height>
-      <heightRatio>1</heightRatio>
+      <height>581</height>
       <left>0</left>
-      <onCreate>sender.style.boxSizing="border-box";
-sender.style.borderWidth = "1px";
-sender.style.borderColor = "rgb(230,236,240)";
-sender.style.borderStyle = "solid";
-sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
-      <outerRight>10</outerRight>
-      <sizeRatio>2.13553113553114</sizeRatio>
+      <onCreate><![CDATA[sender.style.overflow = "auto";
+sender.innerHTML = `
+<style>
+  .epage-overview {
+    color: #23243d;
+    font: 16px/1.6 system-ui, "Segoe UI", sans-serif;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  .epage-overview * { box-sizing: border-box; }
+  .epage-overview p { margin: 0; }
+  .epage-overview h1, .epage-overview h2, .epage-overview h3 {
+    margin: 0;
+    line-height: 1.15;
+  }
+  .epage-overview .overview-wrap {
+    width: min(100%, 1120px);
+    margin-inline: auto;
+    padding-inline: clamp(18px, 5vw, 44px);
+  }
+  .epage-overview .overview-hero {
+    padding-block: clamp(32px, 5vw, 56px);
+    background: linear-gradient(120deg, #26234c, #423b83);
+    color: #fff;
+  }
+  .epage-overview h1 {
+    max-width: 19ch;
+    font-size: clamp(32px, 5vw, 56px);
+    letter-spacing: -.04em;
+  }
+  .epage-overview .overview-hero p {
+    max-width: 62ch;
+    margin-block: 20px 26px;
+    color: #ebe8ff;
+    font-size: clamp(16px, 2vw, 19px);
+  }
+  .epage-overview .overview-link {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #fff;
+    color: #342d72;
+    font-weight: 650;
+    text-decoration: none;
+  }
+  .epage-overview .overview-link:hover { background: #e9e5ff; }
+  .epage-overview .overview-link:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+  }
+  .epage-overview .overview-section { padding-block: clamp(28px, 5vw, 56px); }
+  .epage-overview h2 { font-size: clamp(24px, 4vw, 34px); }
+  .epage-overview h3 { font-size: 19px; }
+  .epage-overview .overview-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .epage-overview .overview-step {
+    padding: 22px;
+    border: 1px solid #e2dff2;
+    border-radius: 12px;
+    background: #fff;
+  }
+  .epage-overview .overview-step p,
+  .epage-overview .overview-details p { margin-top: 10px; color: #4d4c64; }
+  .epage-overview .overview-details {
+    border-top: 1px solid #e2dff2;
+  }
+  .epage-overview code { color: #403583; }
+</style>
+<main class="epage-overview" lang="en">
+  <section class="overview-hero">
+    <div class="overview-wrap">
+      <h1>Build web applications with ePage Studio</h1>
+      <p>Design pages visually, write JavaScript for browser interactions and server-side logic, and publish your project with eServer. This website is built with ePage.</p>
+      <a class="overview-link" href="./features?v=guide">Explore features</a>
+    </div>
+  </section>
+  <div class="overview-wrap">
+    <section class="overview-section" aria-labelledby="overview-workflow">
+      <h2 id="overview-workflow">How ePage works</h2>
+      <div class="overview-steps">
+        <article class="overview-step">
+          <h3>Design in ePage Studio</h3>
+          <p>Arrange controls visually, adjust their properties, and use layouts and layers to organize each page.</p>
+        </article>
+        <article class="overview-step">
+          <h3>Add application logic</h3>
+          <p>Use JavaScript to respond to clicks and other page events. Add server-side code for tasks such as retrieving or processing data.</p>
+        </article>
+        <article class="overview-step">
+          <h3>Publish with eServer</h3>
+          <p>Register your project directory in eServer. It reads your page definitions and serves the application over HTTP or HTTPS.</p>
+        </article>
+      </div>
+    </section>
+    <section class="overview-section overview-details" aria-labelledby="overview-files">
+      <h2 id="overview-files">How a project is organized</h2>
+      <p>Each page has its own directory. Its <code>page.xml</code> stores the visual controls and the page's client-side and server-side code. Images and other page assets can live beside that file. At the project root, <code>project.xml</code> lists the pages and resources.</p>
+    </section>
+  </div>
+</main>`;]]></onCreate>
       <top>0</top>
-      <width>546</width>
-      <widthRatio>0.982014388489209</widthRatio>
-    </control>
-    <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem1/layouty1/layoutyitem1">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <backgroundImg>CPY0000.jpg</backgroundImg>
-      <heavyEnabled>false</heavyEnabled>
-      <height>300</height>
-      <heightRatio>0.257289879931389</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.54945054945055</sizeRatio>
-      <top>0</top>
-      <width>546</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem1/layouty1/layoutyitem2">
-      <backgroundColor>d0d0d0</backgroundColor>
-      <heavyEnabled>false</heavyEnabled>
-      <height>15</height>
-      <heightRatio>0.0128644939965695</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.0274725274725275</sizeRatio>
-      <top>300</top>
-      <topRatio>0.257289879931389</topRatio>
-      <width>546</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem1/layouty1/layoutyitem3">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <hAlign>left</hAlign>
-      <height>851</height>
-      <heightRatio>0.729845626072041</heightRatio>
-      <left>0</left>
-      <sizeRatio>1.55860805860806</sizeRatio>
-      <top>315</top>
-      <topRatio>0.270154373927959</topRatio>
-      <vAlign>top</vAlign>
-      <width>546</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="Panel" pathname="/divRoot/layoutx1/layoutxitem1/layouty1/layoutyitem3/panel2">
-      <dockX>fill</dockX>
-      <dockY>fill</dockY>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <hAlign>left</hAlign>
-      <height>851</height>
-      <heightRatio>1</heightRatio>
-      <left>10</left>
-      <leftRatio>0.0183150183150183</leftRatio>
-      <outerLeft>10</outerLeft>
-      <outerRight>10</outerRight>
-      <sizeRatio>1.61787072243346</sizeRatio>
-      <text><![CDATA[    <strong>What is ePage?</strong><br>
-    ePage is an <em>Internet application development platform</em> designed to help developers quickly <strong>build</strong> and <strong>deploy</strong> various applications.<br>
-    It provides a range of powerful tools and features, including:<br>
-    &amp;bull; 🖌️ <strong>Easy-to-use Interface Designer</strong> – Create web applications with an intuitive drag-and-drop interface.
-    &amp;bull; 📊 <strong>Flexible Data Modeling</strong> – Structure and manage your data with ease.
-    &amp;bull; ⚙️ <strong>Powerful Backend Services</strong> – Scalable and secure server-side functionality.
-    &amp;bull; 🔗 <strong>Integration Capabilities</strong> – Seamlessly connect with APIs and third-party services.<br>
-    With ePage, developers can efficiently create <strong>feature-rich and user-friendly</strong> web and mobile applications and deploy them across multiple platforms and devices.<br>
-    <strong>What Can You Build with ePage?</strong><br>
-    Whether you're developing:<br>
-    &amp;bull; 🛒 <strong>An E-commerce Website</strong> – Sell products with an engaging online storefront.
-    &amp;bull; 📱 <strong>A Social Media Application</strong> – Connect users in an interactive way.
-    &amp;bull; 🎓 <strong>An Online Education Platform</strong> – Power virtual learning experiences.
-    &amp;bull; 🚀 <strong>Any Other Web or Mobile App</strong> – Customize for your unique needs.<br>
-    ePage offers a comprehensive set of features to <strong>simplify and streamline</strong> the development process.<br>
-    Whether you're an <strong>experienced developer</strong> or just <strong>getting started</strong>, ePage helps you <strong>effortlessly bring your ideas to life</strong>.
-]]></text>
-      <textAutoBr>false</textAutoBr>
-      <top>0</top>
-      <vAlign>top</vAlign>
-      <width>526</width>
-      <widthRatio>0.963369963369963</widthRatio>
-    </control>
-    <control type="LayoutXItem" pathname="/divRoot/layoutx1/layoutxitem2">
-      <backgroundColor>d0d0d0</backgroundColor>
-      <height>1166</height>
-      <heightRatio>1</heightRatio>
-      <left>556</left>
-      <leftRatio>0.5004500450045</leftRatio>
-      <sizeRatio>2.1009009009009</sizeRatio>
-      <top>0</top>
-      <width>555</width>
-      <widthRatio>0.4995499549955</widthRatio>
-    </control>
-    <control type="LayoutY" pathname="/divRoot/layoutx1/layoutxitem2/layouty2">
-      <dockX>fill</dockX>
-      <dockY>fill</dockY>
-      <height>1166</height>
-      <heightRatio>1</heightRatio>
-      <left>0</left>
-      <onCreate>sender.style.boxSizing="border-box";
-sender.style.borderWidth = "1px";
-sender.style.borderColor = "rgb(230,236,240)";
-sender.style.borderStyle = "solid";
-sender.style.borderRadius = "15px 15px 15px 15px";</onCreate>
-      <outerRight>10</outerRight>
-      <sizeRatio>2.1394495412844</sizeRatio>
-      <top>0</top>
-      <width>545</width>
-      <widthRatio>0.981981981981982</widthRatio>
-    </control>
-    <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem2/layouty2/layoutyitem4">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <backgroundImg>CPY0003.jpg</backgroundImg>
-      <heavyEnabled>false</heavyEnabled>
-      <height>300</height>
-      <heightRatio>0.257289879931389</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.55045871559633</sizeRatio>
-      <top>0</top>
-      <width>545</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem2/layouty2/layoutyitem5">
-      <backgroundColor>d0d0d0</backgroundColor>
-      <heavyEnabled>false</heavyEnabled>
-      <height>15</height>
-      <heightRatio>0.0128644939965695</heightRatio>
-      <left>0</left>
-      <sizeRatio>0.0275229357798165</sizeRatio>
-      <top>300</top>
-      <topRatio>0.257289879931389</topRatio>
-      <width>545</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="LayoutYItem" pathname="/divRoot/layoutx1/layoutxitem2/layouty2/layoutyitem6">
-      <backgroundColor>f0f0f0</backgroundColor>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <hAlign>left</hAlign>
-      <height>851</height>
-      <heightRatio>0.729845626072041</heightRatio>
-      <left>0</left>
-      <sizeRatio>1.56146788990826</sizeRatio>
-      <top>315</top>
-      <topRatio>0.270154373927959</topRatio>
-      <vAlign>top</vAlign>
-      <width>545</width>
-      <widthRatio>1</widthRatio>
-    </control>
-    <control type="Panel" pathname="/divRoot/layoutx1/layoutxitem2/layouty2/layoutyitem6/panel3">
-      <dockX>fill</dockX>
-      <dockY>fill</dockY>
-      <fontFamily>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</fontFamily>
-      <fontSize>12</fontSize>
-      <hAlign>left</hAlign>
-      <height>851</height>
-      <heightRatio>1</heightRatio>
-      <left>10</left>
-      <leftRatio>0.018348623853211</leftRatio>
-      <onCreate><![CDATA[let t = ee.getText(sender);
-t = t.replace(/<br\s*\/?>/g, "");
-ee.setText(sender,t);
-]]></onCreate>
-      <outerLeft>10</outerLeft>
-      <outerRight>10</outerRight>
-      <sizeRatio>1.62095238095238</sizeRatio>
-      <text><![CDATA[    ePage is designed to deliver a <strong>seamless and responsive experience</strong> across all modern web browsers, ensuring consistency and reliability on <strong>both desktop and mobile devices</strong>. Whether you are developing on a <strong>widescreen monitor, tablet, or a vertically oriented smartphone</strong>, ePage adapts fluidly to different screen sizes.
-<br>
-<br>
-    <strong>✅ Desktop:</strong>
-<br>
-    • <strong>Google Chrome</strong> (Recommended for optimal performance)<br>
-    • <strong>Mozilla Firefox</strong><br>
-    • <strong>Microsoft Edge</strong><br>
-    • <strong>Apple Safari</strong><br>
-    • <strong>Opera</strong>
-<br>
-<br>
-    <strong>✅ Mobile (Portrait &amp; Landscape Mode):</strong>
-<br>
-    • <strong>Safari (iOS)</strong> – iPhones &amp; iPads<br>
-    • <strong>Chrome (Android &amp; iOS)</strong><br>
-    • <strong>Samsung Internet (Android)</strong><br>
-    • <strong>Edge (Mobile)</strong>
-<br>
-<br>
-    ePage utilizes <strong>responsive design principles</strong> and <strong>CSS media queries</strong> to ensure that the interface remains intuitive and user-friendly, even on <strong>vertically oriented mobile browsers</strong>. This means that <strong>buttons, menus, and workspace elements adjust dynamically</strong> for smaller screens, providing a smooth experience for mobile developers.<br><br>
-
-    For the best performance, it is recommended to use <strong>the latest browser versions</strong>, as older browsers may lack support for modern web technologies such as <strong>CSS Grid, Flexbox, and Web Components</strong>.
-]]></text>
-      <textAutoBr>false</textAutoBr>
-      <top>0</top>
-      <vAlign>top</vAlign>
-      <width>525</width>
-      <widthRatio>0.963302752293578</widthRatio>
+      <width>1284</width>
     </control>
   </controls>
   <taskSet count="0" />
