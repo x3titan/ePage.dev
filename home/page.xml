@@ -1,140 +1,483 @@
 <page>
-  <controls count="2">
+  <controls count="33">
     <control type="DivRoot" pathname="/divRoot">
-      <backgroundColor>f7f7fc</backgroundColor>
-      <bgColorEnabled>true</bgColorEnabled>
       <dockX>fill</dockX>
       <dockY>fill</dockY>
-      <height>581</height>
       <left>0</left>
       <top>0</top>
-      <width>1284</width>
-    </control>
-    <control type="Panel" pathname="/divRoot/overview">
-      <dockX>fill</dockX>
-      <dockY>fill</dockY>
-      <height>581</height>
-      <left>0</left>
-      <onCreate><![CDATA[sender.style.overflow = "auto";
-sender.innerHTML = `
+      <width>1120</width>
+      <height>1409</height>
+      <pageHead><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  .epage-overview {
-    color: #23243d;
-    font: 16px/1.6 system-ui, "Segoe UI", sans-serif;
-    text-align: left;
-    white-space: normal;
-    overflow-wrap: break-word;
-  }
-  .epage-overview * { box-sizing: border-box; }
-  .epage-overview p { margin: 0; }
-  .epage-overview h1, .epage-overview h2, .epage-overview h3 {
-    margin: 0;
-    line-height: 1.15;
-  }
-  .epage-overview .overview-wrap {
-    width: min(100%, 1120px);
-    margin-inline: auto;
-    padding-inline: clamp(18px, 5vw, 44px);
-  }
-  .epage-overview .overview-hero {
-    padding-block: clamp(32px, 5vw, 56px);
-    background: linear-gradient(120deg, #26234c, #423b83);
-    color: #fff;
-  }
-  .epage-overview h1 {
-    max-width: 19ch;
-    font-size: clamp(32px, 5vw, 56px);
-    letter-spacing: -.04em;
-  }
-  .epage-overview .overview-hero p {
-    max-width: 62ch;
-    margin-block: 20px 26px;
-    color: #ebe8ff;
-    font-size: clamp(16px, 2vw, 19px);
-  }
-  .epage-overview .overview-link {
-    display: inline-block;
-    padding: 10px 18px;
-    border-radius: 8px;
-    background: #fff;
-    color: #342d72;
-    font-weight: 650;
-    text-decoration: none;
-  }
-  .epage-overview .overview-link:hover { background: #e9e5ff; }
-  .epage-overview .overview-link:focus-visible {
-    outline: 2px solid #fff;
-    outline-offset: 4px;
-  }
-  .epage-overview .overview-section { padding-block: clamp(28px, 5vw, 56px); }
-  .epage-overview h2 { font-size: clamp(24px, 4vw, 34px); }
-  .epage-overview h3 { font-size: 19px; }
-  .epage-overview .overview-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-    gap: 16px;
-    margin-top: 20px;
-  }
-  .epage-overview .overview-step {
-    padding: 22px;
-    border: 1px solid #e2dff2;
-    border-radius: 12px;
-    background: #fff;
-  }
-  .epage-overview .overview-step p,
-  .epage-overview .overview-details p { margin-top: 10px; color: #4d4c64; }
-  .epage-overview .overview-details {
-    border-top: 1px solid #e2dff2;
-  }
-  .epage-overview code { color: #403583; }
-</style>
-<main class="epage-overview" lang="en">
-  <section class="overview-hero">
-    <div class="overview-wrap">
-      <h1>Build web applications with ePage Studio</h1>
-      <p>Design pages visually, write JavaScript for browser interactions and server-side logic, and publish your project with eServer. This website is built with ePage.</p>
-      <a class="overview-link" href="./features?v=components">Explore features</a>
-    </div>
-  </section>
-  <div class="overview-wrap">
-    <section class="overview-section" aria-labelledby="overview-workflow">
-      <h2 id="overview-workflow">How ePage works</h2>
-      <div class="overview-steps">
-        <article class="overview-step">
-          <h3>Design in ePage Studio</h3>
-          <p>Arrange controls visually, adjust their properties, and use layouts and layers to organize each page.</p>
-        </article>
-        <article class="overview-step">
-          <h3>Add application logic</h3>
-          <p>Use JavaScript for control events. When an action needs eServer, a Task Set groups request preparation, server logic, and the browser response in one named operation.</p>
-        </article>
-        <article class="overview-step">
-          <h3>Publish with eServer</h3>
-          <p>Register your project directory in eServer. It reads your page definitions and serves the application over HTTP or HTTPS.</p>
-        </article>
-      </div>
-    </section>
-    <section class="overview-section overview-details" aria-labelledby="overview-components">
-      <h2 id="overview-components">Turn a Div into a reusable component</h2>
-      <p>Combine child controls with your own properties, methods, and events. A single multiline Edit component can then serve several views, with its own font, height limit, and behavior in each one.</p>
-      <p><a href="./tutorials?v=components#build-a-component">See how Faith builds its Edit component</a></p>
-    </section>
-    <section class="overview-section overview-details" aria-labelledby="overview-task-set">
-      <h2 id="overview-task-set">Connect a page to eServer with Task Set</h2>
-      <p>When a visitor submits a form, a Task Set can read the input in the browser, validate and process it on eServer, then display the result in the page. All three scripts are stored with the page.</p>
-      <p><a href="./tutorials?v=project-admin#task-set-tutorial">Try a Task Set and read the three scripts</a></p>
-    </section>
-    <section class="overview-section overview-details" aria-labelledby="overview-files">
-      <h2 id="overview-files">How a project is organized</h2>
-      <p>Each page has its own directory. Its <code>page.xml</code> stores the visual controls and the page's client-side and server-side code. Images and other page assets can live beside that file. At the project root, <code>project.xml</code> lists the pages and resources.</p>
-    </section>
-  </div>
-</main>`;]]></onCreate>
-      <top>0</top>
-      <width>1284</width>
+
+html, body { margin:0; }
+#ee_divRoot { position:relative !important; inset:auto !important; width:100% !important; height:auto !important; min-height:100dvh; overflow:visible !important; background:#f7f7fc; }
+#ee_divRoot, #ee_divRoot * { box-sizing:border-box; }
+#ee_divRoot a { color:#46368b; text-underline-offset:.16em; }
+#ee_divRoot a:focus-visible, #ee_divRoot [role=button]:focus-visible, #ee_divRoot input:focus-visible { outline:2px solid #7c63d2; outline-offset:2px; }
+#ee_divRoot h1,#ee_divRoot h2,#ee_divRoot h3,#ee_divRoot p,#ee_divRoot pre { margin:0; }
+#ee_divRoot h1 { font:750 clamp(28px,5vw,48px)/1.12 system-ui,sans-serif; }
+#ee_divRoot h2 { font:720 clamp(21px,3vw,30px)/1.2 system-ui,sans-serif; }
+#ee_divRoot h3 { font:700 19px/1.3 system-ui,sans-serif; }
+#ee_divRoot pre { white-space:pre-wrap; overflow-wrap:anywhere; font:14px/1.55 ui-monospace,monospace; }
+#ee_divRoot code { overflow-wrap:anywhere; }
+:where(#ee_divRoot) [id^="ee_"] {
+position:relative !important; inset:auto !important; width:100% !important; height:auto !important; overflow:visible !important;
+}
+:where(#ee_divRoot) [id^="ee_"] > div:has(> table) { position:relative !important; inset:auto !important; height:auto !important; width:100% !important; overflow:visible !important; }
+:where(#ee_divRoot) [id^="ee_"] > div > table { position:relative !important; inset:auto !important; height:auto !important; width:100% !important; white-space:normal !important; border-collapse:collapse; }
+:where(#ee_divRoot) [id^="ee_"] td { padding:0; line-height:1.55; overflow-wrap:anywhere; }
+#ee_page { width:100% !important; }
+#ee_buildWebApplicationsWithEpageStudio,
+#ee_wrap { max-width:1120px; margin-inline:auto; padding:clamp(16px,4vw,40px); }
+#ee_hero { padding:clamp(22px,5vw,54px) max(16px,calc((100% - 1040px)/2)); }
+#ee_howEpageWorks,
+#ee_turnADivIntoAReusableComponent,
+#ee_connectAPageToEserverWithTask,
+#ee_howAProjectIsOrganized { border:1px solid #e3dff2; border-radius:12px; padding:clamp(15px,3vw,24px); margin-block:14px; }
+#ee_designInEpageStudio,
+#ee_addApplicationLogic,
+#ee_publishWithEserver { border:1px solid #e3dff2; border-radius:10px; padding:15px; margin-block:10px; }
+#ee_buildWebApplicationsWithEpageStudio2,
+#ee_designPagesVisuallyWriteJavascriptForBrowser,
+#ee_exploreFeatures,
+#ee_overviewWorkflow,
+#ee_designInEpageStudio2,
+#ee_arrangeControlsVisuallyAdjustTheirPropertiesAnd,
+#ee_addApplicationLogic2,
+#ee_useJavascriptForControlEventsWhenAn,
+#ee_publishWithEserver2,
+#ee_registerYourProjectDirectoryInEserverIt,
+#ee_overviewComponents,
+#ee_combineChildControlsWithYourOwnProperties,
+#ee_seeHowFaithBuildsItsEditComponent2,
+#ee_overviewTaskSet,
+#ee_whenAVisitorSubmitsAFormA,
+#ee_tryATaskSetAndReadThe2,
+#ee_overviewFiles,
+#ee_eachPageHasItsOwnDirectoryIts { margin-block:6px; }
+#ee_grid { display:grid !important; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:12px; }
+#ee_seeHowFaithBuildsItsEditComponent,
+#ee_tryATaskSetAndReadThe { display:flex !important; align-items:center; flex-wrap:wrap; gap:6px 12px; }
+#ee_seeHowFaithBuildsItsEditComponent2,
+#ee_tryATaskSetAndReadThe2 { width:max-content !important; max-width:100%; }
+#ee_buildWebApplicationsWithEpageStudio2 td { line-height:1.2; }
+#ee_overviewWorkflow td,#ee_overviewComponents td,#ee_overviewTaskSet td,#ee_overviewFiles td { line-height:1.2; }
+#ee_designInEpageStudio2 td,#ee_addApplicationLogic2 td,#ee_publishWithEserver2 td { line-height:1.2; }
+#ee_exploreFeatures a { color:#fff; }</style>]]></pageHead>
+      <onControlLoad><![CDATA[for (const name of ["buildWebApplicationsWithEpageStudio2"]) {
+    const heading = ee.getControl(name);
+    heading.setAttribute("role", "heading");
+    heading.setAttribute("aria-level", "1");
+}
+for (const name of ["overviewWorkflow", "overviewComponents", "overviewTaskSet", "overviewFiles"]) {
+    const heading = ee.getControl(name);
+    heading.setAttribute("role", "heading");
+    heading.setAttribute("aria-level", "2");
+}
+for (const name of ["designInEpageStudio2", "addApplicationLogic2", "publishWithEserver2"]) {
+    const heading = ee.getControl(name);
+    heading.setAttribute("role", "heading");
+    heading.setAttribute("aria-level", "3");
+}
+const anchors = {"overview-workflow":"overviewWorkflow","overview-components":"overviewComponents","overview-task-set":"overviewTaskSet","overview-files":"overviewFiles"};
+function showSection() {
+    const section = anchors[location.hash.slice(1)];
+    if (section) ee.getControl(section)?.scrollIntoView({block: "start"});
+}
+window.addEventListener("hashchange", showSection);
+requestAnimationFrame(showSection);]]></onControlLoad>
+    </control>
+    <control type="Panel" pathname="/divRoot/page">
+      <left>8</left>
+      <top>8</top>
+      <width>1112</width>
+      <height>1394</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/hero">
+      <backgroundColor>302a60</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <left>8</left>
+      <top>8</top>
+      <width>1104</width>
+      <height>260</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/hero/buildWebApplicationsWithEpageStudio">
+      <left>8</left>
+      <top>8</top>
+      <width>1060</width>
+      <height>209</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/hero/buildWebApplicationsWithEpageStudio/buildWebApplicationsWithEpageStudio2">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>ffffff</fontColor>
+      <fontSize>30</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <fontBold>true</fontBold>
+      <left>8</left>
+      <top>8</top>
+      <width>1016</width>
+      <height>62</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Build web applications with ePage Studio]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/hero/buildWebApplicationsWithEpageStudio/designPagesVisuallyWriteJavascriptForBrowser">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>ffffff</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <left>8</left>
+      <top>77</top>
+      <width>1016</width>
+      <height>52</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Design pages visually, write JavaScript for browser interactions and server-side logic, and publish your project with eServer. This website is built with ePage.]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/hero/buildWebApplicationsWithEpageStudio/exploreFeatures">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>ffffff</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <onCreate><![CDATA[const cell = sender.label.rows[0].cells[0];
+const link = document.createElement("a");
+link.href = "./features?v=native-panels";
+
+link.textContent = cell.textContent;
+cell.replaceChildren(link);]]></onCreate>
+      <left>8</left>
+      <top>136</top>
+      <width>1016</width>
+      <height>30</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Explore features]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap">
+      <left>8</left>
+      <top>275</top>
+      <width>1104</width>
+      <height>1112</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howEpageWorks">
+      <backgroundColor>ffffff</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <left>8</left>
+      <top>8</top>
+      <width>1060</width>
+      <height>416</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howEpageWorks/overviewWorkflow">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>21</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <fontBold>true</fontBold>
+      <left>8</left>
+      <top>8</top>
+      <width>1016</width>
+      <height>46</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[How ePage works]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howEpageWorks/grid">
+      <left>8</left>
+      <top>61</top>
+      <width>1016</width>
+      <height>312</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howEpageWorks/grid/designInEpageStudio">
+      <backgroundColor>ffffff</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <left>8</left>
+      <top>8</top>
+      <width>260</width>
+      <height>238</height>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howEpageWorks/grid/designInEpageStudio/designInEpageStudio2">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>15</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <fontBold>true</fontBold>
+      <left>8</left>
+      <top>8</top>
+      <width>216</width>
+      <height>62</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Design in ePage Studio]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howEpageWorks/grid/designInEpageStudio/arrangeControlsVisuallyAdjustTheirPropertiesAnd">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <left>8</left>
+      <top>77</top>
+      <width>216</width>
+      <height>118</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Arrange controls visually, adjust their properties, and use layouts and layers to organize each page.]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howEpageWorks/grid/addApplicationLogic">
+      <backgroundColor>ffffff</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <left>275</left>
+      <top>8</top>
+      <width>260</width>
+      <height>304</height>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howEpageWorks/grid/addApplicationLogic/addApplicationLogic2">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>15</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <fontBold>true</fontBold>
+      <left>8</left>
+      <top>8</top>
+      <width>216</width>
+      <height>62</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Add application logic]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howEpageWorks/grid/addApplicationLogic/useJavascriptForControlEventsWhenAn">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <left>8</left>
+      <top>77</top>
+      <width>216</width>
+      <height>184</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Use JavaScript for control events. When an action needs eServer, a Task Set groups request preparation, server logic, and the browser response in one named operation.]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howEpageWorks/grid/publishWithEserver">
+      <backgroundColor>ffffff</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <left>542</left>
+      <top>8</top>
+      <width>260</width>
+      <height>260</height>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howEpageWorks/grid/publishWithEserver/publishWithEserver2">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>15</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <fontBold>true</fontBold>
+      <left>8</left>
+      <top>8</top>
+      <width>216</width>
+      <height>62</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Publish with eServer]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howEpageWorks/grid/publishWithEserver/registerYourProjectDirectoryInEserverIt">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <left>8</left>
+      <top>77</top>
+      <width>216</width>
+      <height>140</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Register your project directory in eServer. It reads your page definitions and serves the application over HTTP or HTTPS.]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/turnADivIntoAReusableComponent">
+      <backgroundColor>ffffff</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <left>8</left>
+      <top>431</top>
+      <width>1060</width>
+      <height>223</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/turnADivIntoAReusableComponent/overviewComponents">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>21</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <fontBold>true</fontBold>
+      <left>8</left>
+      <top>8</top>
+      <width>1016</width>
+      <height>46</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Turn a Div into a reusable component]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/turnADivIntoAReusableComponent/combineChildControlsWithYourOwnProperties">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <left>8</left>
+      <top>61</top>
+      <width>1016</width>
+      <height>52</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Combine child controls with your own properties, methods, and events. A single multiline Edit component can then serve several views, with its own font, height limit, and behavior in each one.]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/turnADivIntoAReusableComponent/seeHowFaithBuildsItsEditComponent">
+      <left>8</left>
+      <top>120</top>
+      <width>1016</width>
+      <height>60</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/turnADivIntoAReusableComponent/seeHowFaithBuildsItsEditComponent/seeHowFaithBuildsItsEditComponent2">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <onCreate><![CDATA[const cell = sender.label.rows[0].cells[0];
+const link = document.createElement("a");
+link.href = "./tutorials?v=native-panels#build-a-component";
+
+link.textContent = cell.textContent;
+cell.replaceChildren(link);]]></onCreate>
+      <left>8</left>
+      <top>8</top>
+      <width>410</width>
+      <height>52</height>
+      <text><![CDATA[See how Faith builds its Edit component]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/connectAPageToEserverWithTask">
+      <backgroundColor>ffffff</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <left>8</left>
+      <top>661</top>
+      <width>1060</width>
+      <height>223</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/connectAPageToEserverWithTask/overviewTaskSet">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>21</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <fontBold>true</fontBold>
+      <left>8</left>
+      <top>8</top>
+      <width>1016</width>
+      <height>46</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Connect a page to eServer with Task Set]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/connectAPageToEserverWithTask/whenAVisitorSubmitsAFormA">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <left>8</left>
+      <top>61</top>
+      <width>1016</width>
+      <height>52</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[When a visitor submits a form, a Task Set can read the input in the browser, validate and process it on eServer, then display the result in the page. All three scripts are stored with the page.]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/connectAPageToEserverWithTask/tryATaskSetAndReadThe">
+      <left>8</left>
+      <top>120</top>
+      <width>1016</width>
+      <height>60</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/connectAPageToEserverWithTask/tryATaskSetAndReadThe/tryATaskSetAndReadThe2">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <onCreate><![CDATA[const cell = sender.label.rows[0].cells[0];
+const link = document.createElement("a");
+link.href = "./tutorials?v=native-panels#task-set-tutorial";
+
+link.textContent = cell.textContent;
+cell.replaceChildren(link);]]></onCreate>
+      <left>8</left>
+      <top>8</top>
+      <width>430</width>
+      <height>52</height>
+      <text><![CDATA[Try a Task Set and read the three scripts]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howAProjectIsOrganized">
+      <backgroundColor>ffffff</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <left>8</left>
+      <top>891</top>
+      <width>1060</width>
+      <height>178</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howAProjectIsOrganized/overviewFiles">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>21</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <fontBold>true</fontBold>
+      <left>8</left>
+      <top>8</top>
+      <width>1016</width>
+      <height>46</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[How a project is organized]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/howAProjectIsOrganized/eachPageHasItsOwnDirectoryIts">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <left>8</left>
+      <top>61</top>
+      <width>1016</width>
+      <height>74</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Each page has its own directory. Its page.xml stores the visual controls and the page's client-side and server-side code. Images and other page assets can live beside that file. At the project root, project.xml lists the pages and resources.]]></text>
     </control>
   </controls>
-  <taskSet count="0" />
+  <taskSet count="0">
+  </taskSet>
   <gridLines count="0" />
   <g5Items count="0" />
 </page>

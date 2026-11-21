@@ -1,46 +1,254 @@
 <page>
-  <controls count="2">
+  <controls count="16">
     <control type="DivRoot" pathname="/divRoot">
       <dockX>fill</dockX>
       <dockY>fill</dockY>
-      <height>802</height>
       <left>0</left>
       <top>0</top>
-      <width>1284</width>
-    </control>
-    <control type="Panel" pathname="/divRoot/content">
-      <dockX>fill</dockX>
-      <dockY>fill</dockY>
-      <height>802</height>
-      <left>0</left>
-      <onCreate><![CDATA[sender.style.overflow = "auto";
-sender.innerHTML = `
+      <width>1120</width>
+      <height>800</height>
+      <pageHead><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-.site-doc { color:#26243c; background:#f7f7fc; min-height:100%; font:16px/1.6 system-ui,sans-serif; white-space:normal; overflow-wrap:anywhere; }
-.site-doc * { box-sizing:border-box; }
-.site-doc a { color:#46368b; text-underline-offset:.15em; }
-.site-doc h1,.site-doc h2,.site-doc p { margin:0; }
-.site-doc h1 { font-size:clamp(28px,5vw,48px); line-height:1.1; }
-.site-doc h2 { font-size:clamp(19px,3vw,25px); line-height:1.25; }
-.site-doc header { background:#302a60; color:white; }
-.site-doc .wrap { max-width:950px; margin:auto; padding:clamp(20px,5vw,48px); }
-.site-doc header p,.site-doc section p { margin-top:10px; }
-.site-doc section { background:white; border:1px solid #e3dff2; border-radius:12px; padding:clamp(16px,3vw,26px); margin-bottom:15px; }
-.site-doc pre { white-space:pre-wrap; background:#f1eef9; padding:12px; border-radius:6px; }
-.site-doc button,.site-doc select,.site-doc input { font:inherit; }
-.site-doc button { background:#46368b; color:#fff; border:0; border-radius:6px; padding:6px 13px; cursor:pointer; }
-.site-doc :focus-visible { outline:2px solid #7c63d2; outline-offset:3px; }
-.site-doc fieldset { border:1px solid #d9d1ef; border-radius:8px; margin:12px 0 0; min-width:0; }
-.site-doc table { width:100%; text-align:left; border-collapse:collapse; margin-top:10px; }
-.site-doc th,.site-doc td { padding:6px; border-bottom:1px solid #e3dff2; }
-</style>
-<main class="site-doc" lang="en"><header><div class="wrap"><h1>Website information</h1><p>Information about this site and its examples.</p></div></header><div class="wrap"><section id="use"><h2>Website use</h2><p>This website presents ePage Studio and eServer, provides tutorials, and hosts browser-based examples. The examples use sample content to demonstrate interface behavior.</p></section><section id="privacy"><h2>Privacy</h2><p>eServer can set a session cookie when serving this site. If you email support, your message includes the information you choose to share.</p><p>For questions about website use or privacy, email <a href="mailto:support@epage.dev">support@epage.dev</a>.</p></section></div></main>`;
-]]></onCreate>
-      <top>0</top>
-      <width>1284</width>
+
+html, body { margin:0; }
+#ee_divRoot { position:relative !important; inset:auto !important; width:100% !important; height:auto !important; min-height:100dvh; overflow:visible !important; background:#f7f7fc; }
+#ee_divRoot, #ee_divRoot * { box-sizing:border-box; }
+#ee_divRoot a { color:#46368b; text-underline-offset:.16em; }
+#ee_divRoot a:focus-visible, #ee_divRoot [role=button]:focus-visible, #ee_divRoot input:focus-visible { outline:2px solid #7c63d2; outline-offset:2px; }
+#ee_divRoot h1,#ee_divRoot h2,#ee_divRoot h3,#ee_divRoot p,#ee_divRoot pre { margin:0; }
+#ee_divRoot h1 { font:750 clamp(28px,5vw,48px)/1.12 system-ui,sans-serif; }
+#ee_divRoot h2 { font:720 clamp(21px,3vw,30px)/1.2 system-ui,sans-serif; }
+#ee_divRoot h3 { font:700 19px/1.3 system-ui,sans-serif; }
+#ee_divRoot pre { white-space:pre-wrap; overflow-wrap:anywhere; font:14px/1.55 ui-monospace,monospace; }
+#ee_divRoot code { overflow-wrap:anywhere; }
+:where(#ee_divRoot) [id^="ee_"] {
+position:relative !important; inset:auto !important; width:100% !important; height:auto !important; overflow:visible !important;
+}
+:where(#ee_divRoot) [id^="ee_"] > div:has(> table) { position:relative !important; inset:auto !important; height:auto !important; width:100% !important; overflow:visible !important; }
+:where(#ee_divRoot) [id^="ee_"] > div > table { position:relative !important; inset:auto !important; height:auto !important; width:100% !important; white-space:normal !important; border-collapse:collapse; }
+:where(#ee_divRoot) [id^="ee_"] td { padding:0; line-height:1.55; overflow-wrap:anywhere; }
+#ee_page { width:100% !important; }
+#ee_wrap { max-width:1120px; margin-inline:auto; padding:clamp(16px,4vw,40px); }
+#ee_websiteInformation { padding:clamp(22px,5vw,54px) max(16px,calc((100% - 1040px)/2)); }
+#ee_use,
+#ee_privacy { border:1px solid #e3dff2; border-radius:12px; padding:clamp(15px,3vw,24px); margin-block:14px; }
+#ee_websiteInformation2,
+#ee_informationAboutThisSiteAndItsExamples,
+#ee_websiteUse,
+#ee_thisWebsitePresentsEpageStudioAndEserver,
+#ee_privacy2,
+#ee_eserverCanSetASessionCookieWhen,
+#ee_forQuestionsAboutWebsiteUseOrPrivacy2,
+#ee_supportEpageDev,
+#ee_label { margin-block:6px; }
+#ee_forQuestionsAboutWebsiteUseOrPrivacy { display:flex !important; align-items:center; flex-wrap:wrap; gap:6px 12px; }
+#ee_supportEpageDev { width:max-content !important; max-width:100%; }
+#ee_forQuestionsAboutWebsiteUseOrPrivacy2,
+#ee_label { width:auto !important; max-width:100%; }
+#ee_websiteInformation2 td { line-height:1.2; }
+#ee_websiteUse td,#ee_privacy2 td { line-height:1.2; }
+</style>]]></pageHead>
+      <onControlLoad><![CDATA[for (const name of ["websiteInformation2"]) {
+    const heading = ee.getControl(name);
+    heading.setAttribute("role", "heading");
+    heading.setAttribute("aria-level", "1");
+}
+for (const name of ["websiteUse", "privacy2"]) {
+    const heading = ee.getControl(name);
+    heading.setAttribute("role", "heading");
+    heading.setAttribute("aria-level", "2");
+}
+const anchors = {"use":"use","privacy":"privacy"};
+function showSection() {
+    const section = anchors[location.hash.slice(1)];
+    if (section) ee.getControl(section)?.scrollIntoView({block: "start"});
+}
+window.addEventListener("hashchange", showSection);
+requestAnimationFrame(showSection);]]></onControlLoad>
+    </control>
+    <control type="Panel" pathname="/divRoot/page">
+      <left>8</left>
+      <top>8</top>
+      <width>1112</width>
+      <height>609</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/websiteInformation">
+      <backgroundColor>302a60</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <left>8</left>
+      <top>8</top>
+      <width>1104</width>
+      <height>150</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/websiteInformation/websiteInformation2">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>ffffff</fontColor>
+      <fontSize>30</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <fontBold>true</fontBold>
+      <left>8</left>
+      <top>8</top>
+      <width>1060</width>
+      <height>62</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Website information]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/websiteInformation/informationAboutThisSiteAndItsExamples">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>ffffff</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <left>8</left>
+      <top>77</top>
+      <width>1060</width>
+      <height>30</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Information about this site and its examples.]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap">
+      <left>8</left>
+      <top>165</top>
+      <width>1104</width>
+      <height>437</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/use">
+      <backgroundColor>ffffff</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <left>8</left>
+      <top>8</top>
+      <width>1060</width>
+      <height>156</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/use/websiteUse">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>21</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <fontBold>true</fontBold>
+      <left>8</left>
+      <top>8</top>
+      <width>1016</width>
+      <height>46</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Website use]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/use/thisWebsitePresentsEpageStudioAndEserver">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <left>8</left>
+      <top>61</top>
+      <width>1016</width>
+      <height>52</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[This website presents ePage Studio and eServer, provides tutorials, and hosts browser-based examples. The examples use sample content to demonstrate interface behavior.]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/privacy">
+      <backgroundColor>ffffff</backgroundColor>
+      <bgColorEnabled>true</bgColorEnabled>
+      <left>8</left>
+      <top>171</top>
+      <width>1060</width>
+      <height>223</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/privacy/privacy2">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>21</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <fontBold>true</fontBold>
+      <left>8</left>
+      <top>8</top>
+      <width>1016</width>
+      <height>46</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[Privacy]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/privacy/eserverCanSetASessionCookieWhen">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <left>8</left>
+      <top>61</top>
+      <width>1016</width>
+      <height>52</height>
+      <dockX>fill</dockX>
+      <text><![CDATA[eServer can set a session cookie when serving this site. If you email support, your message includes the information you choose to share.]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/privacy/forQuestionsAboutWebsiteUseOrPrivacy">
+      <left>8</left>
+      <top>120</top>
+      <width>1016</width>
+      <height>60</height>
+      <dockX>fill</dockX>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/privacy/forQuestionsAboutWebsiteUseOrPrivacy/forQuestionsAboutWebsiteUseOrPrivacy2">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <left>8</left>
+      <top>8</top>
+      <width>510</width>
+      <height>52</height>
+      <text><![CDATA[For questions about website use or privacy, email]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/privacy/forQuestionsAboutWebsiteUseOrPrivacy/supportEpageDev">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <onCreate><![CDATA[const cell = sender.label.rows[0].cells[0];
+const link = document.createElement("a");
+link.href = "mailto:support@epage.dev";
+
+link.textContent = cell.textContent;
+cell.replaceChildren(link);]]></onCreate>
+      <left>525</left>
+      <top>8</top>
+      <width>190</width>
+      <height>30</height>
+      <text><![CDATA[support@epage.dev]]></text>
+    </control>
+    <control type="Panel" pathname="/divRoot/page/wrap/privacy/forQuestionsAboutWebsiteUseOrPrivacy/label">
+      <fontFamily>Segoe UI, system-ui, sans-serif</fontFamily>
+      <fontColor>26243c</fontColor>
+      <fontSize>12</fontSize>
+      <hAlign>left</hAlign>
+      <vAlign>top</vAlign>
+      <textAutoBr>false</textAutoBr>
+      <left>722</left>
+      <top>8</top>
+      <width>65</width>
+      <height>30</height>
+      <text><![CDATA[.]]></text>
     </control>
   </controls>
-  <taskSet count="0" />
+  <taskSet count="0">
+  </taskSet>
   <gridLines count="0" />
   <g5Items count="0" />
 </page>

@@ -1,6 +1,6 @@
 <EBProj>
   <projectName>ePage.dev</projectName>
-  <projectItems count="127">
+  <projectItems count="135">
     <page pathname="/main" alias="main entery" />
     <image pathname="/main/logo256.png" />
     <image pathname="/.gitattributes" />
@@ -128,6 +128,14 @@
     <page pathname="/blog" alias="" />
     <page pathname="/website" alias="" />
     <page pathname="/samples/common" alias="" />
+    <image pathname="/features/layoutToolbar.jpg" />
+    <image pathname="/features/projectTree.jpg" />
+    <image pathname="/features/studioInterface.jpg" />
+    <image pathname="/samples/uploadProgress.png" />
+    <image pathname="/tutorials/eventEditor.png" />
+    <image pathname="/tutorials/propertyDropdown.png" />
+    <image pathname="/tutorials/taskSetEditor.png" />
+    <image pathname="/tutorials/userPropertyHelp.png" />
   </projectItems>
   <dbConnections count="0" />
 </EBProj>
